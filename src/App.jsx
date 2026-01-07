@@ -96,17 +96,24 @@ const PROJECTS = [
     }
 ];
 
-    {
-        id: 'Cryptic-Hunt',
-        title: 'Cryptic Hunt',
-        year: '2025',
-        category: 'Graphic Design',
-        description: 'A Event .',
-        thumbnail: chunt,
-        images: [
-            chunt
-        ]
-    },
+{
+  id: 'unique-id-name', // Use lowercase and dashes, e.g., 'new-branding-project'
+  title: 'Project Name Here',
+  year: '2025',
+  category: 'Graphic Design', // e.g., UI/UX, Branding, Social Media
+  description: 'A brief description of the project goals and your vision.',
+  thumbnail: '[https://link-to-your-image.com/thumb.jpg](https://link-to-your-image.com/thumb.jpg)',
+  images: [
+    '[https://link-to-your-image.com/detail-1.jpg](https://link-to-your-image.com/detail-1.jpg)',
+    '[https://link-to-your-image.com/detail-2.jpg](https://link-to-your-image.com/detail-2.jpg)'
+  ],
+  details: [
+    "Challenge: Description of the problem.",
+    "Solution: How you fixed it.",
+    "Tools: Photoshop, Figma, etc."
+  ]
+},
+
 // --- COMPONENTS ---
 
 const Navbar = ({ currentView, setView }) => {
@@ -414,12 +421,13 @@ export default function App() {
                     Visual Systems & Strategy
                 </p>
                 <p className="text-neutral-500 text-[9px] font-bold uppercase tracking-[0.2em]">
-                    &copy; {new Date().getFullYear()} Lakshay Jain | Crafted with Precision
+                    &copy; {new Date().getFullYear()} Lakshay Jain | Crafted with Passion
                 </p>
             </footer>
         </div>
     );
 }
+
 
 
 
