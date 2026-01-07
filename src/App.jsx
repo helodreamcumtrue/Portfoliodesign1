@@ -11,6 +11,7 @@ import {
     Monitor,
     Smartphone
 } from 'lucide-react';
+import campus from './assets/chronicals.png'
 
 // --- DATA STRUCTURED FROM DRIVE ---
 const PROJECTS = [
@@ -37,9 +38,9 @@ const PROJECTS = [
         year: '2025',
         category: 'Product Design',
         description: 'A specialized application for laundry management within residential complexes and hostels. Features include live status tracking, scheduling, and payment integration.',
-        thumbnail: 'https://images.unsplash.com/photo-1545173153-5dd736fb688a?auto=format&fit=crop&q=80&w=800',
+        thumbnail: campus,
         images: [
-            'https://images.unsplash.com/photo-1545173153-5dd736fb688a?auto=format&fit=crop&q=80&w=1200'
+            campus
         ]
     },
     {
