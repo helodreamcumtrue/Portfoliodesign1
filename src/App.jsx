@@ -12,6 +12,13 @@ import {
     Smartphone
 } from 'lucide-react';
 import campus from './assets/chronicals.png'
+import foodle from './assets/fooddle is back.png'
+import hack from './assets/hacklipse grid.png'
+import enactus from './assets/enactusrecuitmentpng.png'
+import chunt from './assets/cryptic hunt grid1.png'
+
+
+
 
 // --- DATA STRUCTURED FROM DRIVE ---
 const PROJECTS = [
@@ -71,9 +78,9 @@ const PROJECTS = [
         year: '2024',
         category: 'Graphic Design',
         description: 'A monthly newsletter layout designed for university students, focusing on event reporting (like URJA 2025) and campus culture.',
-        thumbnail: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800',
+        thumbnail: campus,
         images: [
-            'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=1200'
+            campus
         ]
     },
     {
@@ -402,3 +409,4 @@ export default function App() {
         </div>
     );
 }
+
