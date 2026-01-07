@@ -15,8 +15,8 @@ import {
 // --- LOCAL ASSET IMPORTS ---
 // Ensure these files exist in your src/assets/ folder
 import campus from './assets/chronicals.png';
-import foddle from './assets/fooddle is back.png';
-import hack from './assets/hacklipse grid.png';
+import food from './assets/back.png';
+import hack from './assets/lips grid.png';
 import enactus from './assets/enactusrecuitmentpng.png';
 import chunt from './assets/cryptic1.png';
 import san from './assets/sanchay.png';
@@ -70,8 +70,8 @@ const PROJECTS = [
     year: '2025',
     category: 'Graphic Design',
     description: 'Fresh re-branding assets for Fooddle, focused on vibrant colors and modern food-tech vibes to appeal to a younger demographic.',
-    thumbnail: foddle,
-    images: [foddle],
+    thumbnail: food,
+    images: [food],
     details: ["Social media campaign visuals."]
   },
   {
@@ -457,4 +457,5 @@ export default function App() {
     </div>
   );
 }
+
 
