@@ -12,10 +12,10 @@ import {
     Smartphone
 } from 'lucide-react';
 import campus from './assets/chronicals.png'
-import foodle from './assets/fooddle is back.png'
-import hack from './assets/hacklipse grid.png'
+import fooddle from './assets/fooddle.png'
+import hack from './assets/hackgrid.png'
 import enactus from './assets/enactusrecuitmentpng.png'
-import chunt from './assets/cryptic hunt grid1.png'
+import chunt from './assets/cryptic1.png'
 
 
 
@@ -45,9 +45,9 @@ const PROJECTS = [
         year: '2025',
         category: 'Product Design',
         description: 'A specialized application for laundry management within residential complexes and hostels. Features include live status tracking, scheduling, and payment integration.',
-        thumbnail: campus,
+        thumbnail: fooddle,
         images: [
-            campus
+            fooddle
         ]
     },
     {
@@ -409,4 +409,5 @@ export default function App() {
         </div>
     );
 }
+
 
