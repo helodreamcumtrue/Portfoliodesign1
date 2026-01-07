@@ -125,6 +125,18 @@ const PROJECTS = [
   }
 ];
 
+  {
+    id: 'enactus',
+    title: 'Recruitment Banner',
+    year: '2025',
+    category: 'Branding',
+    description: 'Large-scale print designs for ACM events, ensuring high-impact visibility and clear communication of event details.',
+    thumbnail: enactus,
+    images: [
+    enactus    ]
+  }
+];
+
 // --- COMPONENTS ---
 
 const Navbar = ({ currentView, setView }) => {
@@ -438,6 +450,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
