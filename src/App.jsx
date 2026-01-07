@@ -78,7 +78,7 @@ const PROJECTS = [
     category: 'Graphic Design',
     description: 'Promotional graphics for Hackspirse, emphasizing innovation and technology through bold geometric patterns and high-contrast typography.',
     thumbnail: hack,
-    images: [hack],
+    images: [hackgrid],
     details: ["Event branding and social media strategy."]
   },
   {
@@ -438,4 +438,5 @@ export default function App() {
     </div>
   );
 }
+
 
