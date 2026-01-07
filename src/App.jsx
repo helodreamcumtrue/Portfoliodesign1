@@ -19,6 +19,11 @@ import foddle from './assets/fooddle.png';
 import hack from './assets/hackgrid.png';
 import enactus from './assets/enactusrecuitmentpng.png';
 import chunt from './assets/cryptic1.png';
+import san from './assets/sanchay.png';
+import lanund from './assets/laundify.png';
+import gui from './assets/Guidelinesfinal.png';
+
+
 
 // --- DATA STRUCTURED FROM DRIVE & LOCAL ASSETS ---
 const PROJECTS = [
@@ -45,8 +50,8 @@ const PROJECTS = [
     year: '2025',
     category: 'Product Design',
     description: 'A specialized application for laundry management within residential complexes and hostels. Features include live status tracking, scheduling, and payment integration.',
-    thumbnail: enactus,
-    images: [enactus]
+    thumbnail: lanund,
+    images: [lanund]
   },
   {
     id: 'crptic-hunt',
@@ -87,10 +92,8 @@ const PROJECTS = [
     year: '2025',
     category: 'Fintech Design',
     description: 'Sanchay is a personal finance tool that helps users track expenses, set savings goals, and visualize their financial health through clean charts.',
-    thumbnail: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=800',
-    images: [
-      'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=1200'
-    ]
+    thumbnail: san,
+    images: [san]
   },
   {
     id: 'clam-nest',
@@ -450,6 +453,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
