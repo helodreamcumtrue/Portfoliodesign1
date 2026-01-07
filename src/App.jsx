@@ -96,6 +96,17 @@ const PROJECTS = [
     }
 ];
 
+    {
+        id: 'Cryptic-Hunt',
+        title: 'Cryptic Hunt',
+        year: '2025',
+        category: 'Graphic Design',
+        description: 'A Event .',
+        thumbnail: chunt,
+        images: [
+            chunt
+        ]
+    },
 // --- COMPONENTS ---
 
 const Navbar = ({ currentView, setView }) => {
@@ -409,5 +420,6 @@ export default function App() {
         </div>
     );
 }
+
 
 
