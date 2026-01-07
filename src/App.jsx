@@ -75,7 +75,7 @@ const PROJECTS = [
     {
         id: 'campus-chronicles',
         title: 'Campus Chronicles Newsletter',
-        year: '2024',
+        year: '2025',
         category: 'Graphic Design',
         description: 'A monthly newsletter layout designed for university students, focusing on event reporting (like URJA 2025) and campus culture.',
         thumbnail: campus,
@@ -86,7 +86,7 @@ const PROJECTS = [
     {
         id: 'acm-flex-design',
         title: 'ACM Official Flex Banners',
-        year: '2024',
+        year: '2025',
         category: 'Branding',
         description: 'Large-scale print designs for ACM events, ensuring high-impact visibility and clear communication of event details.',
         thumbnail: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800',
@@ -421,6 +421,7 @@ export default function App() {
         </div>
     );
 }
+
 
 
 
