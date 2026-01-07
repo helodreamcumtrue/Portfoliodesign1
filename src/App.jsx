@@ -23,8 +23,6 @@ import san from './assets/sanchay.png';
 import lanund from './assets/laundify.png';
 import gui from './assets/Guidelinesfinal.png';
 
-
-
 // --- DATA STRUCTURED FROM DRIVE & LOCAL ASSETS ---
 const PROJECTS = [
   {
@@ -125,18 +123,24 @@ const PROJECTS = [
     images: [
       'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=1200'
     ]
-  }
-];
-
+  },
   {
     id: 'enactus',
-    title: 'Recruitment Banner',
+    title: 'Enactus Recruitment Banner',
     year: '2025',
     category: 'Branding',
-    description: 'Large-scale print designs for ACM events, ensuring high-impact visibility and clear communication of event details.',
+    description: 'Official recruitment visuals for Enactus, designed to effectively communicate the organization\'s impact and invite new talent.',
     thumbnail: enactus,
-    images: [
-    enactus    ]
+    images: [enactus]
+  },
+  {
+    id: 'brand-guidelines',
+    title: 'Brand Guidelines Visuals',
+    year: '2024',
+    category: 'Branding',
+    description: 'A comprehensive set of visual guidelines ensuring consistency across all brand touchpoints.',
+    thumbnail: gui,
+    images: [gui]
   }
 ];
 
@@ -453,9 +457,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
-
-
-
