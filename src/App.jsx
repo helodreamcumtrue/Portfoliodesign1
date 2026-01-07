@@ -97,16 +97,38 @@ const PROJECTS = [
 ];
 
 {
-  id: 'unique-id-name', // Use lowercase and dashes, e.g., 'new-branding-project'
-  title: 'Project Name Here',
+  id: 'crptic-hunt', // Use lowercase and dashes, e.g., 'new-branding-project'
+  title: 'Crptic Hunt Instagram Grid',
   year: '2025',
   category: 'Graphic Design', // e.g., UI/UX, Branding, Social Media
   description: 'A brief description of the project goals and your vision.',
-  thumbnail: '[https://link-to-your-image.com/thumb.jpg](https://link-to-your-image.com/thumb.jpg)',
+  thumbnail: chunt,
   images: [
-    '[https://link-to-your-image.com/detail-1.jpg](https://link-to-your-image.com/detail-1.jpg)',
-    '[https://link-to-your-image.com/detail-2.jpg](https://link-to-your-image.com/detail-2.jpg)'
+    chunt
   ],
+
+{
+  id: 'fooddle', // Use lowercase and dashes, e.g., 'new-branding-project'
+  title: 'Foddle Re-branding  Instagram Grid',
+  year: '2025',
+  category: 'Graphic Design', // e.g., UI/UX, Branding, Social Media
+  description: 'A brief description of the project goals and your vision.',
+  thumbnail: foodddle,
+  images: [
+    fooddle
+  ],
+{
+  id: 'hackspirse', // Use lowercase and dashes, e.g., 'new-branding-project'
+  title: 'Hackspirse Instagram Grid',
+  year: '2025',
+  category: 'Graphic Design', // e.g., UI/UX, Branding, Social Media
+  description: 'A brief description of the project goals and your vision.',
+  thumbnail: hack,
+  images: [
+    hack
+  ],
+
+
 
 // --- COMPONENTS ---
 
@@ -421,6 +443,7 @@ export default function App() {
         </div>
     );
 }
+
 
 
 
