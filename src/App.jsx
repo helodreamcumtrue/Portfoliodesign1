@@ -45,8 +45,8 @@ const PROJECTS = [
     year: '2025',
     category: 'Product Design',
     description: 'A specialized application for laundry management within residential complexes and hostels. Features include live status tracking, scheduling, and payment integration.',
-    thumbnail: fooddle,
-    images: [fooddle]
+    thumbnail: enactus,
+    images: [enactus]
   },
   {
     id: 'crptic-hunt',
@@ -438,3 +438,4 @@ export default function App() {
     </div>
   );
 }
+
