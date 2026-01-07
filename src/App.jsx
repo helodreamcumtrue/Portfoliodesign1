@@ -107,12 +107,6 @@ const PROJECTS = [
     '[https://link-to-your-image.com/detail-1.jpg](https://link-to-your-image.com/detail-1.jpg)',
     '[https://link-to-your-image.com/detail-2.jpg](https://link-to-your-image.com/detail-2.jpg)'
   ],
-  details: [
-    "Challenge: Description of the problem.",
-    "Solution: How you fixed it.",
-    "Tools: Photoshop, Figma, etc."
-  ]
-},
 
 // --- COMPONENTS ---
 
@@ -427,6 +421,7 @@ export default function App() {
         </div>
     );
 }
+
 
 
 
