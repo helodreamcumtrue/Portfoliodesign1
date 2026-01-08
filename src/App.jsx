@@ -24,6 +24,7 @@ import lanund from './assets/laundify.png';
 import gui from './assets/Guidelinesfinal.png';
 import cnest from './assets/clamnest.png';
 import reg from './assets/Registerpage.png';
+import flex from './assets/acm flex (1).png';
 
 
 
@@ -122,10 +123,8 @@ const PROJECTS = [
     year: '2025',
     category: 'Branding',
     description: 'Large-scale print designs for ACM events, ensuring high-impact visibility and clear communication of event details.',
-    thumbnail: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=800',
-    images: [
-      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&q=80&w=1200'
-    ]
+    thumbnail: flex ,
+    images: [flex]
   },
   {
     id: 'enactus',
@@ -461,6 +460,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
