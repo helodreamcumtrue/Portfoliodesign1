@@ -13,7 +13,6 @@ import {
 } from 'lucide-react';
 
 // --- LOCAL ASSET IMPORTS ---
-// Ensure these files exist in your src/assets/ folder
 import campus from './assets/chronicals.png';
 import food from './assets/back.png';
 import hack from './assets/lips grid.png';
@@ -27,7 +26,8 @@ import reg from './assets/Registerpage.png';
 import flex from './assets/acmflex.png';
 import biz from './assets/edcpost.png';
 
-
+// Note: Ensure 'merch.png' exists if you intend to use the ACM Merch project
+// import merch from './assets/merch.png'; 
 
 // --- DATA STRUCTURED FROM DRIVE & LOCAL ASSETS ---
 const PROJECTS = [
@@ -106,8 +106,7 @@ const PROJECTS = [
     category: 'Branding / UI',
     description: 'An ACM-backed project focused on mental wellness. Clam Nest provides tools for therapy matching and mental health resources with a calming visual aesthetic.',
     thumbnail: cnest,
-    images: [
-    cnest]
+    images: [cnest]
   },
   {
     id: 'campus-chronicles',
@@ -124,7 +123,7 @@ const PROJECTS = [
     year: '2025',
     category: 'Branding',
     description: 'Large-scale print designs for ACM events, ensuring high-impact visibility and clear communication of event details.',
-    thumbnail: flex ,
+    thumbnail: flex,
     images: [flex]
   },
   {
@@ -141,36 +140,20 @@ const PROJECTS = [
     title: 'Feature Creep Chaos',
     year: '2024',
     category: 'Branding',
-    description: 'A comprehensive set of visual guidelines ensuring consistency across all brand touchpoints.',
+    description: 'A comprehensive set of visual guidelines and interface designs ensuring consistency across all brand touchpoints.',
     thumbnail: gui,
-    images: [gui]
-    [reg]
-  }
-];
-
-  {
-    id: 'acmmerch',
-    title: 'ACM Merch ',
-    year: '2025',
-    category: 'Branding',
-    description: 'A comprehensive set of visual guidelines ensuring consistency across all brand touchpoints.',
-    thumbnail: merch,
-    images: [merch]
-  }
-];
-
+    images: [gui, reg]
+  },
   {
     id: 'edcpos',
     title: 'Poster for Tech event',
     year: '2024',
     category: 'Branding',
-    description: 'A comprehensive set of visual guidelines ensuring consistency across all brand touchpoints.',
+    description: 'Promotional visuals for technology-focused events, combining technical accuracy with aesthetic appeal.',
     thumbnail: biz,
     images: [biz]
   }
 ];
-
-
 
 // --- COMPONENTS ---
 
@@ -485,9 +468,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
-
-
-
