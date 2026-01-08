@@ -24,7 +24,7 @@ import lanund from './assets/laundify.png';
 import gui from './assets/Guidelinesfinal.png';
 import cnest from './assets/clamnest.png';
 import reg from './assets/Registerpage.png';
-import flex from './assets/acm flex (1).png';
+import flex from './assets/acmflex.png';
 
 
 
@@ -460,6 +460,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
