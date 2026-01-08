@@ -25,6 +25,7 @@ import gui from './assets/Guidelinesfinal.png';
 import cnest from './assets/clamnest.png';
 import reg from './assets/Registerpage.png';
 import flex from './assets/acmflex.png';
+import biz from './assets/edcpost.png';
 
 
 
@@ -146,6 +147,30 @@ const PROJECTS = [
     [reg]
   }
 ];
+
+  {
+    id: 'acmmerch',
+    title: 'ACM Merch ',
+    year: '2025',
+    category: 'Branding',
+    description: 'A comprehensive set of visual guidelines ensuring consistency across all brand touchpoints.',
+    thumbnail: merch,
+    images: [merch]
+  }
+];
+
+  {
+    id: 'edcpos',
+    title: 'Poster for Tech event',
+    year: '2024',
+    category: 'Branding',
+    description: 'A comprehensive set of visual guidelines ensuring consistency across all brand touchpoints.',
+    thumbnail: biz,
+    images: [biz]
+  }
+];
+
+
 
 // --- COMPONENTS ---
 
@@ -460,6 +485,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
