@@ -22,6 +22,10 @@ import chunt from './assets/cryptic1.png';
 import san from './assets/sanchay.png';
 import lanund from './assets/laundify.png';
 import gui from './assets/Guidelinesfinal.png';
+import cnest from './assets/clamnest.png';
+import reg from './assets/Registerpage.png';
+
+
 
 // --- DATA STRUCTURED FROM DRIVE & LOCAL ASSETS ---
 const PROJECTS = [
@@ -95,14 +99,13 @@ const PROJECTS = [
   },
   {
     id: 'clam-nest',
-    title: 'Clam Nest Therapy Platform',
+    title: 'Clam Nest Website BTS',
     year: '2024',
     category: 'Branding / UI',
     description: 'An ACM-backed project focused on mental wellness. Clam Nest provides tools for therapy matching and mental health resources with a calming visual aesthetic.',
-    thumbnail: 'https://images.unsplash.com/photo-1527137342181-19aab11a8ee1?auto=format&fit=crop&q=80&w=800',
+    thumbnail: cnest,
     images: [
-      'https://images.unsplash.com/photo-1527137342181-19aab11a8ee1?auto=format&fit=crop&q=80&w=1200'
-    ]
+    cnest]
   },
   {
     id: 'campus-chronicles',
@@ -134,13 +137,14 @@ const PROJECTS = [
     images: [enactus]
   },
   {
-    id: 'brand-guidelines',
-    title: 'Brand Guidelines Visuals',
+    id: 'acmeventweb',
+    title: 'Feature Creep Chaos',
     year: '2024',
     category: 'Branding',
     description: 'A comprehensive set of visual guidelines ensuring consistency across all brand touchpoints.',
     thumbnail: gui,
     images: [gui]
+    [reg]
   }
 ];
 
@@ -457,5 +461,6 @@ export default function App() {
     </div>
   );
 }
+
 
 
