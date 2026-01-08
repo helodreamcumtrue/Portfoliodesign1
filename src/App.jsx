@@ -24,7 +24,7 @@ import cnest from './assets/clamnest.png';
 import reg from './assets/Registerpage.png';
 import flex from './assets/acmflex.png';
 import biz from './assets/edcpost.png';
-
+import hack from './assets/lips.png';
 const PROJECTS = [
   {
     id: 'pnb-case-study',
@@ -72,8 +72,8 @@ const PROJECTS = [
     year: '2025',
     category: 'Graphic Design',
     description: 'Tech-focused promotional graphics with geometric patterns.',
-    thumbnail: ,
-    images: 
+    thumbnail: hack ,
+    images: [hack]
   },
   {
     id: 'sanchay-manager',
@@ -297,4 +297,5 @@ export default function App() {
     </div>
   );
 }
+
 
