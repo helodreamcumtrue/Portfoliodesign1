@@ -15,7 +15,6 @@ import {
 // IMPORTANT: Ensure these files exist exactly as named in src/assets/
 import campus from './assets/chronicals.png';
 import food from './assets/back.png';
-import hack from './assets/lips.png';
 import enactus from './assets/enactusrecuitmentpng.png';
 import chunt from './assets/cryptic1.png';
 import san from './assets/sanchay.png';
@@ -73,8 +72,8 @@ const PROJECTS = [
     year: '2025',
     category: 'Graphic Design',
     description: 'Tech-focused promotional graphics with geometric patterns.',
-    thumbnail: hack,
-    images: [hack]
+    thumbnail: ,
+    images: 
   },
   {
     id: 'sanchay-manager',
@@ -298,3 +297,4 @@ export default function App() {
     </div>
   );
 }
+
