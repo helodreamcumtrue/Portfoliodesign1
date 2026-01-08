@@ -86,7 +86,7 @@ const PROJECTS = [
   {
     id: 'sanchay-manager',
     title: 'Sanchay - Money Manager',
-    year: '2025',
+    year: '2026',
     category: 'Fintech Design',
     description: 'Sanchay is a personal finance tool that helps users track expenses, set savings goals, and visualize financial health.',
     thumbnail: san,
@@ -337,3 +337,4 @@ export default function App() {
     </div>
   );
 }
+
