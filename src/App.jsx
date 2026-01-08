@@ -17,7 +17,7 @@ import {
 // Make sure these files exist in your src/assets/ folder
 import campus from './assets/chronicals.png';
 import food from './assets/back.png';
-import hack from './assets/lips grid.png';
+import hack from './assets/lipsgrid.png';
 import enactus from './assets/enactusrecuitmentpng.png';
 import chunt from './assets/cryptic1.png';
 import san from './assets/sanchay.png';
@@ -337,4 +337,5 @@ export default function App() {
     </div>
   );
 }
+
 
