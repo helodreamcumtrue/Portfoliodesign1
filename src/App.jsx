@@ -22,7 +22,7 @@ import lanund from './assets/laundify.png';
 import gui from './assets/Guidelinesfinal.png';
 import cnest from './assets/clamnest.png';
 import reg from './assets/Registerpage.png';
-import flex from './assets/acmflex.png';
+import flex from './assets/acmflex.jpg';
 import biz from './assets/edcpost.png';
 import hack from './assets/lips.png';
 const PROJECTS = [
