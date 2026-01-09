@@ -8,11 +8,12 @@ import {
   Send,
   Layers,
   Monitor,
-  Smartphone
+  Smartphone,
+  FileText,
+  CheckCircle
 } from 'lucide-react';
 
 // --- LOCAL ASSET IMPORTS ---
-// IMPORTANT: Ensure these files exist exactly as named in src/assets/
 import campus from './assets/chronicals.png';
 import food from './assets/back.png';
 import enactus from './assets/enactusrecuitmentpng.png';
@@ -28,15 +29,14 @@ import hack from './assets/lips.png';
 import pdf from './assets/NAYAPNBCASESTUDY.pdf';
 
 const PROJECTS = [
-
-    {
+  {
     id: 'pnb-case-study',
     title: 'New Better PNB - UI/UX Case Study',
     year: '2025',
     category: 'UI/UX Design',
     description: "A comprehensive redesign of the Punjab National Bank mobile application. This project addresses user pain points regarding complex navigation, visual clutter, and accessibility for older demographics.",
     thumbnail: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800', 
-    pdfLink: pdf, // REPLACE '#' with your actual Drive PDF link or file path
+    pdfLink: pdf, 
     images: [
       'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200',
       'https://images.unsplash.com/photo-1551288049-bbbda5366392?auto=format&fit=crop&q=80&w=1200'
@@ -47,7 +47,6 @@ const PROJECTS = [
       "Key Result: 40% reduction in average task completion time."
     ]
   },
- 
   {
     id: 'laundify',
     title: 'Laundify - Service App',
@@ -81,7 +80,7 @@ const PROJECTS = [
     year: '2025',
     category: 'Graphic Design',
     description: 'Tech-focused promotional graphics with geometric patterns.',
-    thumbnail: hack ,
+    thumbnail: hack,
     images: [hack]
   },
   {
@@ -201,7 +200,8 @@ const WorkView = ({ setView, setSelectedProject }) => (
         <div key={project.id} onClick={() => { setSelectedProject(project); setView('project-detail'); }} className="group cursor-pointer space-y-4">
           <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-neutral-900 border border-white/5 shadow-xl">
             <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
-            <div className="absolute top-4 right-4 px-3 py-1 bg-black/80 rounded-full border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="absolute top-4 right-4 px-3 py-1 bg-black/80 rounded-full border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2">
+              {project.pdfLink && <FileText size={12} className="text-white" />}
               <span className="text-[10px] font-black uppercase text-white tracking-widest">View Case</span>
             </div>
           </div>
@@ -227,11 +227,25 @@ const ProjectDetailView = ({ project, setView }) => {
         <button onClick={() => setView('work')} className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-16 uppercase tracking-widest text-[10px] font-black">
           <ArrowLeft size={14} /> Back to Archive
         </button>
+        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-32">
           <div className="lg:col-span-2 space-y-8">
             <h1 className="text-5xl md:text-8xl font-black tracking-tighter uppercase leading-[0.9]">{project.title}</h1>
             <p className="text-xl text-neutral-400 font-light leading-relaxed italic border-l-2 border-white/10 pl-8">{project.description}</p>
+            
+            {/* PDF Action Button */}
+            {project.pdfLink && (
+              <a 
+                href={project.pdfLink} 
+                target="_blank" 
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 border border-white/10 text-white rounded-2xl hover:bg-white hover:text-black transition-all font-black uppercase text-xs tracking-widest mt-4"
+              >
+                <FileText size={18} /> View Case Study PDF
+              </a>
+            )}
           </div>
+          
           <div className="bg-neutral-900/50 p-8 rounded-3xl border border-white/5 space-y-6 h-fit">
             <div><p className="text-[10px] font-black uppercase text-neutral-500 mb-1">Service</p><p className="text-sm font-bold">{project.category}</p></div>
             <div><p className="text-[10px] font-black uppercase text-neutral-500 mb-1">Year</p><p className="text-sm font-bold">{project.year}</p></div>
@@ -242,6 +256,7 @@ const ProjectDetailView = ({ project, setView }) => {
             )}
           </div>
         </div>
+
         <div className="space-y-16">
           {project.images.map((img, idx) => (
             <div key={idx} className="w-full bg-neutral-900 rounded-[2rem] overflow-hidden shadow-2xl border border-white/5">
@@ -249,6 +264,7 @@ const ProjectDetailView = ({ project, setView }) => {
             </div>
           ))}
         </div>
+
         <div className="mt-32 pt-24 border-t border-white/10 text-center">
             <button onClick={() => setView('work')} className="text-3xl md:text-5xl font-black hover:text-neutral-400 uppercase tracking-tighter">Next Project</button>
         </div>
@@ -274,7 +290,7 @@ const ContactView = () => {
         </div>
         <div className="bg-neutral-900/50 p-10 rounded-[2rem] border border-white/5 shadow-2xl">
           {submitted ? (
-            <div className="py-20 text-center space-y-6"><div className="w-20 h-20 bg-white/10 text-white rounded-full flex items-center justify-center animate-pulse mx-auto"><Send size={32} /></div><h3 className="text-2xl font-black uppercase">Sent</h3></div>
+            <div className="py-20 text-center space-y-6"><div className="w-20 h-20 bg-white/10 text-white rounded-full flex items-center justify-center animate-pulse mx-auto"><CheckCircle size={32} /></div><h3 className="text-2xl font-black uppercase">Sent</h3></div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-8">
               <input type="text" required placeholder="Name" className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white text-sm" value={formState.name} onChange={e => setFormState({...formState, name: e.target.value})} />
@@ -306,7 +322,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
-
