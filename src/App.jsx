@@ -25,6 +25,8 @@ import reg from './assets/Registerpage.png';
 import flex from './assets/acmflex.jpg';
 import biz from './assets/edcpost.png';
 import hack from './assets/lips.png';
+import pdf from './assets/NAYAPNBCASESTUDY.pdf';
+
 const PROJECTS = [
 
     {
@@ -34,7 +36,7 @@ const PROJECTS = [
     category: 'UI/UX Design',
     description: "A comprehensive redesign of the Punjab National Bank mobile application. This project addresses user pain points regarding complex navigation, visual clutter, and accessibility for older demographics.",
     thumbnail: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800', 
-    pdfLink: 'https://drive.google.com/file/d/1vQtZxxJ_kcgVoJxIo5ETabx7uj0UHHjF/view?usp=drive_link', // REPLACE '#' with your actual Drive PDF link or file path
+    pdfLink: pdf, // REPLACE '#' with your actual Drive PDF link or file path
     images: [
       'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200',
       'https://images.unsplash.com/photo-1551288049-bbbda5366392?auto=format&fit=crop&q=80&w=1200'
@@ -45,19 +47,7 @@ const PROJECTS = [
       "Key Result: 40% reduction in average task completion time."
     ]
   },
-  {
-    id: 'pnb-case-study',
-    title: 'New Better PNB - UI/UX Case Study',
-    year: '2025',
-    category: 'UI/UX Design',
-    description: "A comprehensive redesign of the Punjab National Bank mobile application addressing navigation complexity and accessibility.",
-    thumbnail: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800', 
-    images: [
-      'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200',
-      'https://images.unsplash.com/photo-1551288049-bbbda5366392?auto=format&fit=crop&q=80&w=1200'
-    ],
-    details: ["Objective: Streamline fund transfers.", "Result: 40% faster task completion."]
-  },
+ 
   {
     id: 'laundify',
     title: 'Laundify - Service App',
@@ -316,6 +306,7 @@ export default function App() {
     </div>
   );
 }
+
 
 
 
