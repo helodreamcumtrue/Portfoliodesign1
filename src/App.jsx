@@ -192,17 +192,17 @@ const ProjectDetailView = ({ project, setView }) => {
   return (
     <div className="min-h-screen pb-24 bg-black">
       {/* 1584x396 RATIO BANNER - UNIQUE PER POST */}
-      <div className="w-full h-[20vh] md:h-[30vh] overflow-hidden relative border-b border-white/5">
+      <div className="w-full h-[15vh] md:h-[25vh] overflow-hidden relative border-b border-white/5">
         <img 
           src={project.banner || 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1584&h=396'} 
           alt="Project Banner" 
-          className="w-full h-full object-cover brightness-50"
+          className="w-full h-full object-cover brightness-[0.4]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent" />
       </div>
 
-      <div className="max-w-5xl mx-auto px-4 md:px-6">
-        {/* CORRECTED BACK BUTTON POSITION */}
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
+        {/* BACK BUTTON POSITIONED CLEARLY ABOVE CONTENT */}
         <div className="pt-8 md:pt-12 mb-12">
           <button 
             onClick={() => setView('work')} 
@@ -212,18 +212,18 @@ const ProjectDetailView = ({ project, setView }) => {
           </button>
         </div>
         
-        {/* ADJUSTED TITLE (TILE) SIZE */}
+        {/* REFINED TITLE SIZE (NOT TOO LARGE) */}
         <div className="mb-16 md:mb-24">
-          <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic font-sans">{project.title}</h1>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic font-sans">{project.title}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             <div className="lg:col-span-3">
               <p className="text-lg md:text-2xl text-neutral-300 font-light leading-relaxed italic border-l-4 border-white/10 pl-6 md:pl-10 font-serif">
                 {project.description}
               </p>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-1 gap-6 border-t lg:border-t-0 border-white/5 pt-8 lg:pt-0 font-sans">
-              <div><p className="text-[10px] font-black uppercase text-neutral-600 mb-2">Service</p><p className="text-xs md:text-sm font-bold uppercase tracking-widest">{project.category}</p></div>
-              <div><p className="text-[10px] font-black uppercase text-neutral-600 mb-2">Year</p><p className="text-xs md:text-sm font-bold">{project.year}</p></div>
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-6 border-t lg:border-t-0 border-white/5 pt-8 lg:pt-0 font-sans text-neutral-500">
+              <div><p className="text-[10px] font-black uppercase mb-1">Service</p><p className="text-xs md:text-sm font-bold uppercase text-white">{project.category}</p></div>
+              <div><p className="text-[10px] font-black uppercase mb-1">Year</p><p className="text-xs md:text-sm font-bold text-white">{project.year}</p></div>
             </div>
           </div>
           
@@ -234,7 +234,7 @@ const ProjectDetailView = ({ project, setView }) => {
           )}
         </div>
 
-        {/* Story Layout - Balanced width for readability */}
+        {/* Story Layout - Images constrained to max-w-4xl for better focus */}
         <div className="space-y-16 md:space-y-32">
           {project.story ? (
             project.story.map((item, idx) => (
@@ -259,7 +259,7 @@ const ProjectDetailView = ({ project, setView }) => {
 
         <div className="mt-40 pt-24 border-t border-white/10 text-center font-sans">
             <p className="text-neutral-600 uppercase text-[9px] md:text-[10px] font-black tracking-[0.6em] mb-8 italic">The story continues</p>
-            <button onClick={() => setView('work')} className="text-4xl md:text-7xl font-black hover:text-neutral-400 uppercase tracking-tighter transition-all italic underline decoration-white/10 underline-offset-[16px]">Next Project</button>
+            <button onClick={() => setView('work')} className="text-3xl md:text-5xl font-black hover:text-neutral-400 uppercase tracking-tighter transition-all italic underline decoration-white/10 underline-offset-[16px]">Next Project</button>
         </div>
       </div>
     </div>
@@ -304,7 +304,6 @@ export default function App() {
   const [view, setView] = useState('home');
   const [selectedProject, setSelectedProject] = useState(null);
 
-  // LOGIC: Sync state with browser navigation
   useEffect(() => {
     const handlePopState = (event) => {
       if (view === 'project-detail') setView('work');
