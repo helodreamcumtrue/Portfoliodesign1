@@ -144,8 +144,8 @@ const PROJECTS = [
 
 const Navbar = ({ currentView, setView }) => (
   <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-xl z-50 px-4 md:px-6 py-4 flex justify-between items-center border-b border-white/5">
-    <div className="text-xl font-black tracking-tighter cursor-pointer uppercase hover:opacity-70 transition-all" onClick={() => setView('home')}>lakshay jain</div>
-    <div className="flex gap-4 md:gap-8 text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase text-neutral-400">
+    <div className="text-xl font-black tracking-tighter cursor-pointer uppercase hover:opacity-70 transition-all font-sans" onClick={() => setView('home')}>lakshay jain</div>
+    <div className="flex gap-4 md:gap-8 text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase text-neutral-400 font-sans">
       <button onClick={() => setView('home')} className={currentView === 'home' ? 'text-white border-b border-white pb-1' : 'hover:text-white transition-colors'}>Home</button>
       <button onClick={() => setView('work')} className={currentView === 'work' ? 'text-white border-b border-white pb-1' : 'hover:text-white transition-colors'}>Work</button>
       <button onClick={() => setView('contact')} className={currentView === 'contact' ? 'text-white border-b border-white pb-1' : 'hover:text-white transition-colors'}>Contact</button>
@@ -156,32 +156,31 @@ const Navbar = ({ currentView, setView }) => (
 const HomeView = ({ setView }) => (
   <div className="min-h-screen flex flex-col md:flex-row bg-black overflow-x-hidden">
     <div className="w-full md:w-1/2 h-[60vh] md:h-screen relative overflow-hidden group">
-      {/* Premium Dark Abstract Background */}
       <img 
         src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1600" 
         alt="Creative Abstraction" 
         className="w-full h-full object-cover grayscale brightness-[0.2] group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-50 transition-all duration-[2000ms] ease-in-out" 
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center p-8 md:p-12 text-center">
-        <h1 className="text-5xl sm:text-7xl md:text-9xl font-black text-white italic tracking-tighter mix-blend-overlay uppercase leading-none select-none">Lakshay<br />Jain</h1>
-        <p className="mt-6 md:mt-8 text-white/40 text-[10px] md:text-xs font-black tracking-[0.4em] md:tracking-[0.8em] uppercase">Visual Systems // 2026</p>
+        <h1 className="text-5xl sm:text-7xl md:text-9xl font-black text-white italic tracking-tighter mix-blend-overlay uppercase leading-none select-none font-sans">Lakshay<br />Jain</h1>
+        <p className="mt-6 md:mt-8 text-white/40 text-[10px] md:text-xs font-black tracking-[0.4em] md:tracking-[0.8em] uppercase font-sans">Visual Systems // 2026</p>
       </div>
     </div>
     <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-24 bg-neutral-900/40">
       <div className="max-w-md">
-        <h2 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tighter">Strategic Design.</h2>
-        <p className="text-lg md:text-xl text-neutral-400 mb-8 md:mb-12 leading-relaxed font-light italic border-l-2 border-white/10 pl-6">"I don't just build pixels; I architect digital products that solve the complex frictions of everyday human life."</p>
+        <h2 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tighter font-sans">Strategic Design.</h2>
+        <p className="text-lg md:text-xl text-neutral-400 mb-8 md:mb-12 leading-relaxed font-light italic border-l-2 border-white/10 pl-6 font-serif">"I don't just build pixels; I architect digital products that solve the complex frictions of everyday human life."</p>
         <div className="grid grid-cols-1 gap-6 mb-12">
           <div className="flex items-center gap-4 text-neutral-500">
             <div className="p-3 rounded-full bg-white/5"><Smartphone size={20} /></div>
-            <p className="text-[10px] font-bold uppercase tracking-widest">Product Strategy</p>
+            <p className="text-[10px] font-bold uppercase tracking-widest font-sans">Product Strategy</p>
           </div>
           <div className="flex items-center gap-4 text-neutral-500">
             <div className="p-3 rounded-full bg-white/5"><Layers size={20} /></div>
-            <p className="text-[10px] font-bold uppercase tracking-widest">Interface Architecture</p>
+            <p className="text-[10px] font-bold uppercase tracking-widest font-sans">Interface Architecture</p>
           </div>
         </div>
-        <button onClick={() => setView('work')} className="group w-full md:w-auto px-10 md:px-12 py-5 bg-white text-black rounded-full flex items-center justify-center gap-3 font-black text-sm uppercase tracking-widest shadow-2xl transition-all hover:scale-105 active:scale-95">
+        <button onClick={() => setView('work')} className="group w-full md:w-auto px-10 md:px-12 py-5 bg-white text-black rounded-full flex items-center justify-center gap-3 font-black text-sm uppercase tracking-widest shadow-2xl transition-all hover:scale-105 active:scale-95 font-sans">
           Explore Archive <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
         </button>
       </div>
@@ -190,11 +189,11 @@ const HomeView = ({ setView }) => (
 );
 
 const WorkView = ({ setView, setSelectedProject }) => (
-  <div className="min-h-screen pt-24 md:pt-32 pb-24 px-4 md:px-12 max-w-7xl mx-auto">
+  <div className="min-h-screen pt-24 md:pt-32 pb-24 px-4 md:px-12 max-w-7xl mx-auto font-sans">
     <div className="max-w-2xl mb-16 md:mb-24">
       <p className="text-white/20 uppercase tracking-[0.4em] text-[10px] font-black mb-4 underline underline-offset-8 decoration-white/10">Selected Works</p>
       <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic">The Archive.</h2>
-      <p className="text-neutral-500 text-lg md:text-xl border-l-2 border-neutral-800 pl-8 leading-relaxed italic">A meticulously curated collection of design-led solutions.</p>
+      <p className="text-neutral-500 text-lg md:text-xl border-l-2 border-neutral-800 pl-8 leading-relaxed italic font-serif">A meticulously curated collection of design-led solutions.</p>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 md:gap-y-20">
       {PROJECTS.map((project) => (
@@ -224,13 +223,13 @@ const ProjectDetailView = ({ project, setView }) => {
   
   return (
     <div className="min-h-screen pt-20 md:pt-12 pb-24 bg-black">
-      <div className="max-w-5xl mx-auto px-4 md:px-6">
-        <button onClick={() => setView('work')} className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-8 md:mb-12 uppercase tracking-[0.2em] text-[10px] font-black">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
+        <button onClick={() => setView('work')} className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-8 md:mb-12 uppercase tracking-[0.2em] text-[10px] font-black font-sans">
           <ArrowLeft size={14} /> Back to Archive
         </button>
 
-        {/* HERO IMAGE FIRST */}
-        <div className="w-full mb-12 md:mb-20 rounded-[1.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl border border-white/5 bg-neutral-900 group">
+        {/* HERO IMAGE - Adjusted size to not be too overwhelming */}
+        <div className="w-full max-w-5xl mx-auto mb-12 md:mb-20 rounded-[1.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/5 bg-neutral-900 group">
           <img 
             src={project.thumbnail} 
             alt={project.title} 
@@ -238,35 +237,37 @@ const ProjectDetailView = ({ project, setView }) => {
           />
         </div>
         
-        {/* CONTENT STARTS AFTER IMAGE */}
-        <div className="mb-16 md:mb-32">
-          <h1 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic">{project.title}</h1>
+        {/* CONTENT */}
+        <div className="mb-16 md:mb-32 max-w-5xl mx-auto">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic font-sans">{project.title}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             <div className="lg:col-span-3">
-              <p className="text-xl md:text-3xl text-neutral-300 font-light leading-relaxed italic border-l-4 border-white/10 pl-6 md:pl-10">{project.description}</p>
+              <p className="text-lg md:text-2xl text-neutral-300 font-light leading-relaxed italic border-l-4 border-white/10 pl-6 md:pl-10 font-serif">
+                {project.description}
+              </p>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-1 gap-6 border-t lg:border-t-0 border-white/5 pt-8 lg:pt-0">
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-6 border-t lg:border-t-0 border-white/5 pt-8 lg:pt-0 font-sans">
               <div><p className="text-[10px] font-black uppercase text-neutral-600 mb-2">Category</p><p className="text-xs md:text-sm font-bold uppercase tracking-widest">{project.category}</p></div>
               <div><p className="text-[10px] font-black uppercase text-neutral-600 mb-2">Year</p><p className="text-xs md:text-sm font-bold">{project.year}</p></div>
             </div>
           </div>
           
           {project.pdfLink && (
-            <a href={project.pdfLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-full md:w-auto gap-3 px-10 md:px-12 py-5 bg-white text-black rounded-2xl hover:bg-neutral-200 transition-all font-black uppercase text-[10px] md:text-xs tracking-widest mt-12 shadow-xl">
+            <a href={project.pdfLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-full md:w-auto gap-3 px-10 md:px-12 py-5 bg-white text-black rounded-2xl hover:bg-neutral-200 transition-all font-black uppercase text-[10px] md:text-xs tracking-widest mt-12 shadow-xl font-sans">
               <FileText size={18} /> View Case Study PDF
             </a>
           )}
         </div>
 
-        {/* Story Layout (Interleaved Text & Images) */}
-        <div className="space-y-16 md:space-y-32">
+        {/* Story Layout - Balanced width for readability */}
+        <div className="space-y-16 md:space-y-24 max-w-5xl mx-auto">
           {project.story ? (
             project.story.map((item, idx) => (
               <div key={idx} className="max-w-4xl mx-auto">
                 {item.type === 'text' ? (
-                  <p className="text-xl md:text-3xl text-neutral-400 leading-relaxed font-light italic">{item.content}</p>
+                  <p className="text-lg md:text-xl text-neutral-400 leading-relaxed font-light italic font-serif">{item.content}</p>
                 ) : (
-                  <div className="w-full bg-neutral-900 rounded-[1.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/5 my-8 md:my-0 group">
+                  <div className="w-full max-w-4xl mx-auto bg-neutral-900 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5 my-8 md:my-0 group">
                     <img src={item.src} alt="Process visual" className="w-full h-auto transform transition-transform duration-[1200ms] group-hover:scale-105" />
                   </div>
                 )}
@@ -274,14 +275,14 @@ const ProjectDetailView = ({ project, setView }) => {
             ))
           ) : (
             project.images?.map((img, idx) => (
-              <div key={idx} className="w-full bg-neutral-900 rounded-[1.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
+              <div key={idx} className="w-full max-w-4xl mx-auto bg-neutral-900 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5">
                 <img src={img} alt="Detail" className="w-full h-auto" />
               </div>
             ))
           )}
         </div>
 
-        <div className="mt-40 pt-24 border-t border-white/10 text-center">
+        <div className="mt-40 pt-24 border-t border-white/10 text-center font-sans">
             <p className="text-neutral-600 uppercase text-[9px] md:text-[10px] font-black tracking-[0.6em] mb-8 italic">The story continues</p>
             <button onClick={() => setView('work')} className="text-4xl md:text-7xl font-black hover:text-neutral-400 uppercase tracking-tighter transition-all italic underline decoration-white/10 underline-offset-[16px]">Next Project</button>
         </div>
@@ -295,11 +296,11 @@ const ContactView = () => {
   const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); setTimeout(() => setSubmitted(false), 5000); };
   
   return (
-    <div className="min-h-screen pt-32 md:pt-48 pb-24 px-4 md:px-6 max-w-5xl mx-auto">
+    <div className="min-h-screen pt-32 md:pt-48 pb-24 px-4 md:px-6 max-w-5xl mx-auto font-sans">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
         <div className="space-y-10 md:space-y-16">
           <h1 className="text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.8] italic">New<br />Chapter.</h1>
-          <p className="text-xl md:text-2xl text-neutral-500 font-light italic leading-relaxed">Currently accepting high-impact product partnerships and freelance inquiries for 2026.</p>
+          <p className="text-xl md:text-2xl text-neutral-500 font-light italic leading-relaxed font-serif">Currently accepting high-impact product partnerships and freelance inquiries for 2026.</p>
           <div className="space-y-4">
             <span className="text-[10px] font-black uppercase text-neutral-600 tracking-[0.4em] block">Direct Access</span>
             <a href="mailto:lakshayjain148@gmail.com" className="text-xl sm:text-2xl md:text-4xl font-bold hover:text-neutral-400 transition-colors block border-b border-white/10 pb-6 overflow-hidden text-ellipsis">lakshayjain148@gmail.com</a>
@@ -334,10 +335,33 @@ const ContactView = () => {
 export default function App() {
   const [view, setView] = useState('home');
   const [selectedProject, setSelectedProject] = useState(null);
-  useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, [view]);
+
+  // LOGIC: Enable browser back button to work with state-based navigation
+  useEffect(() => {
+    const handlePopState = (event) => {
+      if (view === 'project-detail' || view === 'contact') {
+        setView('work');
+      } else if (view === 'work') {
+        setView('home');
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    
+    // Push a dummy state so there's something to "pop" back from
+    if (view !== 'home') {
+      window.history.pushState({ view }, "");
+    }
+
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [view]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [view]);
 
   return (
-    <div className="bg-black text-white min-h-screen font-sans selection:bg-white selection:text-black overflow-x-hidden antialiased">
+    <div className="bg-black text-white min-h-screen selection:bg-white selection:text-black overflow-x-hidden antialiased">
       {view !== 'home' && <Navbar currentView={view} setView={setView} />}
       <main className="transition-all duration-1000 ease-in-out">
         {view === 'home' && <HomeView setView={setView} />}
@@ -345,7 +369,9 @@ export default function App() {
         {view === 'project-detail' && <ProjectDetailView project={selectedProject} setView={setView} />}
         {view === 'contact' && <ContactView />}
       </main>
-      <footer className="py-16 md:py-24 border-t border-white/5 text-center text-neutral-700 text-[8px] md:text-[10px] uppercase font-black tracking-[0.8em] md:tracking-[1.2em] px-6">&copy; {new Date().getFullYear()} Lakshay Jain // Product Strategy // Visual Systems</footer>
+      <footer className="py-16 md:py-24 border-t border-white/5 text-center text-neutral-700 text-[8px] md:text-[10px] uppercase font-black tracking-[0.8em] md:tracking-[1.2em] px-6 font-sans">
+        &copy; {new Date().getFullYear()} Lakshay Jain // Product Strategy // Visual Systems
+      </footer>
     </div>
   );
 }
