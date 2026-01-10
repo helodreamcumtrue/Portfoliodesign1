@@ -177,7 +177,7 @@ const PROJECTS = [
     banner: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
       { type: 'text', content: "I designed a seamless registration flow that handled heavy user traffic while maintaining a clean, error-free experience." },
-      { type: 'image', src: reg }
+      { type: 'image', src: reg },
       { type: 'image', src: gui }
 
     ]
@@ -410,3 +410,4 @@ export default function App() {
     </div>
   );
 }
+
