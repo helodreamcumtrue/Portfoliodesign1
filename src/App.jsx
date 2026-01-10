@@ -30,6 +30,8 @@ import flex from './assets/acmflex.jpg';
 import biz from './assets/edcpost.png';
 import hack from './assets/lips.png';
 import pdf from './assets/NAYAPNBCASESTUDY.pdf';
+import pnbbb from './assets/pnbb.png';
+
 
 const PROJECTS = [
   {
@@ -43,7 +45,7 @@ const PROJECTS = [
     pdfLink: pdf, 
     story: [
       { type: 'text', content: "The Punjab National Bank application faced a common hurdle in legacy tech: a high cognitive load that often intimidated users, particularly the older generation. My mission was to prove that 'secure' and 'simple' can coexist. I wanted to create an interface where a 70-year-old grandfather could transfer funds with the same confidence as a 20-year-old student." },
-      { type: 'image', src: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200' },
+      { type: 'image', src: pnbbb },
       { type: 'text', content: "I focused on 'Progressive Disclosure'—showing only what is necessary at each step. By stripping away visual noise and implementing a grid-based navigation system inspired by physical bank branch queues, I managed to reduce task completion time by 40% in user testing." }
     ]
   },
@@ -413,5 +415,6 @@ export default function App() {
     </div>
   );
 }
+
 
 
