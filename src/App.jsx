@@ -215,7 +215,7 @@ const HomeView = ({ setView }) => (
       <img 
         src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1600" 
         alt="Abstraction" 
-        className="w-full h-full object-cover grayscale brightness-[0.2] group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-50 transition-all duration-[2000ms] ease-in-out" 
+        className="w-full h-full object-cover grayscale brightness-[0.2] group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-50 transition-all duration-[1500ms] ease-in-out" 
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center p-8 md:p-12 text-center">
         <h1 className="text-5xl sm:text-7xl md:text-9xl font-black text-white italic tracking-tighter mix-blend-overlay uppercase leading-none select-none font-sans">Lakshay<br />Jain</h1>
@@ -413,4 +413,5 @@ export default function App() {
     </div>
   );
 }
+
 
