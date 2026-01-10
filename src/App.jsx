@@ -352,7 +352,7 @@ const ContactView = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                 <div>
                     <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-tight mb-8">Get In<br />Touch.</h1>
-                    <p className="text-neutral-500 text-lg font-light leading-relaxed italic mb-12">Currently accepting new project inquiries for 2025. Let's build something impactful.</p>
+                    <p className="text-neutral-500 text-lg font-light leading-relaxed italic mb-12">Currently accepting new project inquiries. Let's build something impactful.</p>
                     <div className="space-y-6">
                         <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Direct Email</span><a href="mailto:lakshayjain148@gmail.com" className="text-xl font-bold hover:text-neutral-400 transition-colors block">lakshayjain148@gmail.com</a></div>
                         <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Social Hub</span><a href="https://linktr.ee" target="_blank" rel="noreferrer" className="text-xl font-bold hover:text-neutral-400 transition-colors flex items-center gap-2">Linktree <ExternalLink size={18} /></a></div>
@@ -413,4 +413,5 @@ export default function App() {
     </div>
   );
 }
+
 
