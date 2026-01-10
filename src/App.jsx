@@ -118,7 +118,7 @@ const PROJECTS = [
   {
     id: 'hackspirse',
     title: 'Hackspirse',
-    year: '2026',
+    year: '2025',
     category: 'Event Branding',
     description: 'Capturing the raw energy of high-octane creation through geometric precision.',
     thumbnail: hack,
@@ -131,7 +131,7 @@ const PROJECTS = [
   {
     id: 'campus-chronicles',
     title: 'Campus Chronicles',
-    year: '2026',
+    year: '2025',
     category: 'Layout Design',
     description: 'Modernizing student journalism by applying a digital-first grid to long-form storytelling.',
     thumbnail: campus,
@@ -144,7 +144,7 @@ const PROJECTS = [
   {
     id: 'acm-flex-design',
     title: 'ACM Banner',
-    year: '2026',
+    year: '2024',
     category: 'Print Branding',
     description: 'Large-scale print designs for professional event visibility.',
     thumbnail: flex,
@@ -157,7 +157,7 @@ const PROJECTS = [
   {
     id: 'enactus-recruitment',
     title: 'Enactus Recruitment',
-    year: '2026',
+    year: '2025',
     category: 'Visual Identity',
     description: 'Impactful visuals designed for social enterprise talent acquisition.',
     thumbnail: enactus,
@@ -173,11 +173,13 @@ const PROJECTS = [
     year: '2025',
     category: 'Web Design',
     description: 'User registration flows and interface systems for complex event networks.',
-    thumbnail: reg,
+    thumbnail: gui,
     banner: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
       { type: 'text', content: "I designed a seamless registration flow that handled heavy user traffic while maintaining a clean, error-free experience." },
       { type: 'image', src: reg }
+      { type: 'image', src: gui }
+
     ]
   },
   {
