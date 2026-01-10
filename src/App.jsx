@@ -355,7 +355,7 @@ const ContactView = () => {
                     <p className="text-neutral-500 text-lg font-light leading-relaxed italic mb-12">Currently accepting new project inquiries. Let's build something impactful.</p>
                     <div className="space-y-6">
                         <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Direct Email</span><a href="mailto:lakshayjain148@gmail.com" className="text-xl font-bold hover:text-neutral-400 transition-colors block">lakshayjain148@gmail.com</a></div>
-                        <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Social Hub</span><a href="https://linktr.ee" target="_blank" rel="noreferrer" className="text-xl font-bold hover:text-neutral-400 transition-colors flex items-center gap-2">Linktree <ExternalLink size={18} /></a></div>
+                        <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Social Hub</span><a href="https://linktr.ee" target="linktr.ee/lakshay.j" rel="noreferrer" className="text-xl font-bold hover:text-neutral-400 transition-colors flex items-center gap-2">Linktree <ExternalLink size={18} /></a></div>
                     </div>
                 </div>
                 <div className="bg-neutral-900/50 p-10 rounded-3xl border border-white/5 shadow-2xl">
@@ -413,5 +413,6 @@ export default function App() {
     </div>
   );
 }
+
 
 
