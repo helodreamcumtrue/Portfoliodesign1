@@ -39,7 +39,7 @@ const PROJECTS = [
     year: '2025',
     category: 'UI/UX Design',
     description: "Redefining legacy banking by bridging the gap between complex financial systems and human intuition.",
-    thumbnail: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800', 
+    thumbnail: pbn, 
     banner: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=1584&h=396', 
     pdfLink: pdf, 
     story: [
@@ -414,4 +414,5 @@ export default function App() {
     </div>
   );
 }
+
 
