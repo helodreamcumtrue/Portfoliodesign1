@@ -341,46 +341,43 @@ const ProjectDetailView = ({ project, setView }) => {
   );
 };
 
+
 const ContactView = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); setTimeout(() => setSubmitted(false), 5000); };
-  
-  return (
-    <div className="min-h-screen pt-32 md:pt-48 pb-24 px-4 md:px-6 max-w-5xl mx-auto font-sans">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
-        <div className="space-y-10 md:space-y-16">
-          <h1 className="text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.8] italic">New<br />Chapter.</h1>
-          <p className="text-xl md:text-2xl text-neutral-500 font-light italic leading-relaxed font-serif">Available for high-impact partnerships for 2026.</p>
-          <div className="space-y-4">
-            <span className="text-[10px] font-black uppercase text-neutral-600 tracking-[0.4em] block">Direct Access</span>
-            <a href="mailto:lakshayjain148@gmail.com" className="text-xl sm:text-2xl md:text-4xl font-bold hover:text-neutral-400 transition-colors block border-b border-white/10 pb-6 overflow-hidden text-ellipsis italic font-serif">lakshayjain148@gmail.com</a>
-          </div>
-        </div>
-        <div className="bg-neutral-900/30 p-8 md:p-16 rounded-[2.5rem] md:rounded-[4.5rem] border border-white/5 shadow-2xl backdrop-blur-xl">
-          {submitted ? (
-            <div className="py-16 md:py-24 text-center space-y-8">
-                <CheckCircle size={48} className="mx-auto text-white animate-bounce" /> 
-                <h3 className="text-3xl font-black uppercase italic tracking-tighter font-sans">Success</h3>
-                <p className="text-neutral-500 text-sm italic font-serif">Transmission delivered. Response within 24 hours.</p>
+    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+    const [submitted, setSubmitted] = useState(false);
+    const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); setTimeout(() => setSubmitted(false), 5000); };
+    return (
+        <div className="min-h-screen pt-40 pb-24 px-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <div>
+                    <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-tight mb-8">Get In<br />Touch.</h1>
+                    <p className="text-neutral-500 text-lg font-light leading-relaxed italic mb-12">Currently accepting new project inquiries for 2025. Let's build something impactful.</p>
+                    <div className="space-y-6">
+                        <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Direct Email</span><a href="mailto:lakshayjain148@gmail.com" className="text-xl font-bold hover:text-neutral-400 transition-colors block">lakshayjain148@gmail.com</a></div>
+                        <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Social Hub</span><a href="https://linktr.ee" target="_blank" rel="noreferrer" className="text-xl font-bold hover:text-neutral-400 transition-colors flex items-center gap-2">Linktree <ExternalLink size={18} /></a></div>
+                    </div>
+                </div>
+                <div className="bg-neutral-900/50 p-10 rounded-3xl border border-white/5 shadow-2xl">
+                    {submitted ? (
+                        <div className="py-20 flex flex-col items-center text-center space-y-6">
+                            <div className="w-20 h-20 bg-white/10 text-white rounded-full flex items-center justify-center animate-pulse"><Send size={32} /></div>
+                            <h3 className="text-2xl font-black uppercase tracking-tighter">Message Sent</h3>
+                            <p className="text-neutral-500 text-sm italic">Thank you! I'll respond within 24 hours.</p>
+                        </div>
+                    ) : (
+                        <div className="space-y-8">
+                            <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Name</label><input type="text" required placeholder="Your name" className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors text-sm font-medium px-1" value={formState.name} onChange={e => setFormState({ ...formState, name: e.target.value })} /></div>
+                            <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Email</label><input type="email" required placeholder="hello@example.com" className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors text-sm font-medium px-1" value={formState.email} onChange={e => setFormState({ ...formState, email: e.target.value })} /></div>
+                            <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Message</label><textarea rows="4" required placeholder="Describe your vision..." className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors resize-none text-sm font-medium px-1" value={formState.message} onChange={e => setFormState({ ...formState, message: e.target.value })} /></div>
+                            <button onClick={handleSubmit} className="w-full bg-white text-black font-black uppercase tracking-widest py-5 rounded-2xl hover:bg-neutral-200 transition-all flex items-center justify-center gap-3 text-xs shadow-xl active:scale-95">Send Message <Send size={16} /></button>
+                        </div>
+                    )}
+                </div>
             </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-10 md:space-y-12">
-              <div className="space-y-2">
-                  <label className="text-[10px] font-black uppercase text-neutral-600 ml-4 tracking-widest">Inquiry By</label>
-                  <input type="text" required placeholder="Name or Organization" className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg md:text-2xl transition-all font-light" />
-              </div>
-              <div className="space-y-2">
-                  <label className="text-[10px] font-black uppercase text-neutral-600 ml-4 tracking-widest">The Context</label>
-                  <textarea rows="3" required placeholder="Briefly describe your vision..." className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg md:text-2xl transition-all font-light resize-none" />
-              </div>
-              <button type="submit" className="w-full bg-white text-black font-black uppercase py-6 rounded-full flex items-center justify-center gap-3 text-sm md:text-base shadow-2xl active:scale-[0.98] transition-all hover:bg-neutral-200 tracking-widest">Send Transmission <Send size={20} /></button>
-            </form>
-          )}
         </div>
-      </div>
-    </div>
-  );
+    );
 };
+
 
 export default function App() {
   const [view, setView] = useState('home');
@@ -416,3 +413,4 @@ export default function App() {
     </div>
   );
 }
+
