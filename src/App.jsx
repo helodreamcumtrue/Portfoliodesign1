@@ -204,6 +204,7 @@ const Navbar = ({ currentView, setView }) => (
     <div className="flex gap-4 md:gap-8 text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase text-neutral-400 font-sans">
       <button onClick={() => setView('home')} className={currentView === 'home' ? 'text-white border-b border-white pb-1' : 'hover:text-white transition-colors'}>Home</button>
       <button onClick={() => setView('work')} className={currentView === 'work' ? 'text-white border-b border-white pb-1' : 'hover:text-white transition-colors'}>Work</button>
+      <a href="https://linktr.ee/lakshay.j" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Linktree</a>
       <button onClick={() => setView('contact')} className={currentView === 'contact' ? 'text-white border-b border-white pb-1' : 'hover:text-white transition-colors'}>Contact</button>
     </div>
   </nav>
@@ -225,8 +226,7 @@ const HomeView = ({ setView }) => (
     <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-24 bg-neutral-900/40">
       <div className="max-w-md">
         <h2 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tighter font-sans">Strategic Design.</h2>
-        {/* NEW QUOTE: Removed italic, updated content */}
-        <p className="text-lg md:text-xl text-neutral-400 mb-8 md:mb-12 leading-relaxed font-light border-l-2 border-white/10 pl-6 font-serif">"Turning complex problems into simple, beautiful solutions."</p>
+        <p className="text-lg md:text-xl text-neutral-400 mb-8 md:mb-12 leading-relaxed font-light border-l-2 border-white/10 pl-6 font-serif">"I build high-performance visual systems and intuitive digital products that bridge the gap between complexity and human clarity."</p>
         <button onClick={() => setView('work')} className="group w-full md:w-auto px-10 md:px-12 py-5 bg-white text-black rounded-full flex items-center justify-center gap-3 font-black text-sm uppercase tracking-widest shadow-2xl transition-all hover:scale-105 active:scale-95 font-sans">
           Explore Archive <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
         </button>
@@ -240,7 +240,7 @@ const WorkView = ({ setView, setSelectedProject }) => (
     <div className="max-w-2xl mb-16 md:mb-24">
       <p className="text-white/20 uppercase tracking-[0.4em] text-[10px] font-black mb-4 underline underline-offset-8 decoration-white/10">Selected Works</p>
       <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic">The Archive.</h2>
-      <p className="text-neutral-500 text-lg md:text-xl border-l-2 border-neutral-800 pl-8 leading-relaxed font-serif">A curated collection of design-led solutions.</p>
+      <p className="text-neutral-500 text-lg md:text-xl border-l-2 border-neutral-800 pl-8 leading-relaxed italic font-serif">A curated collection of design-led solutions.</p>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 md:gap-y-20">
       {PROJECTS.map((project) => (
@@ -269,7 +269,7 @@ const ProjectDetailView = ({ project, setView }) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   
   return (
-    <div className="min-h-screen pb-24 bg-black">
+    <div className="min-h-screen pb-24 bg-black font-sans">
       {/* NARROW PROJECT BANNER */}
       <div className="w-full h-[15vh] md:h-[25vh] overflow-hidden relative border-b border-white/5">
         <img 
@@ -284,28 +284,28 @@ const ProjectDetailView = ({ project, setView }) => {
         <div className="pt-8 md:pt-12 mb-12">
           <button 
             onClick={() => setView('work')} 
-            className="flex items-center gap-2 text-neutral-500 hover:text-white transition-all uppercase tracking-[0.3em] text-[10px] font-black font-sans group"
+            className="flex items-center gap-2 text-neutral-500 hover:text-white transition-all uppercase tracking-[0.3em] text-[10px] font-black group"
           >
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Archive
           </button>
         </div>
         
         <div className="mb-16 md:mb-24">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic font-sans">{project.title}</h1>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic">{project.title}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             <div className="lg:col-span-3">
               <p className="text-lg md:text-2xl text-neutral-300 font-light leading-relaxed italic border-l-4 border-white/10 pl-6 md:pl-10 font-serif">
                 {project.description}
               </p>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-1 gap-6 border-t lg:border-t-0 border-white/5 pt-8 lg:pt-0 font-sans text-neutral-500">
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-6 border-t lg:border-t-0 border-white/5 pt-8 lg:pt-0 text-neutral-500">
               <div><p className="text-[10px] font-black uppercase mb-1">Service</p><p className="text-xs md:text-sm font-bold uppercase text-white">{project.category}</p></div>
               <div><p className="text-[10px] font-black uppercase mb-1">Year</p><p className="text-xs md:text-sm font-bold text-white">{project.year}</p></div>
             </div>
           </div>
           
           {project.pdfLink && (
-            <a href={project.pdfLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-full md:w-auto gap-3 px-10 md:px-12 py-5 bg-white text-black rounded-2xl hover:bg-neutral-200 transition-all font-black uppercase text-[10px] md:text-xs tracking-widest mt-12 shadow-xl font-sans">
+            <a href={project.pdfLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-full md:w-auto gap-3 px-10 md:px-12 py-5 bg-white text-black rounded-2xl hover:bg-neutral-200 transition-all font-black uppercase text-[10px] md:text-xs tracking-widest mt-12 shadow-xl">
               <FileText size={18} /> View Case Study PDF
             </a>
           )}
@@ -333,7 +333,7 @@ const ProjectDetailView = ({ project, setView }) => {
           )}
         </div>
 
-        <div className="mt-40 pt-24 border-t border-white/10 text-center font-sans">
+        <div className="mt-40 pt-24 border-t border-white/10 text-center">
             <p className="text-neutral-600 uppercase text-[9px] md:text-[10px] font-black tracking-[0.6em] mb-8 italic">The story continues</p>
             <button onClick={() => setView('work')} className="text-3xl md:text-5xl font-black hover:text-neutral-400 uppercase tracking-tighter transition-all italic underline decoration-white/10 underline-offset-[16px]">Next Project</button>
         </div>
@@ -342,41 +342,72 @@ const ProjectDetailView = ({ project, setView }) => {
   );
 };
 
-
 const ContactView = () => {
-    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-    const [submitted, setSubmitted] = useState(false);
-    const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); setTimeout(() => setSubmitted(false), 5000); };
-    return (
-        <div className="min-h-screen pt-40 pb-24 px-6 max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                <div>
-                    <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-tight mb-8">Get In<br />Touch.</h1>
-                    <p className="text-neutral-500 text-lg font-light leading-relaxed italic mb-12">Currently accepting new project inquiries. Let's build something impactful.</p>
-                    <div className="space-y-6">
-                        <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Direct Email</span><a href="mailto:lakshayjain148@gmail.com" className="text-xl font-bold hover:text-neutral-400 transition-colors block">lakshayjain148@gmail.com</a></div>
-                        <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Social Hub</span><a href="https://linktr.ee" target="linktr.ee/lakshay.j" rel="noreferrer" className="text-xl font-bold hover:text-neutral-400 transition-colors flex items-center gap-2">Linktree <ExternalLink size={18} /></a></div>
-                    </div>
-                </div>
-                <div className="bg-neutral-900/50 p-10 rounded-3xl border border-white/5 shadow-2xl">
-                    {submitted ? (
-                        <div className="py-20 flex flex-col items-center text-center space-y-6">
-                            <div className="w-20 h-20 bg-white/10 text-white rounded-full flex items-center justify-center animate-pulse"><Send size={32} /></div>
-                            <h3 className="text-2xl font-black uppercase tracking-tighter">Message Sent</h3>
-                            <p className="text-neutral-500 text-sm italic">Thank you! I'll respond within 24 hours.</p>
-                        </div>
-                    ) : (
-                        <div className="space-y-8">
-                            <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Name</label><input type="text" required placeholder="Your name" className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors text-sm font-medium px-1" value={formState.name} onChange={e => setFormState({ ...formState, name: e.target.value })} /></div>
-                            <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Email</label><input type="email" required placeholder="hello@example.com" className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors text-sm font-medium px-1" value={formState.email} onChange={e => setFormState({ ...formState, email: e.target.value })} /></div>
-                            <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Message</label><textarea rows="4" required placeholder="Describe your vision..." className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors resize-none text-sm font-medium px-1" value={formState.message} onChange={e => setFormState({ ...formState, message: e.target.value })} /></div>
-                            <button onClick={handleSubmit} className="w-full bg-white text-black font-black uppercase tracking-widest py-5 rounded-2xl hover:bg-neutral-200 transition-all flex items-center justify-center gap-3 text-xs shadow-xl active:scale-95">Send Message <Send size={16} /></button>
-                        </div>
-                    )}
-                </div>
+  const [submitted, setSubmitted] = useState(false);
+  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  
+  const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); setTimeout(() => setSubmitted(false), 5000); };
+  
+  return (
+    <div className="min-h-screen pt-32 md:pt-48 pb-24 px-4 md:px-6 max-w-5xl mx-auto font-sans selection:bg-white selection:text-black">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
+        {/* EDITORIAL SIDE */}
+        <div className="space-y-10 md:space-y-16">
+          <h1 className="text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.8] italic">New<br />Chapter.</h1>
+          <p className="text-xl md:text-2xl text-neutral-500 font-light italic leading-relaxed font-serif">Available for high-impact partnerships and freelance inquiries for 2026.</p>
+          <div className="space-y-6">
+            <div className="space-y-1">
+              <span className="text-[10px] font-black uppercase text-neutral-600 tracking-[0.4em] block">Direct Access</span>
+              <a href="mailto:lakshayjain148@gmail.com" className="text-xl sm:text-2xl md:text-4xl font-bold hover:text-neutral-400 transition-colors block border-b border-white/10 pb-4 overflow-hidden text-ellipsis italic font-serif">lakshayjain148@gmail.com</a>
             </div>
+            <div className="space-y-1">
+              <span className="text-[10px] font-black uppercase text-neutral-600 tracking-[0.4em] block">Social Ecosystem</span>
+              <a href="https://linktr.ee/lakshay.j" target="_blank" rel="noreferrer" className="text-xl sm:text-2xl md:text-3xl font-bold hover:text-neutral-400 transition-colors flex items-center gap-3 italic font-serif">Linktree <ExternalLink size={24} /></a>
+            </div>
+          </div>
         </div>
-    );
+
+        {/* GLASS FORM SIDE */}
+        <div className="bg-neutral-900/30 p-8 md:p-16 rounded-[2.5rem] md:rounded-[4.5rem] border border-white/5 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+          {submitted ? (
+            <div className="py-16 md:py-24 text-center space-y-8">
+                <CheckCircle size={48} className="mx-auto text-white animate-bounce" /> 
+                <h3 className="text-3xl font-black uppercase italic tracking-tighter font-sans">Success</h3>
+                <p className="text-neutral-500 text-sm italic font-serif">Transmission delivered. Response within 24 hours.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-10 md:space-y-12">
+              <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase text-neutral-600 ml-4 tracking-widest">Inquiry By</label>
+                  <input 
+                    type="text" 
+                    required 
+                    placeholder="Name or Organization" 
+                    className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg md:text-2xl transition-all font-light"
+                    value={formState.name}
+                    onChange={e => setFormState({...formState, name: e.target.value})}
+                  />
+              </div>
+              <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase text-neutral-600 ml-4 tracking-widest">The Context</label>
+                  <textarea 
+                    rows="3" 
+                    required 
+                    placeholder="Briefly describe your vision..." 
+                    className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg md:text-2xl transition-all font-light resize-none"
+                    value={formState.message}
+                    onChange={e => setFormState({...formState, message: e.target.value})}
+                  />
+              </div>
+              <button type="submit" className="w-full bg-white text-black font-black uppercase py-6 rounded-full flex items-center justify-center gap-3 text-sm md:text-base shadow-2xl active:scale-[0.98] transition-all hover:bg-neutral-200 tracking-widest">
+                Send Transmission <Send size={20} />
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default function App() {
@@ -413,6 +444,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
