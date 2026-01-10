@@ -39,6 +39,7 @@ const PROJECTS = [
     category: 'UI/UX Design',
     description: "Redefining legacy banking by bridging the gap between complex financial systems and human intuition.",
     thumbnail: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800', 
+    banner: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=1584&h=300', // Unique project banner
     pdfLink: pdf, 
     story: [
       { type: 'text', content: "The Punjab National Bank application faced a common hurdle in legacy tech: a high cognitive load that often intimidated users, particularly the older generation. My mission was to prove that 'secure' and 'simple' can coexist. I wanted to create an interface where a 70-year-old grandfather could transfer funds with the same confidence as a 20-year-old student." },
@@ -54,6 +55,7 @@ const PROJECTS = [
     category: 'Product Design',
     description: 'A comprehensive digital solution to the chaotic experience of shared campus laundry facilities.',
     thumbnail: lanund,
+    banner: 'https://images.unsplash.com/photo-1545173153-5dd736fb688a?auto=format&fit=crop&q=80&w=1584&h=300',
     story: [
       { type: 'text', content: "Laundify was born out of a personal frustration: 'Laundry Anxiety.' In bustling student hubs, time is the most valuable currency, yet hours are wasted walking to laundry rooms only to find machines full. I designed Laundify to transform a physical bottleneck into a digital flow." },
       { type: 'image', src: lanund },
@@ -69,6 +71,7 @@ const PROJECTS = [
     category: 'Fintech Design',
     description: 'Moving personal finance away from intimidating spreadsheets and toward visual storytelling.',
     thumbnail: san,
+    banner: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1584&h=300',
     story: [
       { type: 'text', content: "People avoid tracking their money because bank statements look like math homework—scary and boring. Sanchay (meaning 'to save') was designed to feel like a conversation with your future self. I wanted to turn the anxiety of spending into the joy of saving." },
       { type: 'image', src: san },
@@ -82,6 +85,7 @@ const PROJECTS = [
     category: 'Branding / UI',
     description: 'Creating a digital sanctuary for mental wellness where the design itself acts as a calming agent.',
     thumbnail: cnest,
+    banner: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=1584&h=300',
     story: [
       { type: 'text', content: "In a mental health crisis, the last thing a user needs is a cluttered, loud interface. For Clam Nest, my philosophy was 'Design as a digital exhale.' Every pixel was curated to lower the user's stress level before they even read a word." },
       { type: 'image', src: cnest },
@@ -95,6 +99,7 @@ const PROJECTS = [
     category: 'Visual Strategy',
     description: 'Using mystery as a currency to hack engagement and drive community participation.',
     thumbnail: chunt,
+    banner: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1584&h=300',
     images: [chunt],
     story: [
       { type: 'text', content: "For the Cryptic Hunt, I didn't want to design simple posters; I wanted to build a mystery. I created a unified 9-grid Instagram layout where every tile functioned as a standalone piece of art, but together, they revealed a hidden map of the event's first clue." },
@@ -108,6 +113,7 @@ const PROJECTS = [
     category: 'Graphic Design',
     description: 'Transforming a utility service into a lifestyle brand that celebrates the energy of flavor.',
     thumbnail: food,
+    banner: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1584&h=300',
     images: [food],
     story: [
       { type: 'text', content: "Fooddle needed to break away from the generic 'blue and white' look of logistics apps. I moved the brand toward 'Editorial Food-Tech.' I used high-saturation palettes—colors that actually trigger appetite—and bold, experimental typography." },
@@ -121,6 +127,7 @@ const PROJECTS = [
     category: 'Event Branding',
     description: 'Capturing the raw energy of high-octane creation through geometric precision.',
     thumbnail: hack,
+    banner: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1584&h=300',
     images: [hack],
     story: [
       { type: 'text', content: "Hackathons are organized chaos. For Hackspirse, I designed a visual system based on 'The Laboratory'—clean, technical, but bursting with kinetic energy. I used bold geometric lines to represent the logic of code and high-contrast glitch effects to represent the spark of innovation." }
@@ -133,6 +140,7 @@ const PROJECTS = [
     category: 'Layout Design',
     description: 'Modernizing student journalism by applying a digital-first grid to long-form storytelling.',
     thumbnail: campus,
+    banner: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=1584&h=300',
     images: [campus],
     story: [
       { type: 'text', content: "Traditional campus media often feels dated. I redesigned the Chronicles to feel like a high-fidelity magazine. By utilizing a modular grid and 'Editorial Futurism' typography, I increased the readability of digital articles and gave student journalism the visual weight it deserves." }
@@ -154,45 +162,35 @@ const Navbar = ({ currentView, setView }) => (
 );
 
 const HomeView = ({ setView }) => (
-  <div className="min-h-screen flex flex-col bg-black overflow-x-hidden pt-16">
-    {/* 1584x396 Banner Component */}
-    <div className="w-full px-4 md:px-8 mt-4 md:mt-8">
-      <div className="max-w-[1584px] mx-auto h-[200px] md:h-[396px] relative rounded-[2rem] overflow-hidden group shadow-2xl border border-white/5">
-        <img 
-          src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1584&h=396" 
-          alt="Design Banner" 
-          className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center p-8 md:p-16">
-          <div className="max-w-xl">
-             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/60 mb-4 block">Visual Strategy</span>
-             <h2 className="text-3xl md:text-5xl font-black text-white leading-tight uppercase italic tracking-tighter">Good Design is <br/>Invisible.</h2>
-          </div>
-        </div>
+  <div className="min-h-screen flex flex-col md:flex-row bg-black overflow-x-hidden">
+    <div className="w-full md:w-1/2 h-[60vh] md:h-screen relative overflow-hidden group">
+      <img 
+        src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1600" 
+        alt="Creative Abstraction" 
+        className="w-full h-full object-cover grayscale brightness-[0.2] group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-50 transition-all duration-[2000ms] ease-in-out" 
+      />
+      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 md:p-12 text-center">
+        <h1 className="text-5xl sm:text-7xl md:text-9xl font-black text-white italic tracking-tighter mix-blend-overlay uppercase leading-none select-none font-sans">Lakshay<br />Jain</h1>
+        <p className="mt-6 md:mt-8 text-white/40 text-[10px] md:text-xs font-black tracking-[0.4em] md:tracking-[0.8em] uppercase font-sans">Visual Systems // 2026</p>
       </div>
     </div>
-
-    <div className="flex flex-col md:flex-row flex-grow">
-      <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-24">
-        <div className="max-w-md">
-          <h1 className="text-6xl sm:text-7xl md:text-9xl font-black text-white italic tracking-tighter uppercase leading-[0.8] mb-8 select-none font-sans">Lakshay<br />Jain</h1>
-          <p className="text-white/40 text-[10px] md:text-xs font-black tracking-[0.8em] uppercase font-sans mb-12">Visual Systems // 2026</p>
-          
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tighter font-sans">Strategic Design.</h2>
-          <p className="text-lg text-neutral-400 mb-8 md:mb-12 leading-relaxed font-light italic border-l-2 border-white/10 pl-6 font-serif">"I don't just build pixels; I architect digital products that solve the complex frictions of everyday human life."</p>
-          
-          <button onClick={() => setView('work')} className="group w-full md:w-auto px-10 md:px-12 py-5 bg-white text-black rounded-full flex items-center justify-center gap-3 font-black text-sm uppercase tracking-widest shadow-2xl transition-all hover:scale-105 active:scale-95 font-sans">
-            Explore Archive <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+    <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-24 bg-neutral-900/40">
+      <div className="max-w-md">
+        <h2 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tighter font-sans">Strategic Design.</h2>
+        <p className="text-lg md:text-xl text-neutral-400 mb-8 md:mb-12 leading-relaxed font-light italic border-l-2 border-white/10 pl-6 font-serif">"I don't just build pixels; I architect digital products that solve the complex frictions of everyday human life."</p>
+        <div className="grid grid-cols-1 gap-6 mb-12">
+          <div className="flex items-center gap-4 text-neutral-500">
+            <div className="p-3 rounded-full bg-white/5"><Smartphone size={20} /></div>
+            <p className="text-[10px] font-bold uppercase tracking-widest font-sans">Product Strategy</p>
+          </div>
+          <div className="flex items-center gap-4 text-neutral-500">
+            <div className="p-3 rounded-full bg-white/5"><Layers size={20} /></div>
+            <p className="text-[10px] font-bold uppercase tracking-widest font-sans">Interface Architecture</p>
+          </div>
         </div>
-      </div>
-      
-      <div className="w-full md:w-1/2 relative min-h-[400px] md:min-h-screen overflow-hidden group">
-        <img 
-          src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1600" 
-          alt="Abstraction" 
-          className="w-full h-full object-cover grayscale brightness-[0.2] group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-50 transition-all duration-[2000ms] ease-in-out" 
-        />
+        <button onClick={() => setView('work')} className="group w-full md:w-auto px-10 md:px-12 py-5 bg-white text-black rounded-full flex items-center justify-center gap-3 font-black text-sm uppercase tracking-widest shadow-2xl transition-all hover:scale-105 active:scale-95 font-sans">
+          Explore Archive <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+        </button>
       </div>
     </div>
   </div>
@@ -232,13 +230,28 @@ const ProjectDetailView = ({ project, setView }) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   
   return (
-    <div className="min-h-screen pt-20 md:pt-24 bg-black">
-      <div className="max-w-6xl mx-auto px-4 md:px-6">
-        <button onClick={() => setView('work')} className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-12 md:mb-16 uppercase tracking-[0.2em] text-[10px] font-black font-sans group">
-          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Archive
-        </button>
+    <div className="min-h-screen pb-24 bg-black">
+      {/* NARROW PROJECT-SPECIFIC BANNER */}
+      <div className="w-full h-[200px] md:h-[300px] overflow-hidden relative border-b border-white/5 shadow-2xl">
+        <img 
+          src={project.banner} 
+          alt={`${project.title} Banner`} 
+          className="w-full h-full object-cover brightness-50 grayscale hover:grayscale-0 transition-all duration-[2000ms]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
         
-        {/* CONTENT STARTS DIRECTLY (HERO IMAGE REMOVED FROM TOP) */}
+        {/* RESTORED BACK ARROW UI */}
+        <div className="absolute top-8 left-4 md:left-8 z-50">
+          <button 
+            onClick={() => setView('work')} 
+            className="flex items-center gap-2 px-4 py-2 bg-black/50 backdrop-blur-xl border border-white/10 text-white rounded-full hover:bg-white hover:text-black transition-all font-sans text-[10px] font-black uppercase tracking-widest group shadow-2xl"
+          >
+            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back
+          </button>
+        </div>
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-4 md:px-6 pt-16">
         <div className="mb-16 md:mb-32 max-w-5xl">
           <h1 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic font-sans">{project.title}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
@@ -264,9 +277,9 @@ const ProjectDetailView = ({ project, setView }) => {
         <div className="space-y-16 md:space-y-24">
           {project.story ? (
             project.story.map((item, idx) => (
-              <div key={idx} className="max-w-4xl">
+              <div key={idx} className="max-w-4xl mx-auto">
                 {item.type === 'text' ? (
-                  <p className="text-lg md:text-2xl text-neutral-400 leading-relaxed font-light italic font-serif">{item.content}</p>
+                  <p className="text-lg md:text-xl text-neutral-400 leading-relaxed font-light italic font-serif">{item.content}</p>
                 ) : (
                   <div className="w-full max-w-4xl bg-neutral-900 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5 my-8 md:my-0 group">
                     <img src={item.src} alt="Process visual" className="w-full h-auto transform transition-transform duration-[1200ms] group-hover:scale-105" />
@@ -276,7 +289,7 @@ const ProjectDetailView = ({ project, setView }) => {
             ))
           ) : (
             project.images?.map((img, idx) => (
-              <div key={idx} className="w-full max-w-4xl bg-neutral-900 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5">
+              <div key={idx} className="w-full max-w-4xl mx-auto bg-neutral-900 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5">
                 <img src={img} alt="Detail" className="w-full h-auto" />
               </div>
             ))
@@ -340,11 +353,9 @@ export default function App() {
   // LOGIC: Enable browser back button to work with state-based navigation
   useEffect(() => {
     const handlePopState = (event) => {
-      // If we are in detail view, go back to archive
       if (view === 'project-detail') {
         setView('work');
       } 
-      // If we are in archive/contact, go home
       else if (view === 'work' || view === 'contact') {
         setView('home');
       }
@@ -352,11 +363,7 @@ export default function App() {
 
     window.addEventListener('popstate', handlePopState);
     
-    // Manage browser history stack
-    if (view === 'home') {
-       // Root state
-    } else {
-       // Push current view into history so "back" triggers popstate
+    if (view !== 'home') {
        window.history.pushState({ view }, "");
     }
 
