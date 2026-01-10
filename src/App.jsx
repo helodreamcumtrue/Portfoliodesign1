@@ -179,7 +179,6 @@ const PROJECTS = [
       { type: 'text', content: "I designed a seamless registration flow that handled heavy user traffic while maintaining a clean, error-free experience." },
       { type: 'image', src: reg },
       { type: 'image', src: gui }
-
     ]
   },
   {
@@ -362,11 +361,18 @@ const ContactView = () => {
             <div className="py-16 md:py-24 text-center space-y-8">
                 <CheckCircle size={48} className="mx-auto text-white animate-bounce" /> 
                 <h3 className="text-3xl font-black uppercase italic tracking-tighter">Success</h3>
+                <p className="text-neutral-500 text-sm italic">Transmission delivered. Response within 24 hours.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-10 md:space-y-12">
-              <input type="text" required placeholder="Name or Organization" className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg md:text-2xl transition-all font-light" />
-              <textarea rows="3" required placeholder="Project goals..." className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg md:text-2xl transition-all font-light resize-none" />
+              <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase text-neutral-600 ml-4">Inquiry By</label>
+                  <input type="text" required placeholder="Name or Organization" className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg md:text-2xl transition-all font-light" />
+              </div>
+              <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase text-neutral-600 ml-4">The Context</label>
+                  <textarea rows="3" required placeholder="Briefly describe your vision..." className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg md:text-2xl transition-all font-light resize-none" />
+              </div>
               <button type="submit" className="w-full bg-white text-black font-black uppercase py-6 rounded-full flex items-center justify-center gap-3 text-sm md:text-base shadow-2xl active:scale-[0.98] transition-all hover:bg-neutral-200 tracking-widest">Send Transmission <Send size={20} /></button>
             </form>
           )}
@@ -410,4 +416,3 @@ export default function App() {
     </div>
   );
 }
-
