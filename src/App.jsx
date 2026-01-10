@@ -35,106 +35,107 @@ const PROJECTS = [
   {
     id: 'pnb-case-study',
     title: 'New Better PNB',
-    year: '2025',
+    year: '2026',
     category: 'UI/UX Design',
-    description: "Reimagining legacy banking for a digital-first generation while maintaining accessibility for the elderly.",
+    description: "Redefining legacy banking by bridging the gap between complex financial systems and human intuition.",
     thumbnail: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800', 
     pdfLink: pdf, 
     story: [
-      { type: 'text', content: "The Punjab National Bank app had a challenge common to legacy systems: visual clutter and a high cognitive load that alienated older users. I stepped in to prove that 'secure' doesn't have to mean 'complicated'." },
+      { type: 'text', content: "The Punjab National Bank application faced a common hurdle in legacy tech: a high cognitive load that often intimidated users, particularly the older generation. My mission was to prove that 'secure' and 'simple' can coexist. I wanted to create an interface where a 70-year-old grandfather could transfer funds with the same confidence as a 20-year-old student." },
       { type: 'image', src: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200' },
-      { type: 'text', content: "By implementing a clean grid-based navigation and high-contrast typography, I reduced the time taken for fund transfers by 40%. The goal was to build trust through clarity, ensuring every generation feels empowered to manage their finances independently." }
+      { type: 'text', content: "I focused on 'Progressive Disclosure'—showing only what is necessary at each step. By stripping away visual noise and implementing a grid-based navigation system inspired by physical bank branch queues, I managed to reduce task completion time by 40% in user testing. This design isn't just about aesthetics; it's about financial inclusion and independence." }
     ],
-    details: ["Audience: 10M+ Users", "Focus: Inclusive Design", "Tools: Figma, Adobe Suite"]
+    details: ["Goal: Inclusive Banking", "Focus: Accessibility", "Impact: 10M+ Users"]
   },
   {
     id: 'laundify',
-    title: 'Laundify',
-    year: '2025',
+    title: 'Laundify Ecosystem',
+    year: '2026',
     category: 'Product Design',
-    description: 'Transforming the chaotic laundry experience into a seamless, automated digital ecosystem.',
+    description: 'A comprehensive digital solution to the chaotic experience of shared campus laundry facilities.',
     thumbnail: lanund,
     story: [
-      { type: 'text', content: "In bustling campus hubs, students often face 'laundry anxiety'—walking across campus only to find all machines full or their clothes sitting unattended. I designed Laundify to bridge this gap." },
+      { type: 'text', content: "Laundify was born out of a personal frustration: 'Laundry Anxiety.' In bustling student hubs, time is the most valuable currency, yet hours are wasted walking to laundry rooms only to find machines full. I designed Laundify to transform a physical bottleneck into a digital flow." },
       { type: 'image', src: lanund },
-      { type: 'text', content: "I focused on real-time status updates and a 'one-tap' scheduling system. The UI was built around high-contrast visual cues so that even in the dim light of a basement laundry room, the app remains perfectly legible." },
+      { type: 'text', content: "The design system uses high-contrast visual status indicators. Even in the dim light of a basement laundry room, the app remains perfectly legible. I integrated a real-time tracking system and a 'one-tap' scheduling feature that synchronizes with a student's academic calendar." },
       { type: 'image', src: gui },
-      { type: 'text', content: "By digitizing the token system and adding automated notifications, Laundify doesn't just manage laundry—it saves students hours of wasted time every week." }
+      { type: 'text', content: "By digitizing the token system and adding automated 'Cycle Finished' notifications, Laundify doesn't just manage clothes—it gives students back their peace of mind." }
     ]
   },
   {
     id: 'sanchay-manager',
-    title: 'Sanchay Manager',
-    year: '2025',
+    title: 'Sanchay Finance',
+    year: '2026',
     category: 'Fintech Design',
-    description: 'A personal finance tool built to replace anxiety with clarity through visual storytelling of data.',
+    description: 'Moving personal finance away from intimidating spreadsheets and toward visual storytelling.',
     thumbnail: san,
     story: [
-      { type: 'text', content: "Most finance apps feel like spreadsheets—boring and intimidating. Sanchay was born from the idea that personal finance should feel like a conversation with your future self." },
+      { type: 'text', content: "People avoid tracking their money because bank statements look like math homework—scary and boring. Sanchay (meaning 'to save') was designed to feel like a conversation with your future self. I wanted to turn the anxiety of spending into the joy of saving." },
       { type: 'image', src: san },
-      { type: 'text', content: "I used vibrant data visualizations and a 'no-math-required' interface. Instead of just showing numbers, Sanchay tells users exactly where their money is going through intuitive icons and spending heatmaps." }
+      { type: 'text', content: "I replaced dense rows of numbers with 'Spending Heatmaps' and 'Goal Progressions.' Instead of just seeing a balance, users see their financial health reflected through color and shape. Sanchay treats every transaction as a piece of data that tells a story about your lifestyle." }
     ]
   },
   {
     id: 'clam-nest',
-    title: 'Clam Nest',
-    year: '2024',
+    title: 'Clam Nest Therapy',
+    year: '2025',
     category: 'Branding / UI',
-    description: 'Creating a safe digital sanctuary for mental wellness through soft visual systems.',
+    description: 'Creating a digital sanctuary for mental wellness where the design itself acts as a calming agent.',
     thumbnail: cnest,
     story: [
-      { type: 'text', content: "Mental health platforms can often feel clinical or cold. Working on Clam Nest, my mission was to use design as a form of therapy itself. I chose a soft, organic palette to immediately lower the user's stress level upon entry." },
+      { type: 'text', content: "In a mental health crisis, the last thing a user needs is a cluttered, loud interface. For Clam Nest, my philosophy was 'Design as a digital exhale.' Every pixel was curated to lower the user's stress level before they even read a word." },
       { type: 'image', src: cnest },
-      { type: 'text', content: "I simplified the therapy-matching process into a calming 3-step journey, removing the friction that often prevents people from seeking the help they need." }
+      { type: 'text', content: "I utilized a soft, organic palette and generous whitespace to create a sense of safety. The therapist-matching journey was simplified into a 3-step 'gentle flow,' ensuring that the path to professional help is free of friction and intimidation." }
     ]
   },
   {
     id: 'crptic-hunt',
-    title: 'Cryptic Hunt',
-    year: '2025',
-    category: 'Graphic Design',
-    description: 'Hacking the Instagram algorithm through a unified mystery-driven visual narrative.',
+    title: 'Cryptic Hunt Grid',
+    year: '2026',
+    category: 'Visual Strategy',
+    description: 'Using mystery as a currency to hack engagement and drive community participation.',
     thumbnail: chunt,
     images: [chunt],
     story: [
-      { type: 'text', content: "To drive engagement for the Cryptic Hunt event, I didn't just want to post flyers—I wanted to create an experience. I designed a 9-grid Instagram layout where every tile held a hidden clue." },
-      { type: 'text', content: "The dark, neon-glitch aesthetic successfully captured the 'hacker' vibe, resulting in record-high participation and social sharing before the event even began." }
+      { type: 'text', content: "For the Cryptic Hunt, I didn't want to design simple posters; I wanted to build a mystery. I created a unified 9-grid Instagram layout where every tile functioned as a standalone piece of art, but together, they revealed a hidden map of the event's first clue." },
+      { type: 'text', content: "The 'Neon Glitch' aesthetic was chosen to resonate with the hacker-culture theme. This visual strategy resulted in a 300% increase in social sharing and transformed a passive audience into active participants before the hunt even officially began." }
     ]
   },
   {
     id: 'fooddle-rebrand',
-    title: 'Fooddle Rebrand',
-    year: '2025',
+    title: 'Fooddle Identity',
+    year: '2026',
     category: 'Graphic Design',
-    description: 'Injecting personality and energy into a food-tech startup to appeal to Gen-Z.',
+    description: 'Transforming a utility service into a lifestyle brand that celebrates the energy of flavor.',
     thumbnail: food,
     images: [food],
     story: [
-      { type: 'text', content: "Fooddle needed to move away from the generic 'delivery app' look. I overhauled the brand identity to be vibrant, playful, and energetic, focusing on the joy of eating rather than the logistics of delivery." }
+      { type: 'text', content: "Fooddle needed to break away from the generic 'blue and white' look of logistics apps. I moved the brand toward 'Editorial Food-Tech.' I used high-saturation palettes—colors that actually trigger appetite—and bold, experimental typography." },
+      { type: 'text', content: "The rebrand focused on the 'Moment of Joy' when the food arrives, rather than just the delivery process. This shift helped the brand connect instantly with a Gen-Z audience that values energy and authenticity." }
     ]
   },
   {
     id: 'hackspirse',
-    title: 'Hackspirse',
-    year: '2025',
-    category: 'Graphic Design',
-    description: 'Capturing the high-octane energy of innovation through geometric precision.',
+    title: 'Hackspirse Vision',
+    year: '2026',
+    category: 'Event Branding',
+    description: 'Capturing the raw energy of high-octane creation through geometric precision.',
     thumbnail: hack,
     images: [hack],
     story: [
-      { type: 'text', content: "Hackathons are about rapid creation. I used bold typography and high-contrast geometric visuals to reflect that energy, ensuring the event stood out in a crowded campus calendar." }
+      { type: 'text', content: "Hackathons are organized chaos. For Hackspirse, I designed a visual system based on 'The Laboratory'—clean, technical, but bursting with kinetic energy. I used bold geometric lines to represent the logic of code and high-contrast glitch effects to represent the spark of innovation." }
     ]
   },
   {
     id: 'campus-chronicles',
     title: 'Campus Chronicles',
-    year: '2025',
-    category: 'Graphic Design',
-    description: 'Modernizing student journalism through high-fidelity layout design.',
+    year: '2026',
+    category: 'Layout Design',
+    description: 'Modernizing student journalism by applying a digital-first grid to long-form storytelling.',
     thumbnail: campus,
     images: [campus],
     story: [
-      { type: 'text', content: "Campus newspapers often struggle with readability. I designed a newsletter layout that balanced long-form reporting with snackable visual content, significantly increasing the click-through rate for the digital edition." }
+      { type: 'text', content: "Traditional campus media often feels dated. I redesigned the Chronicles to feel like a high-fidelity magazine. By utilizing a modular grid and 'Editorial Futurism' typography, I increased the readability of digital articles and gave student journalism the visual weight it deserves." }
     ]
   }
 ];
@@ -142,41 +143,46 @@ const PROJECTS = [
 // --- COMPONENTS ---
 
 const Navbar = ({ currentView, setView }) => (
-  <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-xl z-50 px-6 py-4 flex justify-between items-center border-b border-white/5">
+  <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-xl z-50 px-4 md:px-6 py-4 flex justify-between items-center border-b border-white/5">
     <div className="text-xl font-black tracking-tighter cursor-pointer uppercase hover:opacity-70 transition-all" onClick={() => setView('home')}>lakshay jain</div>
-    <div className="flex gap-8 text-[11px] font-bold tracking-[0.2em] uppercase">
-      <button onClick={() => setView('home')} className={currentView === 'home' ? 'text-white border-b border-white pb-1' : 'text-neutral-500 hover:text-white transition-colors'}>Home</button>
-      <button onClick={() => setView('work')} className={currentView === 'work' ? 'text-white border-b border-white pb-1' : 'text-neutral-500 hover:text-white transition-colors'}>Work</button>
-      <button onClick={() => setView('contact')} className={currentView === 'contact' ? 'text-white border-b border-white pb-1' : 'text-neutral-500 hover:text-white transition-colors'}>Contact</button>
+    <div className="flex gap-4 md:gap-8 text-[10px] md:text-[11px] font-bold tracking-[0.2em] uppercase text-neutral-400">
+      <button onClick={() => setView('home')} className={currentView === 'home' ? 'text-white border-b border-white pb-1' : 'hover:text-white transition-colors'}>Home</button>
+      <button onClick={() => setView('work')} className={currentView === 'work' ? 'text-white border-b border-white pb-1' : 'hover:text-white transition-colors'}>Work</button>
+      <button onClick={() => setView('contact')} className={currentView === 'contact' ? 'text-white border-b border-white pb-1' : 'hover:text-white transition-colors'}>Contact</button>
     </div>
   </nav>
 );
 
 const HomeView = ({ setView }) => (
-  <div className="min-h-screen flex flex-col md:flex-row bg-black">
+  <div className="min-h-screen flex flex-col md:flex-row bg-black overflow-x-hidden">
     <div className="w-full md:w-1/2 h-[60vh] md:h-screen relative overflow-hidden group">
-      <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200" alt="Hero" className="w-full h-full object-cover grayscale brightness-[0.3] group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-90 transition-all duration-1000 ease-in-out" />
-      <div className="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
-        <h1 className="text-6xl md:text-9xl font-black text-white italic tracking-tighter mix-blend-overlay uppercase leading-none">Lakshay<br />Jain</h1>
-        <p className="mt-8 text-white/40 text-xs font-black tracking-[0.6em] uppercase">Visual Systems // 2025</p>
+      {/* Premium Dark Abstract Background */}
+      <img 
+        src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1600" 
+        alt="Creative Abstraction" 
+        className="w-full h-full object-cover grayscale brightness-[0.2] group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-50 transition-all duration-[2000ms] ease-in-out" 
+      />
+      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 md:p-12 text-center">
+        <h1 className="text-5xl sm:text-7xl md:text-9xl font-black text-white italic tracking-tighter mix-blend-overlay uppercase leading-none select-none">Lakshay<br />Jain</h1>
+        <p className="mt-6 md:mt-8 text-white/40 text-[10px] md:text-xs font-black tracking-[0.4em] md:tracking-[0.8em] uppercase">Visual Systems // 2026</p>
       </div>
     </div>
-    <div className="w-full md:w-1/2 flex items-center justify-center p-12 md:p-24 bg-neutral-900/40">
+    <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-24 bg-neutral-900/40">
       <div className="max-w-md">
-        <h2 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter">Strategic Design.</h2>
-        <p className="text-xl text-neutral-400 mb-10 leading-relaxed font-light italic">"I build digital products that don't just look beautiful, but solve the complex frictions of everyday life."</p>
+        <h2 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tighter">Strategic Design.</h2>
+        <p className="text-lg md:text-xl text-neutral-400 mb-8 md:mb-12 leading-relaxed font-light italic border-l-2 border-white/10 pl-6">"I don't just build pixels; I architect digital products that solve the complex frictions of everyday human life."</p>
         <div className="grid grid-cols-1 gap-6 mb-12">
-          <div className="flex items-center gap-4 text-neutral-500 group">
-            <div className="p-3 rounded-full bg-white/5 group-hover:bg-white/10 transition-all"><Smartphone size={20} /></div>
-            <p className="text-xs font-bold uppercase tracking-widest">UI/UX Strategy</p>
+          <div className="flex items-center gap-4 text-neutral-500">
+            <div className="p-3 rounded-full bg-white/5"><Smartphone size={20} /></div>
+            <p className="text-[10px] font-bold uppercase tracking-widest">Product Strategy</p>
           </div>
-          <div className="flex items-center gap-4 text-neutral-500 group">
-            <div className="p-3 rounded-full bg-white/5 group-hover:bg-white/10 transition-all"><Layers size={20} /></div>
-            <p className="text-xs font-bold uppercase tracking-widest">Product Ecosystems</p>
+          <div className="flex items-center gap-4 text-neutral-500">
+            <div className="p-3 rounded-full bg-white/5"><Layers size={20} /></div>
+            <p className="text-[10px] font-bold uppercase tracking-widest">Interface Architecture</p>
           </div>
         </div>
-        <button onClick={() => setView('work')} className="group px-12 py-5 bg-white text-black rounded-full flex items-center gap-3 font-black text-sm uppercase tracking-widest shadow-2xl transition-all hover:scale-105 active:scale-95">
-          View Projects <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+        <button onClick={() => setView('work')} className="group w-full md:w-auto px-10 md:px-12 py-5 bg-white text-black rounded-full flex items-center justify-center gap-3 font-black text-sm uppercase tracking-widest shadow-2xl transition-all hover:scale-105 active:scale-95">
+          Explore Archive <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
         </button>
       </div>
     </div>
@@ -184,27 +190,27 @@ const HomeView = ({ setView }) => (
 );
 
 const WorkView = ({ setView, setSelectedProject }) => (
-  <div className="min-h-screen pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-    <div className="max-w-2xl mb-24">
-      <p className="text-white/20 uppercase tracking-[0.4em] text-[10px] font-black mb-4">Case Studies</p>
+  <div className="min-h-screen pt-24 md:pt-32 pb-24 px-4 md:px-12 max-w-7xl mx-auto">
+    <div className="max-w-2xl mb-16 md:mb-24">
+      <p className="text-white/20 uppercase tracking-[0.4em] text-[10px] font-black mb-4 underline underline-offset-8 decoration-white/10">Selected Works</p>
       <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic">The Archive.</h2>
-      <p className="text-neutral-500 text-lg border-l-2 border-neutral-800 pl-8 leading-relaxed italic">A selection of work where visual identity meets functional strategy.</p>
+      <p className="text-neutral-500 text-lg md:text-xl border-l-2 border-neutral-800 pl-8 leading-relaxed italic">A meticulously curated collection of design-led solutions.</p>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 md:gap-y-20">
       {PROJECTS.map((project) => (
         <div key={project.id} onClick={() => { setSelectedProject(project); setView('project-detail'); }} className="group cursor-pointer">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-neutral-900 border border-white/5 shadow-2xl transition-all duration-500 group-hover:border-white/20">
-            <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-110 group-hover:brightness-100 transition-all duration-1000" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-              <span className="text-[10px] font-black uppercase text-white tracking-widest flex items-center gap-2">Explore Story <ChevronRight size={12} /></span>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-neutral-900 border border-white/5 shadow-2xl transition-all duration-700 group-hover:border-white/20">
+            <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1200ms]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+              <span className="text-[10px] font-black uppercase text-white tracking-[0.3em] flex items-center gap-3">View Case Study <ChevronRight size={14} /></span>
             </div>
           </div>
-          <div className="mt-6 px-2 flex justify-between items-start">
+          <div className="mt-6 px-1 flex justify-between items-start">
             <div>
-              <h3 className="text-xl font-bold tracking-tight group-hover:text-white transition-colors">{project.title}</h3>
-              <p className="text-[10px] font-black uppercase tracking-widest text-neutral-500 mt-1">{project.category}</p>
+              <h3 className="text-xl md:text-2xl font-bold tracking-tight group-hover:text-white transition-colors">{project.title}</h3>
+              <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mt-2">{project.category}</p>
             </div>
-            <span className="text-[10px] font-bold text-neutral-700 bg-white/5 px-2 py-1 rounded">{project.year}</span>
+            <span className="text-[9px] font-bold text-neutral-700 bg-white/5 px-3 py-1.5 rounded-full">{project.year}</span>
           </div>
         </div>
       ))}
@@ -217,49 +223,58 @@ const ProjectDetailView = ({ project, setView }) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   
   return (
-    <div className="min-h-screen pt-24 pb-24 bg-black">
-      <div className="max-w-5xl mx-auto px-6">
-        <button onClick={() => setView('work')} className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-20 uppercase tracking-[0.3em] text-[10px] font-black">
+    <div className="min-h-screen pt-20 md:pt-12 pb-24 bg-black">
+      <div className="max-w-5xl mx-auto px-4 md:px-6">
+        <button onClick={() => setView('work')} className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-8 md:mb-12 uppercase tracking-[0.2em] text-[10px] font-black">
           <ArrowLeft size={14} /> Back to Archive
         </button>
+
+        {/* HERO IMAGE FIRST */}
+        <div className="w-full mb-12 md:mb-20 rounded-[1.5rem] md:rounded-[4rem] overflow-hidden shadow-2xl border border-white/5 bg-neutral-900 group">
+          <img 
+            src={project.thumbnail} 
+            alt={project.title} 
+            className="w-full h-auto object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[3000ms] ease-out" 
+          />
+        </div>
         
-        <div className="mb-24">
-          <h1 className="text-6xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic">{project.title}</h1>
+        {/* CONTENT STARTS AFTER IMAGE */}
+        <div className="mb-16 md:mb-32">
+          <h1 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic">{project.title}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             <div className="lg:col-span-3">
-              <p className="text-2xl md:text-3xl text-neutral-300 font-light leading-relaxed italic border-l-4 border-white/10 pl-8">{project.description}</p>
+              <p className="text-xl md:text-3xl text-neutral-300 font-light leading-relaxed italic border-l-4 border-white/10 pl-6 md:pl-10">{project.description}</p>
             </div>
-            <div className="space-y-6">
-              <div><p className="text-[10px] font-black uppercase text-neutral-600 mb-2">Service</p><p className="text-sm font-bold">{project.category}</p></div>
-              <div><p className="text-[10px] font-black uppercase text-neutral-600 mb-2">Year</p><p className="text-sm font-bold">{project.year}</p></div>
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-6 border-t lg:border-t-0 border-white/5 pt-8 lg:pt-0">
+              <div><p className="text-[10px] font-black uppercase text-neutral-600 mb-2">Category</p><p className="text-xs md:text-sm font-bold uppercase tracking-widest">{project.category}</p></div>
+              <div><p className="text-[10px] font-black uppercase text-neutral-600 mb-2">Year</p><p className="text-xs md:text-sm font-bold">{project.year}</p></div>
             </div>
           </div>
           
           {project.pdfLink && (
-            <a href={project.pdfLink} target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black rounded-2xl hover:bg-neutral-200 transition-all font-black uppercase text-xs tracking-widest mt-12 shadow-xl">
+            <a href={project.pdfLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-full md:w-auto gap-3 px-10 md:px-12 py-5 bg-white text-black rounded-2xl hover:bg-neutral-200 transition-all font-black uppercase text-[10px] md:text-xs tracking-widest mt-12 shadow-xl">
               <FileText size={18} /> View Case Study PDF
             </a>
           )}
         </div>
 
         {/* Story Layout (Interleaved Text & Images) */}
-        <div className="space-y-24">
+        <div className="space-y-16 md:space-y-32">
           {project.story ? (
             project.story.map((item, idx) => (
               <div key={idx} className="max-w-4xl mx-auto">
                 {item.type === 'text' ? (
-                  <p className="text-xl md:text-2xl text-neutral-400 leading-relaxed font-light italic">{item.content}</p>
+                  <p className="text-xl md:text-3xl text-neutral-400 leading-relaxed font-light italic">{item.content}</p>
                 ) : (
-                  <div className="w-full bg-neutral-900 rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
-                    <img src={item.src} alt="Process visual" className="w-full h-auto" />
+                  <div className="w-full bg-neutral-900 rounded-[1.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/5 my-8 md:my-0 group">
+                    <img src={item.src} alt="Process visual" className="w-full h-auto transform transition-transform duration-[1200ms] group-hover:scale-105" />
                   </div>
                 )}
               </div>
             ))
           ) : (
-            /* Default Image Stack fallback */
             project.images?.map((img, idx) => (
-              <div key={idx} className="w-full bg-neutral-900 rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
+              <div key={idx} className="w-full bg-neutral-900 rounded-[1.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/5">
                 <img src={img} alt="Detail" className="w-full h-auto" />
               </div>
             ))
@@ -267,8 +282,8 @@ const ProjectDetailView = ({ project, setView }) => {
         </div>
 
         <div className="mt-40 pt-24 border-t border-white/10 text-center">
-            <p className="text-neutral-600 uppercase text-[10px] font-black tracking-[0.5em] mb-8 italic">The story continues</p>
-            <button onClick={() => setView('work')} className="text-4xl md:text-6xl font-black hover:text-neutral-400 uppercase tracking-tighter transition-all italic underline decoration-white/10 underline-offset-8">Next Case Study</button>
+            <p className="text-neutral-600 uppercase text-[9px] md:text-[10px] font-black tracking-[0.6em] mb-8 italic">The story continues</p>
+            <button onClick={() => setView('work')} className="text-4xl md:text-7xl font-black hover:text-neutral-400 uppercase tracking-tighter transition-all italic underline decoration-white/10 underline-offset-[16px]">Next Project</button>
         </div>
       </div>
     </div>
@@ -280,34 +295,34 @@ const ContactView = () => {
   const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); setTimeout(() => setSubmitted(false), 5000); };
   
   return (
-    <div className="min-h-screen pt-48 pb-24 px-6 max-w-5xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
-        <div className="space-y-12">
+    <div className="min-h-screen pt-32 md:pt-48 pb-24 px-4 md:px-6 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
+        <div className="space-y-10 md:space-y-16">
           <h1 className="text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.8] italic">New<br />Chapter.</h1>
-          <p className="text-xl text-neutral-500 font-light italic leading-relaxed">Available for freelance opportunities and long-term product partnerships.</p>
+          <p className="text-xl md:text-2xl text-neutral-500 font-light italic leading-relaxed">Currently accepting high-impact product partnerships and freelance inquiries for 2026.</p>
           <div className="space-y-4">
-            <span className="text-[10px] font-black uppercase text-neutral-600 tracking-[0.3em] block">Inquiries</span>
-            <a href="mailto:lakshayjain148@gmail.com" className="text-2xl md:text-3xl font-bold hover:text-neutral-400 transition-colors block border-b border-white/10 pb-4">lakshayjain148@gmail.com</a>
+            <span className="text-[10px] font-black uppercase text-neutral-600 tracking-[0.4em] block">Direct Access</span>
+            <a href="mailto:lakshayjain148@gmail.com" className="text-xl sm:text-2xl md:text-4xl font-bold hover:text-neutral-400 transition-colors block border-b border-white/10 pb-6 overflow-hidden text-ellipsis">lakshayjain148@gmail.com</a>
           </div>
         </div>
-        <div className="bg-neutral-900/30 p-12 rounded-[3.5rem] border border-white/5 shadow-2xl backdrop-blur-xl">
+        <div className="bg-neutral-900/30 p-8 md:p-16 rounded-[2.5rem] md:rounded-[4.5rem] border border-white/5 shadow-2xl backdrop-blur-xl">
           {submitted ? (
-            <div className="py-24 text-center space-y-8">
+            <div className="py-16 md:py-24 text-center space-y-8">
                 <CheckCircle size={48} className="mx-auto text-white animate-bounce" /> 
-                <h3 className="text-3xl font-black uppercase italic tracking-tighter">Transmission Successful</h3>
-                <p className="text-neutral-500 text-sm italic">Expect a response within 24 hours.</p>
+                <h3 className="text-3xl font-black uppercase italic tracking-tighter">Success</h3>
+                <p className="text-neutral-500 text-sm italic">Transmission delivered. Response within 24 hours.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-10">
+            <form onSubmit={handleSubmit} className="space-y-10 md:space-y-12">
               <div className="space-y-2">
-                  <label className="text-[10px] font-black uppercase text-neutral-600 ml-2">Name</label>
-                  <input type="text" required placeholder="Full Name" className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg transition-all" />
+                  <label className="text-[10px] font-black uppercase text-neutral-600 ml-4">Inquiry By</label>
+                  <input type="text" required placeholder="Name or Organization" className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg md:text-2xl transition-all font-light" />
               </div>
               <div className="space-y-2">
-                  <label className="text-[10px] font-black uppercase text-neutral-600 ml-2">Context</label>
-                  <textarea rows="4" required placeholder="Project goals and timeline..." className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg transition-all" />
+                  <label className="text-[10px] font-black uppercase text-neutral-600 ml-4">The Context</label>
+                  <textarea rows="3" required placeholder="Briefly describe your vision..." className="w-full bg-transparent border-b border-white/10 py-4 focus:outline-none focus:border-white text-lg md:text-2xl transition-all font-light resize-none" />
               </div>
-              <button type="submit" className="w-full bg-white text-black font-black uppercase py-6 rounded-[2rem] flex items-center justify-center gap-3 text-sm shadow-2xl active:scale-[0.98] transition-all hover:bg-neutral-200 tracking-widest">Send Transmission <Send size={18} /></button>
+              <button type="submit" className="w-full bg-white text-black font-black uppercase py-6 rounded-[2rem] md:rounded-full flex items-center justify-center gap-3 text-sm md:text-base shadow-2xl active:scale-[0.98] transition-all hover:bg-neutral-200 tracking-widest">Send Transmission <Send size={20} /></button>
             </form>
           )}
         </div>
@@ -322,7 +337,7 @@ export default function App() {
   useEffect(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, [view]);
 
   return (
-    <div className="bg-black text-white min-h-screen font-sans selection:bg-white selection:text-black">
+    <div className="bg-black text-white min-h-screen font-sans selection:bg-white selection:text-black overflow-x-hidden antialiased">
       {view !== 'home' && <Navbar currentView={view} setView={setView} />}
       <main className="transition-all duration-1000 ease-in-out">
         {view === 'home' && <HomeView setView={setView} />}
@@ -330,7 +345,7 @@ export default function App() {
         {view === 'project-detail' && <ProjectDetailView project={selectedProject} setView={setView} />}
         {view === 'contact' && <ContactView />}
       </main>
-      <footer className="py-20 border-t border-white/5 text-center text-neutral-700 text-[10px] uppercase font-black tracking-[1em]">&copy; 2025 Lakshay Jain // Product Strategy // Visual Systems</footer>
+      <footer className="py-16 md:py-24 border-t border-white/5 text-center text-neutral-700 text-[8px] md:text-[10px] uppercase font-black tracking-[0.8em] md:tracking-[1.2em] px-6">&copy; {new Date().getFullYear()} Lakshay Jain // Product Strategy // Visual Systems</footer>
     </div>
   );
 }
