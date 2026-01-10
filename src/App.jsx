@@ -64,7 +64,7 @@ const PROJECTS = [
   },
   {
     id: 'sanchay-manager',
-    title: 'Sanchay Manager BTS ',
+    title: 'Sanchay Manager',
     year: '2026',
     category: 'Fintech Design',
     description: 'A personal finance tool built to replace anxiety with clarity through visual storytelling of data.',
