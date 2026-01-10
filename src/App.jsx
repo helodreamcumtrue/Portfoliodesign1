@@ -34,8 +34,8 @@ import pdf from './assets/NAYAPNBCASESTUDY.pdf';
 const PROJECTS = [
   {
     id: 'pnb-case-study',
-    title: 'New Better PNB',
-    year: '2026',
+    title: 'New Better PNB Bank',
+    year: '2025',
     category: 'UI/UX Design',
     description: "Redefining legacy banking by bridging the gap between complex financial systems and human intuition.",
     thumbnail: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800', 
@@ -45,13 +45,12 @@ const PROJECTS = [
       { type: 'text', content: "The Punjab National Bank application faced a common hurdle in legacy tech: a high cognitive load that often intimidated users, particularly the older generation. My mission was to prove that 'secure' and 'simple' can coexist. I wanted to create an interface where a 70-year-old grandfather could transfer funds with the same confidence as a 20-year-old student." },
       { type: 'image', src: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200' },
       { type: 'text', content: "I focused on 'Progressive Disclosure'—showing only what is necessary at each step. By stripping away visual noise and implementing a grid-based navigation system inspired by physical bank branch queues, I managed to reduce task completion time by 40% in user testing." }
-    ],
-    details: ["Goal: Inclusive Banking", "Focus: Accessibility", "Impact: 10M+ Users"]
+    ]
   },
   {
     id: 'laundify',
-    title: 'Laundify Ecosystem',
-    year: '2026',
+    title: 'Laundify',
+    year: '2025',
     category: 'Product Design',
     description: 'A comprehensive digital solution to the chaotic experience of shared campus laundry facilities.',
     thumbnail: lanund,
@@ -60,14 +59,13 @@ const PROJECTS = [
       { type: 'text', content: "Laundify was born out of a personal frustration: 'Laundry Anxiety.' In bustling student hubs, time is the most valuable currency, yet hours are wasted walking to laundry rooms only to find machines full." },
       { type: 'image', src: lanund },
       { type: 'text', content: "The design system uses high-contrast visual status indicators. Even in the dim light of a basement laundry room, the app remains perfectly legible. I integrated a real-time tracking system and a 'one-tap' scheduling feature." },
-      { type: 'image', src: gui },
       { type: 'text', content: "By digitizing the token system and adding automated 'Cycle Finished' notifications, Laundify doesn't just manage clothes—it gives students back their peace of mind." }
     ]
   },
   {
     id: 'sanchay-manager',
-    title: 'Sanchay Finance',
-    year: '2026',
+    title: 'Sanchay Finance BTS',
+    year: '2025',
     category: 'Fintech Design',
     description: 'Moving personal finance away from intimidating spreadsheets and toward visual storytelling.',
     thumbnail: san,
@@ -87,33 +85,112 @@ const PROJECTS = [
     thumbnail: cnest,
     banner: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "In a mental health crisis, the last thing a user needs is a cluttered, loud interface. For Clam Nest, my philosophy was 'Design as a digital exhale.'" },
-      { type: 'image', src: cnest },
-      { type: 'text', content: "I utilized a soft, organic palette and generous whitespace to create a sense of safety. The matching journey was simplified into a gentle 3-step flow." }
+      { type: 'text', content: "In a mental health crisis, the last thing a user needs is a cluttered, loud interface. For Clam Nest, my philosophy was 'Design as a digital exhale.' I utilized a soft, organic palette and generous whitespace to create a sense of safety." },
+      { type: 'image', src: cnest }
     ]
   },
   {
     id: 'crptic-hunt',
     title: 'Cryptic Hunt Grid',
-    year: '2026',
+    year: '2025',
     category: 'Visual Strategy',
     description: 'Using mystery as a currency to hack engagement and drive community participation.',
     thumbnail: chunt,
     banner: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "For the Cryptic Hunt, I didn't want to design simple posters; I wanted to build a mystery. I created a unified 9-grid Instagram layout where every tile revealed a hidden map." }
+      { type: 'text', content: "For the Cryptic Hunt, I created a unified 9-grid Instagram layout where every tile revealed a hidden map. This visual strategy resulted in a 300% increase in social sharing." },
+      { type: 'image', src: chunt }
     ]
   },
   {
     id: 'fooddle-rebrand',
-    title: 'Fooddle Identity',
-    year: '2026',
+    title: 'Fooddle Rebranding',
+    year: '2025',
     category: 'Graphic Design',
     description: 'Transforming a utility service into a lifestyle brand that celebrates the energy of flavor.',
     thumbnail: food,
     banner: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "Fooddle needed to break away from the generic look of logistics apps. I moved the brand toward 'Editorial Food-Tech' with high-saturation palettes." }
+      { type: 'text', content: "Fooddle needed to break away from generic logistics visuals. I moved the brand toward 'Editorial Food-Tech' with high-saturation palettes." },
+      { type: 'image', src: food }
+    ]
+  },
+  {
+    id: 'hackspirse',
+    title: 'Hackspirse',
+    year: '2026',
+    category: 'Event Branding',
+    description: 'Capturing the raw energy of high-octane creation through geometric precision.',
+    thumbnail: hack,
+    banner: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1584&h=396',
+    story: [
+      { type: 'text', content: "Hackathons are organized chaos. For Hackspirse, I designed a visual system based on bold geometric lines to represent the logic of code and innovation." },
+      { type: 'image', src: hack }
+    ]
+  },
+  {
+    id: 'campus-chronicles',
+    title: 'Campus Chronicles',
+    year: '2026',
+    category: 'Layout Design',
+    description: 'Modernizing student journalism by applying a digital-first grid to long-form storytelling.',
+    thumbnail: campus,
+    banner: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=1584&h=396',
+    story: [
+      { type: 'text', content: "I redesigned the Chronicles to feel like a high-fidelity magazine, utilizing modular grids to increase readability for a digital generation." },
+      { type: 'image', src: campus }
+    ]
+  },
+  {
+    id: 'acm-flex-design',
+    title: 'ACM Banner',
+    year: '2026',
+    category: 'Print Branding',
+    description: 'Large-scale print designs for professional event visibility.',
+    thumbnail: flex,
+    banner: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1584&h=396',
+    story: [
+      { type: 'text', content: "The challenge was translating digital identity into large-format physical assets without losing visual fidelity." },
+      { type: 'image', src: flex }
+    ]
+  },
+  {
+    id: 'enactus-recruitment',
+    title: 'Enactus Recruitment',
+    year: '2026',
+    category: 'Visual Identity',
+    description: 'Impactful visuals designed for social enterprise talent acquisition.',
+    thumbnail: enactus,
+    banner: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1584&h=396',
+    story: [
+      { type: 'text', content: "For Enactus, I created a visual narrative that emphasized community and social impact to attract mission-driven students." },
+      { type: 'image', src: enactus }
+    ]
+  },
+  {
+    id: 'acm-chaos',
+    title: 'Chaos Web Interface',
+    year: '2025',
+    category: 'Web Design',
+    description: 'User registration flows and interface systems for complex event networks.',
+    thumbnail: reg,
+    banner: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1584&h=396',
+    story: [
+      { type: 'text', content: "I designed a seamless registration flow that handled heavy user traffic while maintaining a clean, error-free experience." },
+      { type: 'image', src: reg }
+    ]
+  },
+  {
+    id: 'edc-poster',
+    title: 'Tech Event Visuals',
+    year: '2025',
+    category: 'Graphic Design',
+    description: 'Promotional visuals combining technical clarity with aesthetic appeal.',
+    thumbnail: biz,
+    banner: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1584&h=396',
+    story: [
+      { type: 'text', content: "By blending technical diagrams with abstract aesthetics, I created a poster series that intrigued both developers and designers." },
+      { type: 'image', src: biz }
     ]
   }
 ];
@@ -191,18 +268,17 @@ const ProjectDetailView = ({ project, setView }) => {
   
   return (
     <div className="min-h-screen pb-24 bg-black">
-      {/* 1584x396 RATIO BANNER - UNIQUE PER POST */}
+      {/* NARROW PROJECT BANNER */}
       <div className="w-full h-[15vh] md:h-[25vh] overflow-hidden relative border-b border-white/5">
         <img 
           src={project.banner || 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1584&h=396'} 
-          alt="Project Banner" 
+          alt="Banner" 
           className="w-full h-full object-cover brightness-[0.4]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        {/* BACK BUTTON POSITIONED CLEARLY ABOVE CONTENT */}
         <div className="pt-8 md:pt-12 mb-12">
           <button 
             onClick={() => setView('work')} 
@@ -212,7 +288,6 @@ const ProjectDetailView = ({ project, setView }) => {
           </button>
         </div>
         
-        {/* REFINED TITLE SIZE (NOT TOO LARGE) */}
         <div className="mb-16 md:mb-24">
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic font-sans">{project.title}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
@@ -234,7 +309,6 @@ const ProjectDetailView = ({ project, setView }) => {
           )}
         </div>
 
-        {/* Story Layout - Images constrained to max-w-4xl for better focus */}
         <div className="space-y-16 md:space-y-32">
           {project.story ? (
             project.story.map((item, idx) => (
@@ -304,6 +378,7 @@ export default function App() {
   const [view, setView] = useState('home');
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // Sync state with browser navigation
   useEffect(() => {
     const handlePopState = (event) => {
       if (view === 'project-detail') setView('work');
