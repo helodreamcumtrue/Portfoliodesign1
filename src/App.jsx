@@ -154,35 +154,45 @@ const Navbar = ({ currentView, setView }) => (
 );
 
 const HomeView = ({ setView }) => (
-  <div className="min-h-screen flex flex-col md:flex-row bg-black overflow-x-hidden">
-    <div className="w-full md:w-1/2 h-[60vh] md:h-screen relative overflow-hidden group">
-      <img 
-        src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1600" 
-        alt="Creative Abstraction" 
-        className="w-full h-full object-cover grayscale brightness-[0.2] group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-50 transition-all duration-[2000ms] ease-in-out" 
-      />
-      <div className="absolute inset-0 flex flex-col items-center justify-center p-8 md:p-12 text-center">
-        <h1 className="text-5xl sm:text-7xl md:text-9xl font-black text-white italic tracking-tighter mix-blend-overlay uppercase leading-none select-none font-sans">Lakshay<br />Jain</h1>
-        <p className="mt-6 md:mt-8 text-white/40 text-[10px] md:text-xs font-black tracking-[0.4em] md:tracking-[0.8em] uppercase font-sans">Visual Systems // 2026</p>
-      </div>
-    </div>
-    <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-24 bg-neutral-900/40">
-      <div className="max-w-md">
-        <h2 className="text-4xl md:text-7xl font-bold mb-6 md:mb-8 tracking-tighter font-sans">Strategic Design.</h2>
-        <p className="text-lg md:text-xl text-neutral-400 mb-8 md:mb-12 leading-relaxed font-light italic border-l-2 border-white/10 pl-6 font-serif">"I don't just build pixels; I architect digital products that solve the complex frictions of everyday human life."</p>
-        <div className="grid grid-cols-1 gap-6 mb-12">
-          <div className="flex items-center gap-4 text-neutral-500">
-            <div className="p-3 rounded-full bg-white/5"><Smartphone size={20} /></div>
-            <p className="text-[10px] font-bold uppercase tracking-widest font-sans">Product Strategy</p>
-          </div>
-          <div className="flex items-center gap-4 text-neutral-500">
-            <div className="p-3 rounded-full bg-white/5"><Layers size={20} /></div>
-            <p className="text-[10px] font-bold uppercase tracking-widest font-sans">Interface Architecture</p>
+  <div className="min-h-screen flex flex-col bg-black overflow-x-hidden pt-16">
+    {/* 1584x396 Banner Component */}
+    <div className="w-full px-4 md:px-8 mt-4 md:mt-8">
+      <div className="max-w-[1584px] mx-auto h-[200px] md:h-[396px] relative rounded-[2rem] overflow-hidden group shadow-2xl border border-white/5">
+        <img 
+          src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1584&h=396" 
+          alt="Design Banner" 
+          className="w-full h-full object-cover transition-transform duration-[3000ms] group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center p-8 md:p-16">
+          <div className="max-w-xl">
+             <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/60 mb-4 block">Visual Strategy</span>
+             <h2 className="text-3xl md:text-5xl font-black text-white leading-tight uppercase italic tracking-tighter">Good Design is <br/>Invisible.</h2>
           </div>
         </div>
-        <button onClick={() => setView('work')} className="group w-full md:w-auto px-10 md:px-12 py-5 bg-white text-black rounded-full flex items-center justify-center gap-3 font-black text-sm uppercase tracking-widest shadow-2xl transition-all hover:scale-105 active:scale-95 font-sans">
-          Explore Archive <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-        </button>
+      </div>
+    </div>
+
+    <div className="flex flex-col md:flex-row flex-grow">
+      <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-24">
+        <div className="max-w-md">
+          <h1 className="text-6xl sm:text-7xl md:text-9xl font-black text-white italic tracking-tighter uppercase leading-[0.8] mb-8 select-none font-sans">Lakshay<br />Jain</h1>
+          <p className="text-white/40 text-[10px] md:text-xs font-black tracking-[0.8em] uppercase font-sans mb-12">Visual Systems // 2026</p>
+          
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tighter font-sans">Strategic Design.</h2>
+          <p className="text-lg text-neutral-400 mb-8 md:mb-12 leading-relaxed font-light italic border-l-2 border-white/10 pl-6 font-serif">"I don't just build pixels; I architect digital products that solve the complex frictions of everyday human life."</p>
+          
+          <button onClick={() => setView('work')} className="group w-full md:w-auto px-10 md:px-12 py-5 bg-white text-black rounded-full flex items-center justify-center gap-3 font-black text-sm uppercase tracking-widest shadow-2xl transition-all hover:scale-105 active:scale-95 font-sans">
+            Explore Archive <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+      </div>
+      
+      <div className="w-full md:w-1/2 relative min-h-[400px] md:min-h-screen overflow-hidden group">
+        <img 
+          src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1600" 
+          alt="Abstraction" 
+          className="w-full h-full object-cover grayscale brightness-[0.2] group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-50 transition-all duration-[2000ms] ease-in-out" 
+        />
       </div>
     </div>
   </div>
@@ -222,27 +232,18 @@ const ProjectDetailView = ({ project, setView }) => {
   useEffect(() => { window.scrollTo(0, 0); }, []);
   
   return (
-    <div className="min-h-screen pt-20 md:pt-12 pb-24 bg-black">
+    <div className="min-h-screen pt-20 md:pt-24 bg-black">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        <button onClick={() => setView('work')} className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-8 md:mb-12 uppercase tracking-[0.2em] text-[10px] font-black font-sans">
-          <ArrowLeft size={14} /> Back to Archive
+        <button onClick={() => setView('work')} className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors mb-12 md:mb-16 uppercase tracking-[0.2em] text-[10px] font-black font-sans group">
+          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Archive
         </button>
-
-        {/* HERO IMAGE - Adjusted size to not be too overwhelming */}
-        <div className="w-full max-w-5xl mx-auto mb-12 md:mb-20 rounded-[1.5rem] md:rounded-[3rem] overflow-hidden shadow-2xl border border-white/5 bg-neutral-900 group">
-          <img 
-            src={project.thumbnail} 
-            alt={project.title} 
-            className="w-full h-auto object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[3000ms] ease-out" 
-          />
-        </div>
         
-        {/* CONTENT */}
-        <div className="mb-16 md:mb-32 max-w-5xl mx-auto">
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic font-sans">{project.title}</h1>
+        {/* CONTENT STARTS DIRECTLY (HERO IMAGE REMOVED FROM TOP) */}
+        <div className="mb-16 md:mb-32 max-w-5xl">
+          <h1 className="text-5xl sm:text-7xl md:text-9xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic font-sans">{project.title}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             <div className="lg:col-span-3">
-              <p className="text-lg md:text-2xl text-neutral-300 font-light leading-relaxed italic border-l-4 border-white/10 pl-6 md:pl-10 font-serif">
+              <p className="text-xl md:text-3xl text-neutral-300 font-light leading-relaxed italic border-l-4 border-white/10 pl-6 md:pl-10 font-serif">
                 {project.description}
               </p>
             </div>
@@ -260,14 +261,14 @@ const ProjectDetailView = ({ project, setView }) => {
         </div>
 
         {/* Story Layout - Balanced width for readability */}
-        <div className="space-y-16 md:space-y-24 max-w-5xl mx-auto">
+        <div className="space-y-16 md:space-y-24">
           {project.story ? (
             project.story.map((item, idx) => (
-              <div key={idx} className="max-w-4xl mx-auto">
+              <div key={idx} className="max-w-4xl">
                 {item.type === 'text' ? (
-                  <p className="text-lg md:text-xl text-neutral-400 leading-relaxed font-light italic font-serif">{item.content}</p>
+                  <p className="text-lg md:text-2xl text-neutral-400 leading-relaxed font-light italic font-serif">{item.content}</p>
                 ) : (
-                  <div className="w-full max-w-4xl mx-auto bg-neutral-900 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5 my-8 md:my-0 group">
+                  <div className="w-full max-w-4xl bg-neutral-900 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5 my-8 md:my-0 group">
                     <img src={item.src} alt="Process visual" className="w-full h-auto transform transition-transform duration-[1200ms] group-hover:scale-105" />
                   </div>
                 )}
@@ -275,7 +276,7 @@ const ProjectDetailView = ({ project, setView }) => {
             ))
           ) : (
             project.images?.map((img, idx) => (
-              <div key={idx} className="w-full max-w-4xl mx-auto bg-neutral-900 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5">
+              <div key={idx} className="w-full max-w-4xl bg-neutral-900 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5">
                 <img src={img} alt="Detail" className="w-full h-auto" />
               </div>
             ))
@@ -339,18 +340,24 @@ export default function App() {
   // LOGIC: Enable browser back button to work with state-based navigation
   useEffect(() => {
     const handlePopState = (event) => {
-      if (view === 'project-detail' || view === 'contact') {
+      // If we are in detail view, go back to archive
+      if (view === 'project-detail') {
         setView('work');
-      } else if (view === 'work') {
+      } 
+      // If we are in archive/contact, go home
+      else if (view === 'work' || view === 'contact') {
         setView('home');
       }
     };
 
     window.addEventListener('popstate', handlePopState);
     
-    // Push a dummy state so there's something to "pop" back from
-    if (view !== 'home') {
-      window.history.pushState({ view }, "");
+    // Manage browser history stack
+    if (view === 'home') {
+       // Root state
+    } else {
+       // Push current view into history so "back" triggers popstate
+       window.history.pushState({ view }, "");
     }
 
     return () => window.removeEventListener('popstate', handlePopState);
@@ -361,7 +368,7 @@ export default function App() {
   }, [view]);
 
   return (
-    <div className="bg-black text-white min-h-screen selection:bg-white selection:text-black overflow-x-hidden antialiased">
+    <div className="bg-black text-white min-h-screen font-sans selection:bg-white selection:text-black overflow-x-hidden antialiased">
       {view !== 'home' && <Navbar currentView={view} setView={setView} />}
       <main className="transition-all duration-1000 ease-in-out">
         {view === 'home' && <HomeView setView={setView} />}
