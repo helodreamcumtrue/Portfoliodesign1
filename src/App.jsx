@@ -50,17 +50,17 @@ const PROJECTS = [
   },
   {
     id: 'laundify',
-    title: 'Laundify',
+    title: 'Laundrify',
     year: '2025',
     category: 'Product Design',
     description: 'A comprehensive digital solution to the chaotic experience of shared campus laundry facilities.',
     thumbnail: lanund,
     banner: 'https://images.unsplash.com/photo-1545173153-5dd736fb688a?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "Laundify was born out of a personal frustration: 'Laundry Anxiety.' In bustling student hubs, time is the most valuable currency, yet hours are wasted walking to laundry rooms only to find machines full." },
+      { type: 'text', content: "Laundrify was born out of a personal frustration: 'Laundry Anxiety.' In bustling student hubs, time is the most valuable currency, yet hours are wasted walking to laundry rooms only to find machines full." },
       { type: 'image', src: lanund },
       { type: 'text', content: "The design system uses high-contrast visual status indicators. Even in the dim light of a basement laundry room, the app remains perfectly legible. I integrated a real-time tracking system and a 'one-tap' scheduling feature." },
-      { type: 'text', content: "By digitizing the token system and adding automated 'Cycle Finished' notifications, Laundify doesn't just manage clothes—it gives students back their peace of mind." }
+      { type: 'text', content: "By digitizing the token system and adding automated 'Cycle Finished' notifications, Laundrify doesn't just manage clothes—it gives students back their peace of mind." }
     ]
   },
   {
@@ -414,5 +414,6 @@ export default function App() {
     </div>
   );
 }
+
 
 
