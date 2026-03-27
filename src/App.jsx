@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   ExternalLink, 
   ChevronRight, 
@@ -31,6 +31,25 @@ import biz from './assets/edcpost.png';
 import hack from './assets/lips.png';
 import pdf from './assets/NAYAPNBCASESTUDY.pdf';
 import pbn from './assets/pnbb.png';
+
+// --- CATEGORY DEFINITIONS ---
+// Maps each project id to one of the 6 user-defined categories
+const CATEGORY_MAP = {
+  'pnb-case-study':     'UI Design',
+  'laundify':           'Product',
+  'sanchay-manager':    'UI Design',
+  'clam-nest':          'Branding',
+  'crptic-hunt':        'Poster',
+  'fooddle-rebrand':    'Branding',
+  'hackspirse':         'Poster',
+  'campus-chronicles':  'Printables',
+  'acm-flex-design':    'Printables',
+  'enactus-recruitment':'Merch',
+  'acm-chaos':          'Product',
+  'edc-poster':         'Poster',
+};
+
+const ALL_CATEGORIES = ['All', 'UI Design', 'Branding', 'Product', 'Printables', 'Poster', 'Merch'];
 
 const PROJECTS = [
   {
@@ -236,34 +255,110 @@ const HomeView = ({ setView }) => (
   </div>
 );
 
-const WorkView = ({ setView, setSelectedProject }) => (
-  <div className="min-h-screen pt-24 md:pt-32 pb-24 px-4 md:px-12 max-w-7xl mx-auto font-sans">
-    <div className="max-w-2xl mb-16 md:mb-24">
-      <p className="text-white/20 uppercase tracking-[0.4em] text-[10px] font-black mb-4 underline underline-offset-8 decoration-white/10">Selected Works</p>
-      <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic">The Archive.</h2>
-      <p className="text-neutral-500 text-lg md:text-xl border-l-2 border-neutral-800 pl-8 leading-relaxed italic font-serif">A curated collection of design-led solutions.</p>
-    </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 md:gap-y-20">
-      {PROJECTS.map((project) => (
-        <div key={project.id} onClick={() => { setSelectedProject(project); setView('project-detail'); }} className="group cursor-pointer">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-neutral-900 border border-white/5 shadow-2xl transition-all duration-700 group-hover:border-white/20">
-            <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1200ms]" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-              <span className="text-[10px] font-black uppercase text-white tracking-[0.3em] flex items-center gap-3">View Case Study <ChevronRight size={14} /></span>
-            </div>
-          </div>
-          <div className="mt-6 px-1 flex justify-between items-start">
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold tracking-tight group-hover:text-white transition-colors">{project.title}</h3>
-              <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mt-2">{project.category}</p>
-            </div>
-            <span className="text-[9px] font-bold text-neutral-700 bg-white/5 px-3 py-1.5 rounded-full">{project.year}</span>
+// ─── ONLY CHANGED COMPONENT ──────────────────────────────────────────────────
+const WorkView = ({ setView, setSelectedProject }) => {
+  const [activeCategory, setActiveCategory] = useState('All');
+  const tabsRef = useRef(null);
+
+  const filteredProjects = activeCategory === 'All'
+    ? PROJECTS
+    : PROJECTS.filter(p => CATEGORY_MAP[p.id] === activeCategory);
+
+  return (
+    <div className="min-h-screen bg-black font-sans">
+
+      {/* ── Sticky category tabs — sits just below the fixed navbar (top: 57px) ── */}
+      <div
+        ref={tabsRef}
+        className="sticky z-[90] bg-black/95 backdrop-blur-xl border-b border-white/5"
+        style={{ top: '57px' }}
+      >
+        <div className="max-w-7xl mx-auto px-4 md:px-12 overflow-x-auto scrollbar-none">
+          <div className="flex gap-0 min-w-max">
+            {ALL_CATEGORIES.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`
+                  relative px-5 md:px-7 py-4 text-[10px] font-black uppercase tracking-[0.2em] transition-all whitespace-nowrap
+                  ${activeCategory === cat
+                    ? 'text-white'
+                    : 'text-neutral-600 hover:text-neutral-300'
+                  }
+                `}
+              >
+                {cat}
+                {/* active underline indicator */}
+                {activeCategory === cat && (
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-white rounded-full" />
+                )}
+                {/* project count badge */}
+                <span className={`ml-2 text-[9px] font-bold tabular-nums ${activeCategory === cat ? 'text-white/40' : 'text-neutral-700'}`}>
+                  {cat === 'All'
+                    ? PROJECTS.length
+                    : PROJECTS.filter(p => CATEGORY_MAP[p.id] === cat).length}
+                </span>
+              </button>
+            ))}
           </div>
         </div>
-      ))}
+      </div>
+
+      {/* ── Archive heading ── */}
+      <div className="pt-12 md:pt-16 pb-0 px-4 md:px-12 max-w-7xl mx-auto">
+        <div className="max-w-2xl mb-16 md:mb-24">
+          <p className="text-white/20 uppercase tracking-[0.4em] text-[10px] font-black mb-4 underline underline-offset-8 decoration-white/10">Selected Works</p>
+          <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic">The Archive.</h2>
+          <p className="text-neutral-500 text-lg md:text-xl border-l-2 border-neutral-800 pl-8 leading-relaxed italic font-serif">
+            {activeCategory === 'All'
+              ? 'A curated collection of design-led solutions.'
+              : `${activeCategory} — ${filteredProjects.length} project${filteredProjects.length !== 1 ? 's' : ''}`}
+          </p>
+        </div>
+
+        {/* ── Project grid ── */}
+        {filteredProjects.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 md:gap-y-20 pb-24">
+            {filteredProjects.map((project) => (
+              <div
+                key={project.id}
+                onClick={() => { setSelectedProject(project); setView('project-detail'); }}
+                className="group cursor-pointer"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-neutral-900 border border-white/5 shadow-2xl transition-all duration-700 group-hover:border-white/20">
+                  <img
+                    src={project.thumbnail}
+                    alt={project.title}
+                    className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1200ms]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                    <span className="text-[10px] font-black uppercase text-white tracking-[0.3em] flex items-center gap-3">
+                      View Case Study <ChevronRight size={14} />
+                    </span>
+                  </div>
+                </div>
+                <div className="mt-6 px-1 flex justify-between items-start">
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold tracking-tight group-hover:text-white transition-colors">{project.title}</h3>
+                    <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mt-2">{project.category}</p>
+                  </div>
+                  <span className="text-[9px] font-bold text-neutral-700 bg-white/5 px-3 py-1.5 rounded-full">{project.year}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          /* Empty state — matches site's aesthetic */
+          <div className="pb-24 flex flex-col items-center justify-center py-32 text-center">
+            <p className="text-neutral-700 text-[10px] font-black uppercase tracking-[0.6em] mb-4">Nothing here yet</p>
+            <p className="text-neutral-600 text-sm italic font-serif">Projects in this category are coming soon.</p>
+          </div>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
+// ─────────────────────────────────────────────────────────────────────────────
 
 const ProjectDetailView = ({ project, setView }) => {
   if (!project) return null;
@@ -384,7 +479,6 @@ export default function App() {
   const [view, setView] = useState('home');
   const [selectedProject, setSelectedProject] = useState(null);
 
-  // Sync state with browser navigation
   useEffect(() => {
     const handlePopState = (event) => {
       if (view === 'project-detail') setView('work');
@@ -414,7 +508,3 @@ export default function App() {
     </div>
   );
 }
-
-
-
-
