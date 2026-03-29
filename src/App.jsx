@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   ExternalLink, 
   ChevronRight, 
@@ -33,20 +33,19 @@ import pdf from './assets/NAYAPNBCASESTUDY.pdf';
 import pbn from './assets/pnbb.png';
 
 // --- CATEGORY DEFINITIONS ---
-// Maps each project id to one of the 6 user-defined categories
 const CATEGORY_MAP = {
-  'pnb-case-study':     'UI Design',
-  'laundify':           'Product',
-  'sanchay-manager':    'UI Design',
-  'clam-nest':          'Branding',
-  'crptic-hunt':        'Poster',
-  'fooddle-rebrand':    'Branding',
-  'hackspirse':         'Poster',
-  'campus-chronicles':  'Printables',
-  'acm-flex-design':    'Printables',
-  'enactus-recruitment':'Merch',
-  'acm-chaos':          'Product',
-  'edc-poster':         'Poster',
+  'pnb-case-study':      'UI Design',
+  'laundify':            'Product',
+  'sanchay-manager':     'UI Design',
+  'clam-nest':           'Branding',
+  'crptic-hunt':         'Poster',
+  'fooddle-rebrand':     'Branding',
+  'hackspirse':          'Poster',
+  'campus-chronicles':   'Printables',
+  'acm-flex-design':     'Printables',
+  'enactus-recruitment': 'Merch',
+  'acm-chaos':           'Product',
+  'edc-poster':          'Poster',
 };
 
 const ALL_CATEGORIES = ['All', 'UI Design', 'Branding', 'Product', 'Printables', 'Poster', 'Merch'];
@@ -58,11 +57,11 @@ const PROJECTS = [
     year: '2025',
     category: 'UI/UX Design',
     description: "Redefining legacy banking by bridging the gap between complex financial systems and human intuition.",
-    thumbnail: pbn, 
-    banner: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=1584&h=396', 
-    pdfLink: pdf, 
+    thumbnail: pbn,
+    banner: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=1584&h=396',
+    pdfLink: pdf,
     story: [
-      { type: 'text', content: "The Punjab National Bank application faced a common hurdle in legacy tech: a high cognitive load that often intimidated users, particularly the older generation. My mission was to prove that 'secure' and 'simple' can coexist. I wanted to create an interface where a 70-year-old grandfather could transfer funds with the same confidence as a 20-year-old student." },
+      { type: 'text', content: "The Punjab National Bank application faced a common hurdle in legacy tech: a high cognitive load that often intimidated users, particularly the older generation. My mission was to prove that 'secure' and 'simple' can coexist." },
       { type: 'image', src: pbn },
       { type: 'text', content: "I focused on 'Progressive Disclosure'—showing only what is necessary at each step. By stripping away visual noise and implementing a grid-based navigation system inspired by physical bank branch queues, I managed to reduce task completion time by 40% in user testing." }
     ]
@@ -78,7 +77,7 @@ const PROJECTS = [
     story: [
       { type: 'text', content: "Laundrify was born out of a personal frustration: 'Laundry Anxiety.' In bustling student hubs, time is the most valuable currency, yet hours are wasted walking to laundry rooms only to find machines full." },
       { type: 'image', src: lanund },
-      { type: 'text', content: "The design system uses high-contrast visual status indicators. Even in the dim light of a basement laundry room, the app remains perfectly legible. I integrated a real-time tracking system and a 'one-tap' scheduling feature." },
+      { type: 'text', content: "The design system uses high-contrast visual status indicators. Even in the dim light of a basement laundry room, the app remains perfectly legible." },
       { type: 'text', content: "By digitizing the token system and adding automated 'Cycle Finished' notifications, Laundrify doesn't just manage clothes—it gives students back their peace of mind." }
     ]
   },
@@ -105,7 +104,7 @@ const PROJECTS = [
     thumbnail: cnest,
     banner: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "In a mental health crisis, the last thing a user needs is a cluttered, loud interface. For Clam Nest, my philosophy was 'Design as a digital exhale.' I utilized a soft, organic palette and generous whitespace to create a sense of safety." },
+      { type: 'text', content: "In a mental health crisis, the last thing a user needs is a cluttered, loud interface. For Clam Nest, my philosophy was 'Design as a digital exhale.'" },
       { type: 'image', src: cnest }
     ]
   },
@@ -233,10 +232,10 @@ const Navbar = ({ currentView, setView }) => (
 const HomeView = ({ setView }) => (
   <div className="min-h-screen flex flex-col md:flex-row bg-black overflow-x-hidden">
     <div className="w-full md:w-1/2 h-[60vh] md:h-screen relative overflow-hidden group">
-      <img 
-        src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1600" 
-        alt="Abstraction" 
-        className="w-full h-full object-cover grayscale brightness-[0.2] group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-50 transition-all duration-[2000ms] ease-in-out" 
+      <img
+        src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1600"
+        alt="Abstraction"
+        className="w-full h-full object-cover grayscale brightness-[0.2] group-hover:scale-110 group-hover:grayscale-0 group-hover:brightness-50 transition-all duration-[2000ms] ease-in-out"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center p-8 md:p-12 text-center">
         <h1 className="text-5xl sm:text-7xl md:text-9xl font-black text-white italic tracking-tighter mix-blend-overlay uppercase leading-none select-none font-sans">Lakshay<br />Jain</h1>
@@ -258,102 +257,140 @@ const HomeView = ({ setView }) => (
 // ─── ONLY CHANGED COMPONENT ──────────────────────────────────────────────────
 const WorkView = ({ setView, setSelectedProject }) => {
   const [activeCategory, setActiveCategory] = useState('All');
-  const tabsRef = useRef(null);
 
   const filteredProjects = activeCategory === 'All'
     ? PROJECTS
     : PROJECTS.filter(p => CATEGORY_MAP[p.id] === activeCategory);
 
+  const countFor = (cat) =>
+    cat === 'All' ? PROJECTS.length : PROJECTS.filter(p => CATEGORY_MAP[p.id] === cat).length;
+
   return (
-    <div className="min-h-screen bg-black font-sans">
+    <div className="min-h-screen bg-black font-sans pt-[57px]">
+      <div className="flex min-h-[calc(100vh-57px)]">
 
-      {/* ── Sticky category tabs — sits just below the fixed navbar (top: 57px) ── */}
-      <div
-        ref={tabsRef}
-        className="sticky z-[90] bg-black/95 backdrop-blur-xl border-b border-white/5"
-        style={{ top: '57px' }}
-      >
-        <div className="max-w-7xl mx-auto px-4 md:px-12 overflow-x-auto scrollbar-none">
-          <div className="flex gap-0 min-w-max">
-            {ALL_CATEGORIES.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`
-                  relative px-5 md:px-7 py-4 text-[10px] font-black uppercase tracking-[0.2em] transition-all whitespace-nowrap
-                  ${activeCategory === cat
-                    ? 'text-white'
-                    : 'text-neutral-600 hover:text-neutral-300'
-                  }
-                `}
-              >
-                {cat}
-                {/* active underline indicator */}
-                {activeCategory === cat && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-white rounded-full" />
-                )}
-                {/* project count badge */}
-                <span className={`ml-2 text-[9px] font-bold tabular-nums ${activeCategory === cat ? 'text-white/40' : 'text-neutral-700'}`}>
-                  {cat === 'All'
-                    ? PROJECTS.length
-                    : PROJECTS.filter(p => CATEGORY_MAP[p.id] === cat).length}
-                </span>
-              </button>
-            ))}
+        {/* ── Vertical sidebar rail — desktop only, sticky full height ── */}
+        <aside className="hidden md:flex flex-col sticky top-[57px] h-[calc(100vh-57px)] w-[192px] shrink-0 border-r border-white/5 pt-14 pb-8 px-5">
+
+          <p className="text-[9px] font-black uppercase tracking-[0.35em] text-neutral-700 mb-5 px-3">Filter</p>
+
+          <nav className="flex flex-col gap-0.5 flex-1">
+            {ALL_CATEGORIES.map(cat => {
+              const isActive = activeCategory === cat;
+              const count = countFor(cat);
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`
+                    group w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-left
+                    transition-all duration-150
+                    ${isActive
+                      ? 'bg-white'
+                      : 'hover:bg-white/5'
+                    }
+                  `}
+                >
+                  <span className={`text-[10px] font-black uppercase tracking-[0.15em] transition-colors
+                    ${isActive ? 'text-black' : 'text-neutral-600 group-hover:text-neutral-200'}`}>
+                    {cat}
+                  </span>
+                  <span className={`text-[9px] font-bold tabular-nums transition-colors
+                    ${isActive ? 'text-black/40' : 'text-neutral-800 group-hover:text-neutral-500'}`}>
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
+          </nav>
+
+          {/* Bottom brand stamp */}
+          <div className="pt-6 border-t border-white/5 px-3">
+            <p className="text-[8px] font-black uppercase tracking-[0.25em] text-neutral-800 leading-loose">
+              Lakshay Jain<br />Visual Systems<br />© 2026
+            </p>
+          </div>
+        </aside>
+
+        {/* ── Mobile: horizontal pill strip below navbar ── */}
+        <div className="md:hidden fixed top-[57px] left-0 right-0 z-[90] bg-black/95 backdrop-blur-xl border-b border-white/5">
+          <div className="flex overflow-x-auto scrollbar-none px-4 gap-2 py-3">
+            {ALL_CATEGORIES.map(cat => {
+              const isActive = activeCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`
+                    flex-shrink-0 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.15em]
+                    transition-all border
+                    ${isActive
+                      ? 'bg-white text-black border-white'
+                      : 'text-neutral-600 border-white/10 hover:text-white hover:border-white/30'
+                    }
+                  `}
+                >
+                  {cat}
+                </button>
+              );
+            })}
           </div>
         </div>
-      </div>
 
-      {/* ── Archive heading ── */}
-      <div className="pt-12 md:pt-16 pb-0 px-4 md:px-12 max-w-7xl mx-auto">
-        <div className="max-w-2xl mb-16 md:mb-24">
-          <p className="text-white/20 uppercase tracking-[0.4em] text-[10px] font-black mb-4 underline underline-offset-8 decoration-white/10">Selected Works</p>
-          <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic">The Archive.</h2>
-          <p className="text-neutral-500 text-lg md:text-xl border-l-2 border-neutral-800 pl-8 leading-relaxed italic font-serif">
-            {activeCategory === 'All'
-              ? 'A curated collection of design-led solutions.'
-              : `${activeCategory} — ${filteredProjects.length} project${filteredProjects.length !== 1 ? 's' : ''}`}
-          </p>
-        </div>
+        {/* ── Main content ── */}
+        <main className="flex-1 min-w-0 pt-10 md:pt-14 pb-24 px-6 md:px-12 mt-12 md:mt-0">
 
-        {/* ── Project grid ── */}
-        {filteredProjects.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 md:gap-y-20 pb-24">
-            {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                onClick={() => { setSelectedProject(project); setView('project-detail'); }}
-                className="group cursor-pointer"
-              >
-                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-neutral-900 border border-white/5 shadow-2xl transition-all duration-700 group-hover:border-white/20">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1200ms]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
-                    <span className="text-[10px] font-black uppercase text-white tracking-[0.3em] flex items-center gap-3">
-                      View Case Study <ChevronRight size={14} />
-                    </span>
+          {/* Archive heading */}
+          <div className="max-w-2xl mb-14 md:mb-20">
+            <p className="text-white/20 uppercase tracking-[0.4em] text-[10px] font-black mb-4 underline underline-offset-8 decoration-white/10">
+              Selected Works
+            </p>
+            <h2 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 italic">The Archive.</h2>
+            <p className="text-neutral-500 text-lg md:text-xl border-l-2 border-neutral-800 pl-8 leading-relaxed italic font-serif">
+              {activeCategory === 'All'
+                ? 'A curated collection of design-led solutions.'
+                : `${activeCategory} — ${filteredProjects.length} project${filteredProjects.length !== 1 ? 's' : ''}`}
+            </p>
+          </div>
+
+          {/* Grid */}
+          {filteredProjects.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 md:gap-y-20">
+              {filteredProjects.map((project) => (
+                <div
+                  key={project.id}
+                  onClick={() => { setSelectedProject(project); setView('project-detail'); }}
+                  className="group cursor-pointer"
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-neutral-900 border border-white/5 shadow-2xl transition-all duration-700 group-hover:border-white/20">
+                    <img
+                      src={project.thumbnail}
+                      alt={project.title}
+                      className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1200ms]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                      <span className="text-[10px] font-black uppercase text-white tracking-[0.3em] flex items-center gap-3">
+                        View Case Study <ChevronRight size={14} />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="mt-6 px-1 flex justify-between items-start">
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold tracking-tight group-hover:text-white transition-colors">{project.title}</h3>
+                      <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mt-2">{project.category}</p>
+                    </div>
+                    <span className="text-[9px] font-bold text-neutral-700 bg-white/5 px-3 py-1.5 rounded-full">{project.year}</span>
                   </div>
                 </div>
-                <div className="mt-6 px-1 flex justify-between items-start">
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-bold tracking-tight group-hover:text-white transition-colors">{project.title}</h3>
-                    <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500 mt-2">{project.category}</p>
-                  </div>
-                  <span className="text-[9px] font-bold text-neutral-700 bg-white/5 px-3 py-1.5 rounded-full">{project.year}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          /* Empty state — matches site's aesthetic */
-          <div className="pb-24 flex flex-col items-center justify-center py-32 text-center">
-            <p className="text-neutral-700 text-[10px] font-black uppercase tracking-[0.6em] mb-4">Nothing here yet</p>
-            <p className="text-neutral-600 text-sm italic font-serif">Projects in this category are coming soon.</p>
-          </div>
-        )}
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-col items-center justify-center py-40 text-center">
+              <p className="text-neutral-700 text-[10px] font-black uppercase tracking-[0.6em] mb-4">Nothing here yet</p>
+              <p className="text-neutral-600 text-sm italic font-serif">Projects in this category are coming soon.</p>
+            </div>
+          )}
+        </main>
       </div>
     </div>
   );
@@ -363,14 +400,13 @@ const WorkView = ({ setView, setSelectedProject }) => {
 const ProjectDetailView = ({ project, setView }) => {
   if (!project) return null;
   useEffect(() => { window.scrollTo(0, 0); }, []);
-  
+
   return (
     <div className="min-h-screen pb-24 bg-black font-sans">
-      {/* NARROW PROJECT BANNER */}
       <div className="w-full h-[15vh] md:h-[25vh] overflow-hidden relative border-b border-white/5">
-        <img 
-          src={project.banner || 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1584&h=396'} 
-          alt="Banner" 
+        <img
+          src={project.banner || 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&q=80&w=1584&h=396'}
+          alt="Banner"
           className="w-full h-full object-cover brightness-[0.4]"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent" />
@@ -378,14 +414,14 @@ const ProjectDetailView = ({ project, setView }) => {
 
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="pt-8 md:pt-12 mb-12">
-          <button 
-            onClick={() => setView('work')} 
+          <button
+            onClick={() => setView('work')}
             className="flex items-center gap-2 text-neutral-500 hover:text-white transition-all uppercase tracking-[0.3em] text-[10px] font-black group"
           >
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Archive
           </button>
         </div>
-        
+
         <div className="mb-16 md:mb-24">
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-12 italic">{project.title}</h1>
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
@@ -399,7 +435,7 @@ const ProjectDetailView = ({ project, setView }) => {
               <div><p className="text-[10px] font-black uppercase mb-1">Year</p><p className="text-xs md:text-sm font-bold text-white">{project.year}</p></div>
             </div>
           </div>
-          
+
           {project.pdfLink && (
             <a href={project.pdfLink} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-full md:w-auto gap-3 px-10 md:px-12 py-5 bg-white text-black rounded-2xl hover:bg-neutral-200 transition-all font-black uppercase text-[10px] md:text-xs tracking-widest mt-12 shadow-xl">
               <FileText size={18} /> View Case Study PDF
@@ -430,49 +466,48 @@ const ProjectDetailView = ({ project, setView }) => {
         </div>
 
         <div className="mt-40 pt-24 border-t border-white/10 text-center">
-            <p className="text-neutral-600 uppercase text-[9px] md:text-[10px] font-black tracking-[0.6em] mb-8 italic">The story continues</p>
-            <button onClick={() => setView('work')} className="text-3xl md:text-5xl font-black hover:text-neutral-400 uppercase tracking-tighter transition-all italic underline decoration-white/10 underline-offset-[16px]">Next Project</button>
+          <p className="text-neutral-600 uppercase text-[9px] md:text-[10px] font-black tracking-[0.6em] mb-8 italic">The story continues</p>
+          <button onClick={() => setView('work')} className="text-3xl md:text-5xl font-black hover:text-neutral-400 uppercase tracking-tighter transition-all italic underline decoration-white/10 underline-offset-[16px]">Next Project</button>
         </div>
       </div>
     </div>
   );
 };
 
-
 const ContactView = () => {
-    const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-    const [submitted, setSubmitted] = useState(false);
-    const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); setTimeout(() => setSubmitted(false), 5000); };
-    return (
-        <div className="min-h-screen pt-40 pb-24 px-6 max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                <div>
-                    <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-tight mb-8">Get In<br />Touch.</h1>
-                    <p className="text-neutral-500 text-lg font-light leading-relaxed italic mb-12">Currently accepting new project inquiries. Let's build something impactful.</p>
-                    <div className="space-y-6">
-                        <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Direct Email</span><a href="mailto:lakshayjain148@gmail.com" className="text-xl font-bold hover:text-neutral-400 transition-colors block">lakshayjain148@gmail.com</a></div>
-                        <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Social Hub</span><a href="https://linktr.ee" target="_blank" rel="noreferrer" className="text-xl font-bold hover:text-neutral-400 transition-colors flex items-center gap-2">Linktree <ExternalLink size={18} /></a></div>
-                    </div>
-                </div>
-                <div className="bg-neutral-900/50 p-10 rounded-3xl border border-white/5 shadow-2xl">
-                    {submitted ? (
-                        <div className="py-20 flex flex-col items-center text-center space-y-6">
-                            <div className="w-20 h-20 bg-white/10 text-white rounded-full flex items-center justify-center animate-pulse"><Send size={32} /></div>
-                            <h3 className="text-2xl font-black uppercase tracking-tighter">Message Sent</h3>
-                            <p className="text-neutral-500 text-sm italic">Thank you! I'll respond within 24 hours.</p>
-                        </div>
-                    ) : (
-                        <div className="space-y-8">
-                            <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Name</label><input type="text" required placeholder="Your name" className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors text-sm font-medium px-1" value={formState.name} onChange={e => setFormState({ ...formState, name: e.target.value })} /></div>
-                            <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Email</label><input type="email" required placeholder="hello@example.com" className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors text-sm font-medium px-1" value={formState.email} onChange={e => setFormState({ ...formState, email: e.target.value })} /></div>
-                            <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Message</label><textarea rows="4" required placeholder="Describe your vision..." className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors resize-none text-sm font-medium px-1" value={formState.message} onChange={e => setFormState({ ...formState, message: e.target.value })} /></div>
-                            <button onClick={handleSubmit} className="w-full bg-white text-black font-black uppercase tracking-widest py-5 rounded-2xl hover:bg-neutral-200 transition-all flex items-center justify-center gap-3 text-xs shadow-xl active:scale-95">Send Message <Send size={16} /></button>
-                        </div>
-                    )}
-                </div>
-            </div>
+  const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+  const [submitted, setSubmitted] = useState(false);
+  const handleSubmit = (e) => { e.preventDefault(); setSubmitted(true); setTimeout(() => setSubmitted(false), 5000); };
+  return (
+    <div className="min-h-screen pt-40 pb-24 px-6 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <div>
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-tight mb-8">Get In<br />Touch.</h1>
+          <p className="text-neutral-500 text-lg font-light leading-relaxed italic mb-12">Currently accepting new project inquiries. Let's build something impactful.</p>
+          <div className="space-y-6">
+            <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Direct Email</span><a href="mailto:lakshayjain148@gmail.com" className="text-xl font-bold hover:text-neutral-400 transition-colors block">lakshayjain148@gmail.com</a></div>
+            <div><span className="text-xs font-black uppercase text-neutral-600 tracking-widest mb-1">Social Hub</span><a href="https://linktr.ee" target="_blank" rel="noreferrer" className="text-xl font-bold hover:text-neutral-400 transition-colors flex items-center gap-2">Linktree <ExternalLink size={18} /></a></div>
+          </div>
         </div>
-    );
+        <div className="bg-neutral-900/50 p-10 rounded-3xl border border-white/5 shadow-2xl">
+          {submitted ? (
+            <div className="py-20 flex flex-col items-center text-center space-y-6">
+              <div className="w-20 h-20 bg-white/10 text-white rounded-full flex items-center justify-center animate-pulse"><Send size={32} /></div>
+              <h3 className="text-2xl font-black uppercase tracking-tighter">Message Sent</h3>
+              <p className="text-neutral-500 text-sm italic">Thank you! I'll respond within 24 hours.</p>
+            </div>
+          ) : (
+            <div className="space-y-8">
+              <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Name</label><input type="text" required placeholder="Your name" className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors text-sm font-medium px-1" value={formState.name} onChange={e => setFormState({ ...formState, name: e.target.value })} /></div>
+              <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Email</label><input type="email" required placeholder="hello@example.com" className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors text-sm font-medium px-1" value={formState.email} onChange={e => setFormState({ ...formState, email: e.target.value })} /></div>
+              <div><label className="text-xs font-black uppercase text-neutral-500 tracking-widest ml-1">Message</label><textarea rows="4" required placeholder="Describe your vision..." className="w-full bg-black border-b border-white/10 py-3 focus:outline-none focus:border-white transition-colors resize-none text-sm font-medium px-1" value={formState.message} onChange={e => setFormState({ ...formState, message: e.target.value })} /></div>
+              <button onClick={handleSubmit} className="w-full bg-white text-black font-black uppercase tracking-widest py-5 rounded-2xl hover:bg-neutral-200 transition-all flex items-center justify-center gap-3 text-xs shadow-xl active:scale-95">Send Message <Send size={16} /></button>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default function App() {
@@ -480,12 +515,12 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   useEffect(() => {
-    const handlePopState = (event) => {
+    const handlePopState = () => {
       if (view === 'project-detail') setView('work');
       else if (view === 'work' || view === 'contact') setView('home');
     };
     window.addEventListener('popstate', handlePopState);
-    if (view !== 'home') window.history.pushState({ view }, "");
+    if (view !== 'home') window.history.pushState({ view }, '');
     return () => window.removeEventListener('popstate', handlePopState);
   }, [view]);
 
