@@ -269,8 +269,8 @@ const WorkView = ({ setView, setSelectedProject }) => {
     <div className="min-h-screen bg-black font-sans pt-[57px]">
       <div className="flex min-h-[calc(100vh-57px)]">
 
-        {/* ── Vertical sidebar rail — desktop only, sticky full height ── */}
-        <aside className="hidden md:flex flex-col sticky top-[57px] h-[calc(100vh-57px)] w-[192px] shrink-0 border-r border-white/5 pt-14 pb-8 px-5">
+        {/* ── Vertical sidebar rail — desktop only, fixed full height ── */}
+        <aside className="hidden md:flex flex-col fixed top-[57px] left-0 h-[calc(100vh-57px)] w-[192px] shrink-0 border-r border-white/5 pt-14 pb-8 px-5 z-[80] bg-black">
 
           <p className="text-[9px] font-black uppercase tracking-[0.35em] text-neutral-700 mb-5 px-3">Filter</p>
 
@@ -338,7 +338,7 @@ const WorkView = ({ setView, setSelectedProject }) => {
         </div>
 
         {/* ── Main content ── */}
-        <main className="flex-1 min-w-0 pt-10 md:pt-14 pb-24 px-6 md:px-12 mt-12 md:mt-0">
+        <main className="flex-1 min-w-0 pt-10 md:pt-14 pb-24 px-6 md:px-12 mt-12 md:mt-0 md:ml-[192px]">
 
           {/* Archive heading */}
           <div className="max-w-2xl mb-14 md:mb-20">
