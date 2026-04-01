@@ -337,7 +337,6 @@ const PROJECTS = [
       { type: 'text', content: 'This one started with boredom and a long weekend. I practically lived on energy bars through college: late nights, back-to-back classes, projects that never seemed to end. But every bar on the shelf looked the same. Either aggressively gym-bro with neon and skulls, or cold and clinical like something from a hospital dispensary. Neither felt like something I actually wanted to carry around.' },
       { type: 'text', content: 'So I made one. Not a real product, but a real brand. AAVANA started as a personal design experiment and turned into 30 hours of obsessive work that I could not stop even when I wanted to.' },
       { type: 'image', src: aavana },
-      { type: 'heading', content: 'The Design' },
       { type: 'heading', content: 'The Challenge' },
       { type: 'text', content: 'Making healthy snacking feel aspirational without being preachy is genuinely difficult. The design philosophy was simple: black and white as the base, bold flavour colours as accents, clean typography, no noise. But landing on simple takes longer than landing on complicated. Every unnecessary element had to be argued out of existence.' },
       { type: 'quote', content: 'Ship it. A finished thing you are nervous about is worth more than a perfect thing that does not exist.' },
