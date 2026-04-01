@@ -162,15 +162,28 @@ const PROJECTS = [
   },
   {
     id: 'acm-flex-design',
-    title: 'ACM Banner',
+    title: 'ACM Thapar Chapter: Flex Banner Design',
     year: '2024',
     category: 'Print Branding',
-    description: 'Large-scale print designs for professional event visibility.',
+    description: 'A versatile flex banner for the ACM Thapar student chapter — built to work across campus events, workshops, and tech talks.',
     thumbnail: flex,
     banner: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "The challenge was translating digital identity into large-format physical assets without losing visual fidelity." },
-      { type: 'image', src: flex }
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: "The ACM Thapar student chapter needed a flex banner for general branding — something that could work across campus events, workshops, and tech talks. No specific event, just a versatile visual identity that represents their community." },
+      { type: 'text', content: "The challenge? Make tech feel welcoming. Balance credibility with approachability. Professional but not corporate." },
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: "Geometric Background. Overlapping diamond shapes in blue gradients create depth and movement. They hint at connectivity — nodes in a network, students in a community. Tech symbolism that doesn't hit you over the head." },
+      { type: 'text', content: "Color Palette. Deep ocean blue to bright cyan. Modern, digital, energetic. Blue communicates trust and intelligence, but the gradient adds dynamism. The light background keeps it clean and versatile — works for formal talks or casual hackathons." },
+      { type: 'text', content: 'Typography, Layout. "thapar" in lowercase, rounded sans-serif — friendly and approachable. The ACM logo sits in a diamond frame that mirrors the background pattern, creating visual cohesion.' },
+      { type: 'quote', content: 'Collaborate. Elevate. Innovate.' },
+      { type: 'text', content: "Three words. Three pillars. Each gets its own gradient color, creating rhythm and progression. The underlines add a modern, UI-inspired touch while anchoring the message." },
+      { type: 'image', src: flex },
+      { type: 'heading', content: 'The Challenge' },
+      { type: 'text', content: 'Balancing "tech aesthetic" with "student community vibe." Too corporate feels like a company poster. Too playful loses credibility. I landed on "clean with personality" — professional enough for faculty, approachable enough for first-years.' },
+      { type: 'heading', content: 'The Result' },
+      { type: 'text', content: "A banner that works everywhere. Scalable from 6-foot backdrops to social media graphics. It doesn't just say \"ACM Thapar exists\" — it says \"We're a community. Join us.\"" },
+      { type: 'text', content: "Sometimes the best design isn't the most creative — it's the one that works exactly where it needs to work." },
     ]
   },
   {
@@ -443,12 +456,24 @@ const ProjectDetailView = ({ project, setView }) => {
           )}
         </div>
 
-        <div className="space-y-16 md:space-y-32">
+        <div className="space-y-10 md:space-y-14">
           {project.story ? (
             project.story.map((item, idx) => (
               <div key={idx} className="max-w-4xl mx-auto">
-                {item.type === 'text' ? (
-                  <p className="text-lg md:text-xl text-neutral-400 leading-relaxed font-light italic font-serif">{item.content}</p>
+                {item.type === 'heading' ? (
+                  <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mt-2">{item.content}</h3>
+                ) : item.type === 'quote' ? (
+                  <blockquote className="border-l-4 border-white/30 pl-8 py-2">
+                    <p className="text-2xl md:text-3xl font-black italic text-white tracking-tight">{item.content}</p>
+                  </blockquote>
+                ) : item.type === 'text' ? (
+                  <p className="text-lg md:text-xl text-neutral-400 leading-relaxed font-light italic font-serif">
+                    {item.content.split(/(".*?")/g).map((part, i) =>
+                      /^".*"$/.test(part)
+                        ? <strong key={i} className="font-black not-italic text-neutral-200">{part}</strong>
+                        : part
+                    )}
+                  </p>
                 ) : (
                   <div className="w-full max-w-4xl mx-auto bg-neutral-900 rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/5 my-8 md:my-0 group">
                     <img src={item.src} alt="Process visual" className="w-full h-auto transform transition-transform duration-[1200ms] group-hover:scale-105" />
