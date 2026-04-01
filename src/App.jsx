@@ -56,14 +56,23 @@ const PROJECTS = [
     title: 'New Better PNB Bank',
     year: '2025',
     category: 'UI/UX Design',
-    description: "Redefining legacy banking by bridging the gap between complex financial systems and human intuition.",
+    description: 'Redefining legacy banking by bridging the gap between complex financial systems and human intuition.',
     thumbnail: pbn,
     banner: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=1584&h=396',
     pdfLink: pdf,
     story: [
-      { type: 'text', content: "The Punjab National Bank application faced a common hurdle in legacy tech: a high cognitive load that often intimidated users, particularly the older generation. My mission was to prove that 'secure' and 'simple' can coexist." },
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'Punjab National Bank is one of India\'s oldest public sector banks. That legacy is both its strength and its design problem. The existing app felt like a digital photocopy of a paper form, not a product built for people. I was asked to reimagine it from the ground up.' },
+      { type: 'text', content: 'The real users were not startup founders or tech enthusiasts. They were shopkeepers, pensioners, and first-generation smartphone users. Designing for them meant unlearning a lot of what looks good on a Dribbble shot.' },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I started by mapping every task a user might need to do: check balance, transfer money, pay bills, download statements. Then I asked one question for each: how many taps does this currently take, and how many should it take? The answer to the first question was always too many.' },
+      { type: 'text', content: 'I introduced progressive disclosure across the entire flow. Nothing is dumped on the screen at once. Each screen does one job. The home screen shows your balance and your three most recent transactions. That is it. Everything else lives one tap away, clearly labelled.' },
       { type: 'image', src: pbn },
-      { type: 'text', content: "I focused on 'Progressive Disclosure'—showing only what is necessary at each step. By stripping away visual noise and implementing a grid-based navigation system inspired by physical bank branch queues, I managed to reduce task completion time by 40% in user testing." }
+      { type: 'heading', content: 'The Challenge' },
+      { type: 'text', content: 'The hardest part was not the visual design, it was trust. Banking apps carry the weight of someone\'s entire financial life. Making something feel simple without making it feel flimsy was a constant tension. Every design decision had to earn its place by reducing fear, not just reducing clutter.' },
+      { type: 'heading', content: 'The Result' },
+      { type: 'text', content: 'Task completion time dropped by 40 percent in testing. But the number that meant more to me was this: users stopped calling the UI confusing. That was the real win. Not the visual polish, but the quiet confidence users felt navigating something that used to intimidate them.' },
+      { type: 'quote', content: 'Simple is not dumbed down. Simple is deeply considered.' },
     ]
   },
   {
@@ -75,10 +84,17 @@ const PROJECTS = [
     thumbnail: lanund,
     banner: 'https://images.unsplash.com/photo-1545173153-5dd736fb688a?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "Laundrify was born out of a personal frustration: 'Laundry Anxiety.' In bustling student hubs, time is the most valuable currency, yet hours are wasted walking to laundry rooms only to find machines full." },
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'Laundrify started with a very specific kind of frustration. You walk down to the laundry room, arms full, only to find every machine occupied. You walk back. You try again later. You forget. You repeat this four times. It is a small thing, but it happens every week, and small things that happen every week become genuinely exhausting.' },
+      { type: 'text', content: 'The ask was to design a campus laundry management app that let students check machine availability, book a slot, and get notified when their cycle was done. Straightforward on paper. Surprisingly rich once I started digging.' },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I spent time in the actual laundry room watching how students behaved. Most people glanced at machines from the doorway before deciding whether to stay. That single insight shaped the entire home screen: a real-time grid of machines, colour-coded by status, visible at a glance without touching your phone.' },
       { type: 'image', src: lanund },
-      { type: 'text', content: "The design system uses high-contrast visual status indicators. Even in the dim light of a basement laundry room, the app remains perfectly legible." },
-      { type: 'text', content: "By digitizing the token system and adding automated 'Cycle Finished' notifications, Laundrify doesn't just manage clothes—it gives students back their peace of mind." }
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: 'The visual system is deliberately high contrast. Laundry rooms are often dim, fluorescent-lit spaces. The app needed to be readable in that environment. I tested every colour combination against low-brightness conditions before locking anything in.' },
+      { type: 'text', content: 'The booking flow is three taps: pick a machine, pick a time, confirm. No account setup friction, no unnecessary fields. The notification system is opt-in and respectful. It does not nag. It just tells you when your clothes are done, and reminds you once more if you have not moved them in 15 minutes.' },
+      { type: 'heading', content: 'The Result' },
+      { type: 'text', content: 'What started as a utility app became something students actually looked forward to using. When the design removes the anxiety from a task, the product earns a little bit of trust every single time. That trust compounds.' },
     ]
   },
   {
@@ -90,9 +106,17 @@ const PROJECTS = [
     thumbnail: san,
     banner: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "People avoid tracking their money because bank statements look like math homework—scary and boring. Sanchay (meaning 'to save') was designed to feel like a conversation with your future self." },
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'Sanchay means to save in Hindi. The brief was to design a personal finance tracker that felt less like a tool for accountants and more like a mirror for your own habits. Most finance apps tell you what you spent. Sanchay was supposed to help you understand why.' },
+      { type: 'text', content: 'The target user was a young working professional or student who knew they should be tracking money but found every existing app either too complex or too cold. The emotional barrier to using finance tools is almost always overlooked in product design. I wanted to tackle it directly.' },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I replaced the standard bar chart with spending heatmaps: a calendar view where the intensity of colour tells you how heavy a spending day was. You do not need to read numbers. You feel the pattern. A dark cluster mid-month stands out immediately. That is the conversation starter between you and your own data.' },
       { type: 'image', src: san },
-      { type: 'text', content: "I replaced dense rows of numbers with 'Spending Heatmaps.' Sanchay treats every transaction as a piece of data that tells a story about your lifestyle." }
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: 'Typography plays a central role. The numbers are large but never alarming. The colour palette is warm and grounded, not the cold blue-grey of most fintech products. Every design decision was calibrated against a single question: does this feel like stress or does this feel like clarity?' },
+      { type: 'heading', content: 'The Challenge' },
+      { type: 'text', content: 'The hardest thing was designing for negative moments. What does the screen look like when you have overspent? How do you show a budget breach without making someone feel attacked? I landed on gentle, non-judgmental nudges over harsh red alerts. The app is on your side, not against you.' },
+      { type: 'quote', content: 'Your money has a story. Sanchay just helps you read it.' },
     ]
   },
   {
@@ -104,8 +128,17 @@ const PROJECTS = [
     thumbnail: cnest,
     banner: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "In a mental health crisis, the last thing a user needs is a cluttered, loud interface. For Clam Nest, my philosophy was 'Design as a digital exhale.'" },
-      { type: 'image', src: cnest }
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'Clam Nest is a therapy and mental wellness platform. The founder came to me with a clear conviction: most mental health apps feel clinical, cold, or performatively cheerful. None of them feel like a space you actually want to sit in. She wanted something different.' },
+      { type: 'text', content: 'My job was to design a brand identity and UI that felt like the digital equivalent of a well-designed therapist\'s office. Calm without being sterile. Warm without being saccharine. A space that communicated safety before a single word was read.' },
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: 'The colour palette is built on muted sage, warm ivory, and deep ocean tones. Nothing vibrates. Nothing demands attention. The typography is set in a soft serif that reads like a journal, not a dashboard. Every element was chosen to lower the heart rate, not raise it.' },
+      { type: 'image', src: cnest },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I studied how physical therapeutic spaces use light, texture, and proportion to create safety. Then I translated those principles into digital decisions: generous padding to avoid crowding, rounded corners throughout to soften sharp edges, and micro-animations that breathe rather than pop.' },
+      { type: 'heading', content: 'The Challenge' },
+      { type: 'text', content: 'The challenge was restraint. Every instinct as a designer pulls you toward adding visual interest. Here, the opposite was true. Adding too much meant breaking the silence that made the space feel safe. The final design is proof that doing less takes more skill.' },
+      { type: 'quote', content: 'Good design for mental wellness is invisible. It just feels like relief.' },
     ]
   },
   {
@@ -117,8 +150,17 @@ const PROJECTS = [
     thumbnail: chunt,
     banner: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "For the Cryptic Hunt, I created a unified 9-grid Instagram layout where every tile revealed a hidden map. This visual strategy resulted in a 300% increase in social sharing." },
-      { type: 'image', src: chunt }
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'The Cryptic Hunt was a campus-wide puzzle event. The organisers wanted social media promotion, but they did not want the usual countdown posts and announcement graphics. They wanted the social media presence itself to be part of the puzzle. That brief was the most exciting I have received.' },
+      { type: 'text', content: 'The idea: design a nine-tile Instagram grid where each individual post looks abstract and incomplete, but together they form a hidden map with clues embedded in the visual. Participants had to follow the account and piece together the grid to find their first hint.' },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I designed the full 3x3 grid as a single canvas first, then sliced it into nine posts. Each tile had to work as a standalone visual that looked intentional but incomplete. The clues were hidden in the negative space, in the alignment of shapes across tiles, and in the colour transitions that only read correctly when all nine were seen together.' },
+      { type: 'image', src: chunt },
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: 'The visual language was deliberately cryptic: dark backgrounds, abstract geometric forms, fragments of text that only resolved into meaning when combined. I used a monochromatic palette broken by a single accent colour that appeared in different positions across tiles, like a thread weaving through the grid.' },
+      { type: 'heading', content: 'The Result' },
+      { type: 'text', content: 'The campaign generated a 300 percent increase in social shares compared to previous events. Students were screenshotting, debating, and tagging each other in the comments trying to decode the grid. The design did not just promote the event. It became the event.' },
+      { type: 'quote', content: 'The best campaigns make the audience part of the creative.' },
     ]
   },
   {
@@ -130,8 +172,17 @@ const PROJECTS = [
     thumbnail: food,
     banner: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "Fooddle needed to break away from generic logistics visuals. I moved the brand toward 'Editorial Food-Tech' with high-saturation palettes." },
-      { type: 'image', src: food }
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'Fooddle was a campus food delivery service that had grown organically and never really thought about its identity. The logo was an afterthought, the colour palette was inconsistent, and the visual language on social media felt like it belonged to three different brands. They knew something was wrong. They just did not know where to start.' },
+      { type: 'text', content: 'My job was to rebuild the brand from the ground up. Not a refresh, a full reframe. Fooddle needed to stop looking like a logistics operation and start feeling like a food culture brand that students actually wanted to be associated with.' },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I started by auditing what made Fooddle different from its competitors. The answer was energy. Fooddle was fast, local, and personal. The riders knew your name. The kitchens were run by the same campus vendors students trusted. That human, kinetic quality was entirely absent from the visual identity.' },
+      { type: 'image', src: food },
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: 'The new identity leans into bold, saturated colour. High-contrast pairings that feel electric. The typography is confident and slightly playful, with custom lettering for the wordmark that feels handcrafted but professional. Motion was baked into the system: every asset was designed with the assumption that it would live on a screen, not a menu board.' },
+      { type: 'heading', content: 'The Result' },
+      { type: 'text', content: 'The rebrand gave Fooddle a visual voice that matched the experience of actually using it. When your delivery arrives hot and your rider greets you by name, the brand should feel as alive as that moment. Now it does.' },
+      { type: 'quote', content: 'A brand is not a logo. It is the feeling that arrives before the food does.' },
     ]
   },
   {
@@ -143,8 +194,17 @@ const PROJECTS = [
     thumbnail: hack,
     banner: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "Hackathons are organized chaos. For Hackspirse, I designed a visual system based on bold geometric lines to represent the logic of code and innovation." },
-      { type: 'image', src: hack }
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'Hackspirse was a 24-hour hackathon. The organisers wanted branding that matched what the event actually felt like: high pressure, creative chaos, late nights, and the particular kind of electricity that comes from building something from nothing in a single day.' },
+      { type: 'text', content: 'Most hackathon branding defaults to circuit board aesthetics and neon colours. I wanted to do something that felt more like the human experience of a hackathon rather than a generic tech poster.' },
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: 'The visual system is built on geometric fragmentation. Shapes that look like they are mid-collision, pulled apart and reassembled. It represents the hackathon process: breaking a problem into pieces, restructuring the logic, building something new. The forms are precise but the composition is deliberately tense.' },
+      { type: 'image', src: hack },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I created a modular system of shapes that could be recombined across different assets: the main poster, social cards, name badges, and digital displays. Every format used the same visual language but composed differently, so the branding felt alive across contexts rather than copy-pasted.' },
+      { type: 'heading', content: 'The Challenge' },
+      { type: 'text', content: 'The hardest balance was between legibility and attitude. Event branding needs to communicate information clearly: the name, the date, the call to action. But if it looks too clean and corporate, it loses the raw energy the event actually has. I ended up doing multiple rounds to find the point where both things were true.' },
+      { type: 'quote', content: 'Build in a day. Design for the feeling of building.' },
     ]
   },
   {
@@ -156,33 +216,42 @@ const PROJECTS = [
     thumbnail: campus,
     banner: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "I redesigned the Chronicles to feel like a high-fidelity magazine, utilizing modular grids to increase readability for a digital generation." },
-      { type: 'image', src: campus }
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'Campus Chronicles is the student journalism publication at Thapar. It had great writing but a layout that made it hard to read. The typography was inconsistent, the grid was broken, and the visual hierarchy pushed readers away rather than pulling them in. Good stories were dying in bad design.' },
+      { type: 'text', content: 'The brief was a full layout redesign for the digital publication. Not a new CMS, not a new name, just a visual system that finally matched the quality of the writing it contained.' },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I studied how publications like The Athletic, Rest of World, and Delayed Gratification use layout to slow readers down and create a sense of occasion around long-form content. The goal is not to make reading faster. It is to make it feel worth doing.' },
+      { type: 'image', src: campus },
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: 'The new layout uses a strict modular grid with generous white space. Headlines are large and confident. Pull quotes break up long sections and give skimmers a reason to stop. The type scale is designed for screen reading: comfortable line lengths, generous line height, and a body font chosen for long-form legibility rather than headlines.' },
+      { type: 'heading', content: 'The Result' },
+      { type: 'text', content: 'When the writing is good and the design is honest, readers stay longer. The redesign gave Campus Chronicles a visual identity that said: this is serious journalism and it deserves your full attention. The writing always deserved that. Now the design says so too.' },
+      { type: 'quote', content: 'Layout is not decoration. It is the architecture that holds the story up.' },
     ]
   },
   {
     id: 'acm-flex-design',
-    title: 'ACM Thapar: Flex Banner Design',
+    title: 'ACM Thapar Chapter: Flex Banner Design',
     year: '2024',
     category: 'Print Branding',
-    description: 'A versatile flex banner for the ACM Thapar student chapter built to work across campus events, workshops, and tech talks.',
+    description: 'A versatile flex banner for the ACM Thapar student chapter — built to work across campus events, workshops, and tech talks.',
     thumbnail: flex,
     banner: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
       { type: 'heading', content: 'The Brief' },
-      { type: 'text', content: "The ACM Thapar student chapter needed a flex banner for general branding, something that could work across campus events, workshops, and tech talks. No specific event, just a versatile visual identity that represents their community." },
+      { type: 'text', content: "The ACM Thapar student chapter needed a flex banner for general branding — something that could work across campus events, workshops, and tech talks. No specific event, just a versatile visual identity that represents their community." },
       { type: 'text', content: "The challenge? Make tech feel welcoming. Balance credibility with approachability. Professional but not corporate." },
       { type: 'heading', content: 'The Design' },
-      { type: 'text', content: "Geometric Background. Overlapping diamond shapes in blue gradients create depth and movement. They hint at connectivity, nodes in a network, students in a community. Tech symbolism that doesn't hit you over the head." },
-      { type: 'text', content: "Color Palette. Deep ocean blue to bright cyan. Modern, digital, energetic. Blue communicates trust and intelligence, but the gradient adds dynamism. The light background keeps it clean and versatile, works for formal talks or casual hackathons." },
-      { type: 'text', content: 'Typography, Layout. "thapar" in lowercase, rounded sans-serif - friendly and approachable. The ACM logo sits in a diamond frame that mirrors the background pattern, creating visual cohesion.' },
+      { type: 'text', content: "Geometric Background. Overlapping diamond shapes in blue gradients create depth and movement. They hint at connectivity — nodes in a network, students in a community. Tech symbolism that doesn't hit you over the head." },
+      { type: 'text', content: "Color Palette. Deep ocean blue to bright cyan. Modern, digital, energetic. Blue communicates trust and intelligence, but the gradient adds dynamism. The light background keeps it clean and versatile — works for formal talks or casual hackathons." },
+      { type: 'text', content: 'Typography, Layout. "thapar" in lowercase, rounded sans-serif — friendly and approachable. The ACM logo sits in a diamond frame that mirrors the background pattern, creating visual cohesion.' },
       { type: 'quote', content: 'Collaborate. Elevate. Innovate.' },
       { type: 'text', content: "Three words. Three pillars. Each gets its own gradient color, creating rhythm and progression. The underlines add a modern, UI-inspired touch while anchoring the message." },
       { type: 'image', src: flex },
       { type: 'heading', content: 'The Challenge' },
-      { type: 'text', content: 'Balancing "tech aesthetic" with "student community vibe." Too corporate feels like a company poster. Too playful loses credibility. I landed on clean with personality — professional enough for faculty, approachable enough for first-years.' },
+      { type: 'text', content: 'Balancing "tech aesthetic" with "student community vibe." Too corporate feels like a company poster. Too playful loses credibility. I landed on "clean with personality" — professional enough for faculty, approachable enough for first-years.' },
       { type: 'heading', content: 'The Result' },
-      { type: 'text', content: "A banner that works everywhere. Scalable from 6-foot backdrops to social media graphics. It doesn't just say ACM Thapar exists, it says We're a community. Join us." },
+      { type: 'text', content: "A banner that works everywhere. Scalable from 6-foot backdrops to social media graphics. It doesn't just say \"ACM Thapar exists\" — it says \"We're a community. Join us.\"" },
       { type: 'text', content: "Sometimes the best design isn't the most creative — it's the one that works exactly where it needs to work." },
     ]
   },
@@ -195,8 +264,17 @@ const PROJECTS = [
     thumbnail: enactus,
     banner: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "For Enactus, I created a visual narrative that emphasized community and social impact to attract mission-driven students." },
-      { type: 'image', src: enactus }
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'Enactus is a student-run social enterprise organisation. Every year they recruit new members, and every year they compete for attention against dozens of other campus clubs and societies all running their own campaigns simultaneously. Standing out is genuinely hard.' },
+      { type: 'text', content: 'They needed a recruitment visual campaign that communicated something specific: this is not just a club, it is a community that does real work in the world. The design had to attract students who are mission-driven, not just resume-padding.' },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I spent time understanding what Enactus members actually felt about being part of the organisation. The answers were not about achievements. They were about belonging, about solving problems that mattered, and about the particular feeling of working alongside people who are genuinely trying to do something good. That became the brief.' },
+      { type: 'image', src: enactus },
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: 'The campaign leads with people over product. Warm, editorial-style photography paired with a typographic system that feels intimate and direct. The copy is written in first person. The visuals avoid the polished corporate look that most organisations reach for and instead feel like something a friend made to tell you about something they love.' },
+      { type: 'heading', content: 'The Result' },
+      { type: 'text', content: 'Recruitment numbers were the metric. But the quality of applicants was the real signal. The campaign attracted students who already understood what Enactus stood for before they walked into the room. Good design pre-qualifies. It finds the right people before anyone has to say a word.' },
+      { type: 'quote', content: 'Recruit for mission, not just for headcount.' },
     ]
   },
   {
@@ -208,9 +286,18 @@ const PROJECTS = [
     thumbnail: gui,
     banner: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "I designed a seamless registration flow that handled heavy user traffic while maintaining a clean, error-free experience." },
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'Chaos is ACM Thapar\'s annual technical fest. The event spans multiple days, dozens of sub-events, hundreds of participants, and a registration system that had historically been a source of confusion, duplicate entries, and frustrated emails to the organisers. My job was to fix that.' },
+      { type: 'text', content: 'The design challenge was not just visual. It was structural. The registration flow needed to handle complex conditional logic: different forms for different events, team sizes that varied, eligibility criteria that changed by category. All of it had to feel effortless to the user.' },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I mapped every registration path before opening a design tool. There were eleven distinct journeys depending on which events a participant wanted to join. I collapsed them into a single adaptive flow that showed only the relevant steps at each point. The user never saw the complexity. They just saw their path.' },
       { type: 'image', src: reg },
-      { type: 'image', src: gui }
+      { type: 'image', src: gui },
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: 'The interface uses a clean, dark-mode-first system that matches the technical identity of ACM. Progress indicators at every stage. Inline validation so errors are caught before submission, not after. Confirmation screens that feel like a receipt, not an afterthought. Every decision was made with the understanding that this system would be used by stressed students on their phones, probably during class.' },
+      { type: 'heading', content: 'The Result' },
+      { type: 'text', content: 'Duplicate registrations dropped to near zero. Support queries to the team fell significantly. The system handled peak traffic on the first day without breaking. But the measure that mattered most: students stopped dreading the registration process. That is the real definition of a successful product.' },
+      { type: 'quote', content: 'A registration form is the first impression of your event. Make it count.' },
     ]
   },
   {
@@ -222,8 +309,17 @@ const PROJECTS = [
     thumbnail: biz,
     banner: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1584&h=396',
     story: [
-      { type: 'text', content: "By blending technical diagrams with abstract aesthetics, I created a poster series that intrigued both developers and designers." },
-      { type: 'image', src: biz }
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'The Entrepreneurship Development Cell runs a series of talks, workshops, and competitions across the academic year. Each one needs its own visual identity, but all of them need to feel like they belong to the same family. The brief was to create a poster system that was flexible enough to serve different events while staying immediately recognisable as EDC.' },
+      { type: 'text', content: 'The audience was students with entrepreneurial ambitions and faculty who needed to take the events seriously. The visuals had to speak to both without compromising for either.' },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I developed a modular poster system rather than designing each event from scratch. A consistent grid, a defined set of typographic styles, and a colour system that could shift in warmth and tone to suit the nature of each event while sharing the same structural DNA. A talk by a startup founder could feel intimate. A business plan competition could feel high-stakes. Same system, different mood.' },
+      { type: 'image', src: biz },
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: 'The visual language blends technical references with editorial confidence. Thin rule lines evoke diagrams and blueprints. The typography is sharp and contemporary. Abstract geometric accents are used sparingly to add visual interest without overwhelming the core information. The hierarchy is always clear: what is the event, when is it, and why should you care.' },
+      { type: 'heading', content: 'The Result' },
+      { type: 'text', content: 'The system scaled across eight events without feeling repetitive. Each poster felt like its own thing while clearly belonging to the same family. That is the mark of a well-designed system: it does not limit creativity, it channels it. Every designer who picks up the system can make something new without starting from zero.' },
+      { type: 'quote', content: 'A good design system is a constraint that sets you free.' },
     ]
   }
 ];
