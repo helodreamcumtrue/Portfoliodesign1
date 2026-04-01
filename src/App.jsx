@@ -1,3 +1,6 @@
+Here's the fully updated code with your new category structure. I've removed `Branding` and `Poster`, added `Social Media` and `Merch`, remapped every project accordingly, and updated the category strings inside each project object.
+
+```jsx
 import React, { useState, useEffect } from 'react';
 import { 
   ExternalLink, 
@@ -37,29 +40,29 @@ import juaari from './assets/juari.png';
 // --- CATEGORY DEFINITIONS ---
 const CATEGORY_MAP = {
   'pnb-case-study':      'UI Design',
-  'laundify':            'Product',
+  'laundify':            'UI Design',
   'sanchay-manager':     'UI Design',
-  'clam-nest':           'Branding',
-  'crptic-hunt':         'Poster',
-  'fooddle-rebrand':     'Branding',
-  'hackspirse':          'Poster',
+  'clam-nest':           'UI Design',
+  'crptic-hunt':         'Social Media',
+  'fooddle-rebrand':     'Social Media',
+  'hackspirse':          'Social Media',
   'campus-chronicles':   'Printables',
   'acm-flex-design':     'Printables',
-  'enactus-recruitment': 'Merch',
-  'acm-chaos':           'Product',
-  'edc-poster':          'Poster',
-  'aavana-brand':        'Branding',
-  'juaari-brand':        'Branding',
+  'enactus-recruitment': 'Printables',
+  'acm-chaos':           'UI Design',
+  'edc-poster':          'Social Media',
+  'aavana-brand':        'Product',
+  'juaari-brand':        'Product',
 };
 
-const ALL_CATEGORIES = ['All', 'UI Design', 'Branding', 'Product', 'Printables', 'Poster', 'Merch'];
+const ALL_CATEGORIES = ['All', 'UI Design', 'Product', 'Printables', 'Social Media', 'Merch'];
 
 const PROJECTS = [
   {
     id: 'pnb-case-study',
     title: 'New Better PNB Bank',
     year: '2025',
-    category: 'UI/UX Design',
+    category: 'UI Design',
     description: 'Redefining legacy banking by bridging the gap between complex financial systems and human intuition.',
     thumbnail: pbn,
     banner: 'https://images.unsplash.com/photo-1501167786227-4cba60f6d58f?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -78,7 +81,7 @@ const PROJECTS = [
     id: 'laundify',
     title: 'Laundrify',
     year: '2025',
-    category: 'Product Design',
+    category: 'UI Design',
     description: 'A comprehensive digital solution to the chaotic experience of shared campus laundry facilities.',
     thumbnail: lanund,
     banner: 'https://images.unsplash.com/photo-1545173153-5dd736fb688a?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -100,7 +103,7 @@ const PROJECTS = [
     id: 'sanchay-manager',
     title: 'Sanchay Finance BTS',
     year: '2025',
-    category: 'Fintech Design',
+    category: 'UI Design',
     description: 'Moving personal finance away from intimidating spreadsheets and toward visual storytelling.',
     thumbnail: san,
     banner: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -122,7 +125,7 @@ const PROJECTS = [
     id: 'clam-nest',
     title: 'Clam Nest Therapy',
     year: '2025',
-    category: 'Branding / UI',
+    category: 'UI Design',
     description: 'Creating a digital sanctuary for mental wellness where the design itself acts as a calming agent.',
     thumbnail: cnest,
     banner: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -144,7 +147,7 @@ const PROJECTS = [
     id: 'crptic-hunt',
     title: 'Cryptic Hunt Grid',
     year: '2025',
-    category: 'Visual Strategy',
+    category: 'Social Media',
     description: 'Using mystery as a currency to hack engagement and drive community participation.',
     thumbnail: chunt,
     banner: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -166,7 +169,7 @@ const PROJECTS = [
     id: 'fooddle-rebrand',
     title: 'Fooddle Rebranding',
     year: '2025',
-    category: 'Graphic Design',
+    category: 'Social Media',
     description: 'Transforming a utility service into a lifestyle brand that celebrates the energy of flavor.',
     thumbnail: food,
     banner: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -188,7 +191,7 @@ const PROJECTS = [
     id: 'hackspirse',
     title: 'Hackspirse',
     year: '2025',
-    category: 'Event Branding',
+    category: 'Social Media',
     description: 'Capturing the raw energy of high-octane creation through geometric precision.',
     thumbnail: hack,
     banner: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -210,7 +213,7 @@ const PROJECTS = [
     id: 'campus-chronicles',
     title: 'Campus Chronicles',
     year: '2025',
-    category: 'Layout Design',
+    category: 'Printables',
     description: 'Modernizing student journalism by applying a digital-first grid to long-form storytelling.',
     thumbnail: campus,
     banner: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -232,7 +235,7 @@ const PROJECTS = [
     id: 'acm-flex-design',
     title: 'ACM Thapar Chapter: Flex Banner Design',
     year: '2024',
-    category: 'Print Branding',
+    category: 'Printables',
     description: 'A versatile flex banner for the ACM Thapar student chapter — built to work across campus events, workshops, and tech talks.',
     thumbnail: flex,
     banner: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -258,7 +261,7 @@ const PROJECTS = [
     id: 'enactus-recruitment',
     title: 'Enactus Recruitment',
     year: '2025',
-    category: 'Visual Identity',
+    category: 'Printables',
     description: 'Impactful visuals designed for social enterprise talent acquisition.',
     thumbnail: enactus,
     banner: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -280,7 +283,7 @@ const PROJECTS = [
     id: 'acm-chaos',
     title: 'Chaos Web Interface',
     year: '2025',
-    category: 'Web Design',
+    category: 'UI Design',
     description: 'User registration flows and interface systems for complex event networks.',
     thumbnail: gui,
     banner: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -303,7 +306,7 @@ const PROJECTS = [
     id: 'edc-poster',
     title: 'Tech Event Visuals',
     year: '2025',
-    category: 'Graphic Design',
+    category: 'Social Media',
     description: 'Promotional visuals combining technical clarity with aesthetic appeal.',
     thumbnail: biz,
     banner: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -325,7 +328,7 @@ const PROJECTS = [
     id: 'aavana-brand',
     title: 'AAVANA Energy Bar',
     year: '2025',
-    category: 'Branding / Packaging',
+    category: 'Product',
     description: 'A full brand built from scratch in 30 hours. Naming, identity, packaging, and a working e-commerce website for a modern Indian energy bar.',
     thumbnail: aavana,
     banner: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -343,7 +346,7 @@ const PROJECTS = [
     id: 'juaari-brand',
     title: 'JUआरी',
     year: '2025',
-    category: 'Branding / Packaging',
+    category: 'Product',
     description: 'A maximalist playing card brand built as a love letter to vintage India. Bollywood posters, matchbox labels, paan shop kitsch, and the audacious spirit of desi daredevilry.',
     thumbnail: juaari,
     banner: 'https://images.unsplash.com/photo-1541278107931-e006523892df?auto=format&fit=crop&q=80&w=1584&h=396',
@@ -399,7 +402,6 @@ const HomeView = ({ setView }) => (
   </div>
 );
 
-// ─── ONLY CHANGED COMPONENT ──────────────────────────────────────────────────
 const WorkView = ({ setView, setSelectedProject }) => {
   const [activeCategory, setActiveCategory] = useState('All');
 
@@ -540,7 +542,6 @@ const WorkView = ({ setView, setSelectedProject }) => {
     </div>
   );
 };
-// ─────────────────────────────────────────────────────────────────────────────
 
 const ProjectDetailView = ({ project, setView }) => {
   if (!project) return null;
@@ -700,3 +701,15 @@ export default function App() {
     </div>
   );
 }
+```
+
+### What changed:
+1. **Removed `Branding` & `Poster`** from `ALL_CATEGORIES`
+2. **Added `Social Media` & `Merch`** to `ALL_CATEGORIES`
+3. **Updated `CATEGORY_MAP`** to route every project into your new structure:
+   - `UI Design`: PNB, Laundrify, Sanchay, Clam Nest, Chaos Web
+   - `Product`: AAVANA, JUआरी
+   - `Printables`: Campus Chronicles, ACM Flex, Enactus Recruitment
+   - `Social Media`: Cryptic Hunt, Fooddle Rebrand, Hackspirse, EDC Poster
+   - `Merch`: Empty (shows "Coming Soon" automatically)
+4. **Updated `category` string** inside each project object to match the new taxonomy exactly.
