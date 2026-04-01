@@ -32,6 +32,7 @@ import hack from './assets/lips.png';
 import pdf from './assets/NAYAPNBCASESTUDY.pdf';
 import pbn from './assets/pnbb.png';
 import aavana from './assets/aavana_study.png';
+import juaari from './assets/juari.png';
 
 // --- CATEGORY DEFINITIONS ---
 const CATEGORY_MAP = {
@@ -48,6 +49,7 @@ const CATEGORY_MAP = {
   'acm-chaos':           'Product',
   'edc-poster':          'Poster',
   'aavana-brand':        'Branding',
+  'juaari-brand':        'Branding',
 };
 
 const ALL_CATEGORIES = ['All', 'UI Design', 'Branding', 'Product', 'Printables', 'Poster', 'Merch'];
@@ -66,14 +68,9 @@ const PROJECTS = [
       { type: 'heading', content: 'The Brief' },
       { type: 'text', content: 'Punjab National Bank is one of India\'s oldest public sector banks. That legacy is both its strength and its design problem. The existing app felt like a digital photocopy of a paper form, not a product built for people. I was asked to reimagine it from the ground up.' },
       { type: 'text', content: 'The real users were not startup founders or tech enthusiasts. They were shopkeepers, pensioners, and first-generation smartphone users. Designing for them meant unlearning a lot of what looks good on a Dribbble shot.' },
-      { type: 'heading', content: 'The Process' },
-      { type: 'text', content: 'I started by mapping every task a user might need to do: check balance, transfer money, pay bills, download statements. Then I asked one question for each: how many taps does this currently take, and how many should it take? The answer to the first question was always too many.' },
-      { type: 'text', content: 'I introduced progressive disclosure across the entire flow. Nothing is dumped on the screen at once. Each screen does one job. The home screen shows your balance and your three most recent transactions. That is it. Everything else lives one tap away, clearly labelled.' },
       { type: 'image', src: pbn },
       { type: 'heading', content: 'The Challenge' },
       { type: 'text', content: 'The hardest part was not the visual design, it was trust. Banking apps carry the weight of someone\'s entire financial life. Making something feel simple without making it feel flimsy was a constant tension. Every design decision had to earn its place by reducing fear, not just reducing clutter.' },
-      { type: 'heading', content: 'The Result' },
-      { type: 'text', content: 'Task completion time dropped by 40 percent in testing. But the number that meant more to me was this: users stopped calling the UI confusing. That was the real win. Not the visual polish, but the quiet confidence users felt navigating something that used to intimidate them.' },
       { type: 'quote', content: 'Simple is not dumbed down. Simple is deeply considered.' },
     ]
   },
@@ -335,11 +332,30 @@ const PROJECTS = [
     story: [
       { type: 'heading', content: 'The Brief' },
       { type: 'text', content: 'This one started with boredom and a long weekend. I practically lived on energy bars through college: late nights, back-to-back classes, projects that never seemed to end. But every bar on the shelf looked the same. Either aggressively gym-bro with neon and skulls, or cold and clinical like something from a hospital dispensary. Neither felt like something I actually wanted to carry around.' },
-      { type: 'text', content: 'So I made one. Not a real product, but a real brand. AAVANA started as a personal design experiment and turned into 30 hours of obsessive work that I could not stop even when I wanted to.' },
+      { type: 'text', content: 'So I made one. Not a real product, but a real brand. AAVANA started as a personal design experiment and turned into 30 hours of obsessive work that I could not stop even when I wanted to. I handled everything: naming, positioning, visual identity, packaging across three flavours, and a full e-commerce website built in React and deployed live.' },
       { type: 'image', src: aavana },
       { type: 'heading', content: 'The Challenge' },
       { type: 'text', content: 'Making healthy snacking feel aspirational without being preachy is genuinely difficult. The design philosophy was simple: black and white as the base, bold flavour colours as accents, clean typography, no noise. But landing on simple takes longer than landing on complicated. Every unnecessary element had to be argued out of existence.' },
       { type: 'quote', content: 'Ship it. A finished thing you are nervous about is worth more than a perfect thing that does not exist.' },
+    ]
+  },
+  {
+    id: 'juaari-brand',
+    title: 'JUआरी',
+    year: '2025',
+    category: 'Branding / Packaging',
+    description: 'A maximalist playing card brand built as a love letter to vintage India. Bollywood posters, matchbox labels, paan shop kitsch, and the audacious spirit of desi daredevilry.',
+    thumbnail: juaari,
+    banner: 'https://images.unsplash.com/photo-1541278107931-e006523892df?auto=format&fit=crop&q=80&w=1584&h=396',
+    story: [
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'JUआरी is not just a deck of cards. It is a love letter to the India we grew up watching on flickering cinema screens and fading matchbox covers. Born from late night adda sessions, chai-stained nostalgia, and the audacious spirit of vintage Bollywood, the brief was to create something that feels like home but plays like rebellion.' },
+      { type: 'text', content: 'In a world of minimalist designs and safe aesthetics, we chose the maximalism of our mothers\' trunks, the unapologetic kitsch of corner paan shops, and the raw energy of hand-painted movie posters. Because being a JUआरी is not about the cards you are dealt. It is about playing them with style, swagger, and a little bit of that desi daredevil spirit.' },
+      { type: 'image', src: juaari },
+      { type: 'heading', content: 'The Challenge' },
+      { type: 'text', content: 'The hardest part was not any single skill. It was making sure everything connected. The brand strategy had to inform every design choice. The website had to feel like the packaging. Every touchpoint from Instagram to checkout had to feel like the same bold, unapologetic brand. I handled everything: brand strategy and guidelines, visual identity, packaging as collage where every element tells part of the story, and the full website built in React with a database for customer information, shipping addresses, and checkout flow connected through APIs so the whole system actually works when someone clicks buy.' },
+      { type: 'text', content: 'I learned that being a one-stop solution is not about knowing everything. It is about caring enough to make sure nothing falls through the cracks.' },
+      { type: 'quote', content: 'Every shuffle is a gamble, every game a story.' },
     ]
   }
 ];
