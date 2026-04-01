@@ -31,6 +31,7 @@ import biz from './assets/edcpost.png';
 import hack from './assets/lips.png';
 import pdf from './assets/NAYAPNBCASESTUDY.pdf';
 import pbn from './assets/pnbb.png';
+import aavana from './assets/aavana_study.png';
 
 // --- CATEGORY DEFINITIONS ---
 const CATEGORY_MAP = {
@@ -46,6 +47,7 @@ const CATEGORY_MAP = {
   'enactus-recruitment': 'Merch',
   'acm-chaos':           'Product',
   'edc-poster':          'Poster',
+  'aavana-brand':        'Branding',
 };
 
 const ALL_CATEGORIES = ['All', 'UI Design', 'Branding', 'Product', 'Printables', 'Poster', 'Merch'];
@@ -320,6 +322,32 @@ const PROJECTS = [
       { type: 'heading', content: 'The Result' },
       { type: 'text', content: 'The system scaled across eight events without feeling repetitive. Each poster felt like its own thing while clearly belonging to the same family. That is the mark of a well-designed system: it does not limit creativity, it channels it. Every designer who picks up the system can make something new without starting from zero.' },
       { type: 'quote', content: 'A good design system is a constraint that sets you free.' },
+    ]
+  },
+  {
+    id: 'aavana-brand',
+    title: 'AAVANA Energy Bar',
+    year: '2025',
+    category: 'Branding / Packaging',
+    description: 'A full brand built from scratch in 30 hours. Naming, identity, packaging, and a working e-commerce website for a modern Indian energy bar.',
+    thumbnail: aavana,
+    banner: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1584&h=396',
+    story: [
+      { type: 'heading', content: 'The Brief' },
+      { type: 'text', content: 'This one started with boredom and a long weekend. I practically lived on energy bars through college: late nights, back-to-back classes, projects that never seemed to end. But every bar on the shelf looked the same. Either aggressively gym-bro with neon and skulls, or cold and clinical like something from a hospital dispensary. Neither felt like something I actually wanted to carry around.' },
+      { type: 'text', content: 'So I made one. Not a real product, but a real brand. AAVANA started as a personal design experiment and turned into 30 hours of obsessive work that I could not stop even when I wanted to.' },
+      { type: 'heading', content: 'The Process' },
+      { type: 'text', content: 'I handled everything from naming to shipping flow. The name AAVANA came from wanting something that felt rooted but modern, Indian without being a cliche. The positioning landed on aspirational simplicity: for people who take their nutrition seriously but do not want to be lectured about it.' },
+      { type: 'text', content: 'I built the complete visual identity first: logo, colour system, typography. Then packaging for three flavours. Then a full website with cart and checkout functionality, deployed and live. The constraint of doing everything alone in a single weekend meant every decision had to be fast and confident. There was no time to overthink.' },
+      { type: 'image', src: aavana },
+      { type: 'heading', content: 'The Design' },
+      { type: 'text', content: 'The palette is built on black and white as the foundation, broken by bold flavour-specific accent colours: orange for citrus, deep brown for chocolate, red for berry. The typography leads with Montserrat ExtraBold for headlines and Futura PT Heavy for the wordmark. It reads like a brand that knows exactly what it is.' },
+      { type: 'text', content: 'The packaging design was the hardest part. Packaging lives in a physical world with light, shadow, and competing products on either side. I designed it flat, then stress-tested every composition against mockups to make sure it held up. The AAVANA wordmark wraps the bar at an angle, creating movement even when the product is sitting still.' },
+      { type: 'heading', content: 'The Challenge' },
+      { type: 'text', content: 'Making healthy snacking feel aspirational without being preachy is genuinely difficult. The design philosophy was simple: black and white as the base, bold flavour colours as accents, clean typography, no noise. But landing on simple takes longer than landing on complicated. Every unnecessary element had to be argued out of existence.' },
+      { type: 'heading', content: 'The Result' },
+      { type: 'text', content: 'AAVANA is live at aavana.vercel.app. It is not a real product yet, but it is a real demonstration of what I can do when left alone with a brief and enough coffee. Full brand strategy, visual identity, packaging across three SKUs, and a working e-commerce website. Built in a weekend. Shipped because sitting on it felt worse than putting it out.' },
+      { type: 'quote', content: 'Ship it. A finished thing you are nervous about is worth more than a perfect thing that does not exist.' },
     ]
   }
 ];
